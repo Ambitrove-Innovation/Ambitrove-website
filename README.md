@@ -119,7 +119,7 @@ Each push to the main branch will trigger an automated build & deployment.
 
 Kamogelo Enoch Mogasoa – Founder & CEO
 
-Dean meyer – Co-Founder & Strategic Shareholder
+Dean Meyer – Co-Founder, CTO & Strategic Shareholder
 
 Leadership Team – CIO, Executives & Strategic Shareholders
 
