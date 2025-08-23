@@ -52,6 +52,7 @@ The company website will serve as:
    - Contact forms and call-to-actions to convert visitors into leads.
    - Integrated with company LinkedIn, GitHub, and social media.
 
+
 ---
 
 ## 🛠 Development Setup
