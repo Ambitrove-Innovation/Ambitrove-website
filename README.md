@@ -52,7 +52,6 @@ The company website will serve as:
    - Contact forms and call-to-actions to convert visitors into leads.
    - Integrated with company LinkedIn, GitHub, and social media.
 
-
 ---
 
 ## 🛠 Development Setup
@@ -120,7 +119,7 @@ Each push to the main branch will trigger an automated build & deployment.
 
 Kamogelo Enoch Mogasoa – Founder & CEO
 
-[Co-Founder’s Name] – Co-Founder & Strategic Shareholder
+Dean meyer – Co-Founder & Strategic Shareholder
 
 Leadership Team – CIO, Executives & Strategic Shareholders
 
