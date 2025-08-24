@@ -82,6 +82,10 @@ src/
  │    ├── App.tsx
  │    └── routes.tsx
  ├── features/
+ │    ├── components/    #Shared components.
+ │    │    ├── ui/
+ │    │    │    ├── Navbar.tsx
+ │    │    ├── Navbar.tsx
  │    ├── home/          # Homepage
  │    │    ├── index.tsx
  │    │    ├── components/
@@ -104,36 +108,23 @@ src/
  └── index.tsx
 
 🌍 Deployment
-
 We recommend deploying via:
 
-Netlify
- → Quick deployment & free tier for prototypes.
-
-Vercel
- → Ideal for production React/Next.js apps.
+Netlify → Quick deployment & free tier for prototypes.
+Vercel → Ideal for production React/Next.js apps.
 
 Each push to the main branch will trigger an automated build & deployment.
 
 👥 Team
-
 Kamogelo Enoch Mogasoa – Founder & CEO
-
 Dean Christopher Meyer – Co-Founder, CTO & Strategic Shareholder
 
 Leadership Team – CIO, Executives & Strategic Shareholders
-
 📈 Roadmap
-
 ✅ Design prototype in Figma
-
 ✅ Create GitHub Organization & repo
-
 ⬜ Develop MVP website (React + TS + ShadCN + GSAP)
-
 ⬜ Launch website (linked to company domain)
-
 ⬜ Add company portfolio & projects
-
 ⬜ Integrate marketing (LinkedIn, TikTok, GitHub showcases)
 ```
