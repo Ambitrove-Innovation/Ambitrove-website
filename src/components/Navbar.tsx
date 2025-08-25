@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <header className="text-black py-6">
-      <nav className="bg-white container mx-auto flex justify-evenly items-center rounded-full p-2.5 shadow-lg ">
+      <nav className="bg-white container mx-auto flex justify-evenly items-center rounded-full p-2.5 shadow-lg border-b-2 border-cyan-500 shadow-cyan-500/50">
         <label aria-label="Company logo" className="flex items-center gap-1.5">
           <span className="font-semibold text-2xl flex">
             <BirdIcon /> Ambitrove
