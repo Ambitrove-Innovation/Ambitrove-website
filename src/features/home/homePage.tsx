@@ -5,7 +5,9 @@ const Homepage = () => {
     <div>
       Homepage
       <h1>Welcome to Ambitrove</h1>
-      <Button variant={"secondary"}>We live in a society</Button>
+      <Button variant={"secondary"} className="border-1 border-black">
+        Hold
+      </Button>
     </div>
   );
 };
