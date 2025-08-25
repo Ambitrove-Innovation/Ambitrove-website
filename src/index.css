@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+:root {
+  --color-textGradient: linear-gradient(90deg, #000000, #c4c4c4, #00fd94);
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -124,6 +128,23 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-slate-900 text-white antialiased text-center min-h-screen flex flex-col;
+    @apply text-white antialiased text-center min-h-screen flex flex-col;
+  }
+}
+
+@layer utilities {
+  .bg-gradient {
+    background: radial-gradient(
+        ellipse 80% 60% at 50% 0%,
+        rgba(16, 185, 129, 0.25),
+        transparent 70%
+      ),
+      #000000;
+  }
+  .text-gradient {
+    background: var(--color-textGradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
