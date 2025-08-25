@@ -2,16 +2,19 @@ import { Button } from "@/components/ui/button";
 
 const Homepage = () => {
   return (
-    <div>
-      Homepage
-      <h1>Welcome to Ambitrove</h1>
+    <div className="space-y-4">
+      <h1 className="text-4xl font-bold">Welcome to Ambitrove</h1>
       <Button
         variant={"default"}
         disabled={true}
-        className="border-2 border-cyan-500 w-25"
+        className="outline-dashed outline-1 outline-white w-fit "
       >
-        Hold
+        Page under construction
       </Button>
+
+      <div className="text-gray-500 animate-pulse ">
+        page content coming soon...
+      </div>
     </div>
   );
 };
