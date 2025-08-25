@@ -5,7 +5,11 @@ const Homepage = () => {
     <div>
       Homepage
       <h1>Welcome to Ambitrove</h1>
-      <Button variant={"default"} className="border-2 border-cyan-500 w-25">
+      <Button
+        variant={"default"}
+        disabled={true}
+        className="border-2 border-cyan-500 w-25"
+      >
         Hold
       </Button>
     </div>
