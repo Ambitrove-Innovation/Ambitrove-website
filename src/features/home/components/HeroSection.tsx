@@ -45,10 +45,6 @@ const HeroSection = () => {
       >
         <Link to="/contact">Contact Us</Link>
       </Button>
-
-      <div className="text-gray-500 animate-pulse py-16">
-        <span>page content coming soon...</span>
-      </div>
     </div>
   );
 };
