@@ -3,17 +3,20 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <header className="text-black py-6">
-      <nav className="bg-white container mx-auto flex  max-w-4xl justify-evenly items-center rounded-full p-2.5 shadow-lg border-b-2 border-green-400 shadow-teal-500/50">
+    <header className="text-black py-4 sm:py-6 m-3.5">
+      <nav className="bg-white container mx-auto flex flex-col sm:flex-row max-w-4xl justify-between sm:justify-evenly items-center gap-4 sm:gap-0 sm:rounded-full rounded-lg p-3 shadow-lg border-b-2 border-green-400 shadow-teal-500/50">
+        {/* Logo */}
         <label
           aria-label="Company logo"
           className="flex items-center gap-1.5 hover:scale-105 transition-transform duration-300 ease-in-out"
         >
-          <span className="font-bold text-2xl flex">
+          <span className="font-bold text-xl sm:text-2xl flex items-center gap-1">
             <BirdIcon /> Ambitrove
           </span>
         </label>
-        <ul className="flex justify-evenly gap-3.5 text-[1.3rem] font-semibold">
+
+        {/* Links */}
+        <ul className="flex flex-col sm:flex-row justify-center sm:justify-evenly gap-3 sm:gap-6 text-base sm:text-lg md:text-[1.3rem] font-semibold text-center">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -27,15 +30,17 @@ const Navbar = () => {
             <Link to="/services">Services</Link>
           </li>
         </ul>
-        <button className="bg-gradient outline-1 outline-cyan-300 font-medium text-white w-fit px-4 py-2 rounded-sm shadow-md shadow-black hover:scale-105 transition-transform duration-300 ease-in-out">
+
+        {/* Follow Button */}
+        <button className="bg-gradient outline-1 outline-cyan-300 font-medium text-white px-4 py-2 rounded-md shadow-md shadow-black hover:scale-105 transition-transform duration-300 ease-in-out">
           <Link
             to="https://www.linkedin.com/company/ambitrove-innovation"
             target="_blank"
             rel="noopener noreferrer"
-            className=" flex items-center gap-2"
+            className="flex items-center gap-2"
           >
             Follow us
-            <span className="text-teal-500  delay-200 h-6 hover:text-white w-6 ">
+            <span className="text-teal-500 delay-200 h-6 hover:text-white w-6">
               <LinkedinIcon />
             </span>
           </Link>
