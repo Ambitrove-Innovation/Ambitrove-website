@@ -16,7 +16,7 @@ const WhyChoose = () => {
 
   return (
     <section className=" py-16 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto grid  md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div className="space-y-6 text-left">
           <h2 className="text-3xl md:text-4xl  shadow-2xl font-extrabold text-white fade-in">
@@ -41,18 +41,18 @@ const WhyChoose = () => {
             problems with innovative solutions.
           </p>
 
-          <Button className="mt-4 px-6 py-2 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-black transition duration-300">
+          <Button className="mt-4 px-6 py-2 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-black transition duration-300 rounded-tr-lg rounded-bl-lg md:w-35">
             Learn more
           </Button>
         </div>
 
         {/* Right Image */}
         <div className="flex justify-center md:justify-end">
-          <div className="overflow-hidden rounded-[2rem] border-b-4 border-teal-500  shadow-xl shadow-black/40">
+          <div className="overflow-hidden rounded-tr-[4rem] rounded-bl-[4rem] border-b-4 border-teal-500  shadow-xl shadow-black/40">
             <img
               src="/images/board-meeting.jpg"
               alt="Team working on digital solutions"
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover rounded-tr-lg rounded-bl-lg"
             />
           </div>
         </div>
