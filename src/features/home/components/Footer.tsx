@@ -1,5 +1,3 @@
-
-
 const Footer = () => {
   return (
     <footer className=" text-gray-300 py-12 border-t border-gray-800 mt-8 pt-6 text-cente">
@@ -7,7 +5,7 @@ const Footer = () => {
         
         {/* Logo + Description */}
         <div className="mb-8 md:mb-0 md:w-1/3">
-          <h2 className="text-2xl font-bold text-white mb-2">YourCompany</h2>
+          <h2 className="text-2xl font-bold text-white mb-2">Ambitrove Innovation</h2>
           <p className="text-gray-400">
             Providing innovative solutions that empower your business to grow in the digital age.
           </p>
