@@ -1,4 +1,7 @@
 const Footer = () => {
+
+  const currentYear: number = new Date().getFullYear();
+
   return (
     <footer className=" text-gray-300 py-12 border-t border-gray-800 mt-8 pt-6 text-cente">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between">
@@ -33,7 +36,7 @@ const Footer = () => {
 
       {/* Bottom Copyright */}
       <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
-        &copy; 2025 Ambitrove-Innovation. All rights reserved.
+        &copy;{currentYear} Ambitrove-Innovation. All rights reserved.
       </div>
     </footer>
   );
