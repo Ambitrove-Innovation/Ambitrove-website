@@ -1,5 +1,90 @@
 const ServiceCardOffers = () => {
-  return null;
+  const services = [
+    {
+      title: "Software Development",
+      description: "Turn your ideas into scalable web, mobile, and desktop apps from concept to launch, tailored for your business needs."
+    },
+    {
+      title: "SaaS Product Development",
+      description: "Build and deploy powerful Software-as a Service platforms with seamless backend, frontend, and cloud integration to drive growth."
+    },
+    {
+      title: "Web3 & Emerging Tech",
+      description: "Innovate with decentralized apps, smart contracts, and blockchain solutions for the future of finance, logistics, and beyond."
+    },
+    {
+      title: "Business Consulting",
+      description: "Get expert advice on digital transformation, plus ongoing maintenance to keep your tech running smoothly and scalably."
+    }
+  ];
+
+  return (
+    <div className=" text-white px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-16 lg:px-12 lg:py-20 xl:px-16 xl:py-24 min-h-screen" id="services">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 lg:gap-12">
+          {/* Left column - Title and Services List */}
+          <div className="xl:col-span-1 mb-8 xl:mb-0">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-10 md:mb-12 leading-tight">
+              What We Offer.
+            </h2>
+            
+            <div className="space-y-4 sm:space-y-5 md:space-y-6">
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <div className="flex flex-wrap items-baseline">
+                  <span className="text-lg sm:text-xl md:text-2xl font-semibold">Custom</span>
+                  <span className="text-lg sm:text-xl md:text-2xl text-gray-300 ml-1">Software Development.</span>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <div className="flex flex-wrap items-baseline">
+                  <span className="text-lg sm:text-xl md:text-2xl font-semibold">SaaS</span>
+                  <span className="text-lg sm:text-xl md:text-2xl text-gray-300 ml-1">Product Development.</span>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <div className="flex flex-wrap items-baseline">
+                  <span className="text-lg sm:text-xl md:text-2xl font-semibold">Web3</span>
+                  <span className="text-lg sm:text-xl md:text-2xl text-gray-300 ml-1">& Emerging Tech.</span>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <div className="flex flex-wrap items-baseline">
+                  <span className="text-lg sm:text-xl md:text-2xl font-semibold">Business</span>
+                  <span className="text-lg sm:text-xl md:text-2xl text-gray-300 ml-1">Consulting & Support.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Right columns - Service Cards */}
+          <div className="xl:col-span-2">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
+              {services.map((service, index) => (
+                <div 
+                  key={index}
+                  className="bg-white bg-opacity-60 backdrop-blur-sm border border-gray-600 rounded-2xl sm:rounded-3xl p-6 sm:p-7 md:p-8 hover:bg-opacity-80 transition-all duration-300 hover:transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-2xl min-h-[200px] sm:min-h-[220px] md:min-h-[240px] flex flex-col"
+                >
+                  <h3 className="text-lg sm:text-xl md:text-xl font-bold mb-3 sm:mb-4 text-black flex-shrink-0">
+                    {service.title}
+                  </h3>
+                  <p className="text-black leading-relaxed text-sm sm:text-base flex-grow">
+                    {service.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ServiceCardOffers;
