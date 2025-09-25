@@ -15,11 +15,11 @@ const WhyChoose = () => {
   }, []);
 
   return (
-    <section className=" py-16 px-6 md:px-12">
+    <section className=" py-16 px-6 md:px-12" id="about">
       <div className="max-w-6xl mx-auto grid  md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div className="space-y-6 text-left">
-          <h2 className="text-3xl md:text-4xl  shadow-2xl font-extrabold text-white fade-in">
+          <h2 className="text-2xl md:text-4xl  shadow-2xl font-extrabold text-white fade-in">
             Why Choose{" "}
             <span className="text-white drop-shadow-lg">Ambitrove ?</span>
           </h2>
