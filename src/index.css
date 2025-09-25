@@ -88,6 +88,24 @@
   }
 }
 
+@layer components {
+  .service_card {
+    @apply flex items-start space-x-3 sm:space-x-4;
+  }
+  .card_dots {
+    @apply w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0;
+  }
+  .bold_title {
+    @apply text-lg sm:text-xl md:text-2xl font-semibold;
+  }
+  .card_title {
+    @apply text-lg sm:text-xl md:text-2xl text-gray-300 ml-1;
+  }
+  .title_wrapper {
+    @apply flex-wrap items-baseline hover:bg-gray-500 p-2 rounded-lg;
+  }
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
