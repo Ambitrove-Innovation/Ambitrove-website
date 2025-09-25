@@ -29,35 +29,31 @@ const ServiceCardOffers = () => {
             </h2>
             
             <div className="space-y-4 sm:space-y-5 md:space-y-6">
-              <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
-                <div className="flex flex-wrap items-baseline">
-                  <span className="text-lg sm:text-xl md:text-2xl font-semibold">Custom</span>
-                  <span className="text-lg sm:text-xl md:text-2xl text-gray-300 ml-1">Software Development.</span>
+              <div className="service_card">
+                <div className="title_wrapper">
+                  <span className="bold_title">Custom</span>
+                  <span className="card_title">Software Development.</span>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
-                <div className="flex flex-wrap items-baseline">
-                  <span className="text-lg sm:text-xl md:text-2xl font-semibold">SaaS</span>
-                  <span className="text-lg sm:text-xl md:text-2xl text-gray-300 ml-1">Product Development.</span>
+              <div className="service_card">
+                <div className="title_wrapper">
+                  <span className="bold_title">SaaS</span>
+                  <span className="card_title">Product Development.</span>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
-                <div className="flex flex-wrap items-baseline">
-                  <span className="text-lg sm:text-xl md:text-2xl font-semibold">Web3</span>
-                  <span className="text-lg sm:text-xl md:text-2xl text-gray-300 ml-1">& Emerging Tech.</span>
+              <div className="service_card ">
+                <div className="title_wrapper">
+                  <span className="bold_title">Web3</span>
+                  <span className="card_title">& Emerging Tech.</span>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
-                <div className="flex flex-wrap items-baseline">
-                  <span className="text-lg sm:text-xl md:text-2xl font-semibold">Business</span>
-                  <span className="text-lg sm:text-xl md:text-2xl text-gray-300 ml-1">Consulting & Support.</span>
+              <div className="service_card">
+                <div className="title_wrapper">
+                  <span className="bold_title">Business</span>
+                  <span className="card_title">Consulting & Support.</span>
                 </div>
               </div>
             </div>
