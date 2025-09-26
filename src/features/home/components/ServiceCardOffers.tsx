@@ -1,20 +1,28 @@
 const ServiceCardOffers = () => {
   const services: CompanyService[] = [
     {
+      image: "/images/pexels-harold-vasquez-853421-2653362.jpg",
       title: "Software Development",
-      description: "Turn your ideas into scalable web, mobile, and desktop apps from concept to launch, tailored for your business needs."
+      description: "Turn your ideas into scalable web, mobile, and desktop apps from concept to launch, tailored for your business needs.",
+      alt:"Code on laptop screen"
     },
     {
+      image: "/images/pexels-nappy-935977.jpg",
       title: "SaaS Product Development",
-      description: "Build and deploy powerful Software-as a Service platforms with seamless backend, frontend, and cloud integration to drive growth."
+      description: "Build and deploy powerful Software-as a Service platforms with seamless backend, frontend, and cloud integration to drive growth.",
+      alt:"Two business professionals representing SaaS product development."
     },
     {
+      image: "/images/Web3-Banking-Defined.avif",
       title: "Web3 & Emerging Tech",
-      description: "Innovate with decentralized apps, smart contracts, and blockchain solutions for the future of finance, logistics, and beyond."
+      description: "Innovate with decentralized apps, smart contracts, and blockchain solutions for the future of finance, logistics, and beyond.",
+      alt:"An abstract digital visualization of interconnected nodes and data streams, symbolizing blockchain technology, decentralized networks, and emerging tech."
     },
     {
+      image: "/images/pexels-pavel-danilyuk-7658414.jpg",
       title: "Business Consulting",
-      description: "Get expert advice on digital transformation, plus ongoing maintenance to keep your tech running smoothly and scalably."
+      description: "Get expert advice on digital transformation, plus ongoing maintenance to keep your tech running smoothly and scalably.",
+      alt:"A professional consultation taking place at a table."
     }
   ];
 
@@ -65,12 +73,13 @@ const ServiceCardOffers = () => {
               {services.map((service, index) => (
                 <div 
                   key={index}
-                  className="bg-white bg-opacity-60 backdrop-blur-sm border border-gray-600 rounded-2xl sm:rounded-3xl p-6 sm:p-7 md:p-8 hover:bg-opacity-80 transition-all duration-300 hover:transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-2xl min-h-[200px] sm:min-h-[220px] md:min-h-[240px] flex flex-col"
+                  className="bg-white bg-opacity-60 backdrop-blur-sm border border-gray-600 rounded-2xl sm:rounded-3xl hover:bg-opacity-80 transition-all duration-300 hover:transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-2xl min-h-[200px] sm:min-h-[220px] md:min-h-[240px] flex flex-col"
                 >
-                  <h3 className="text-lg sm:text-xl md:text-xl font-bold mb-3 sm:mb-4 text-black flex-shrink-0">
+                 <img className="w-fit h-fit object-contain rounded-t-2xl sm:rounded-t-3xl" loading="lazy" decoding="async" src={service.image} alt={service.alt} />
+                  <h3 className="text-lg sm:text-xl md:text-xl font-bold mb-3 sm:mb-4 text-black flex-shrink-0 px-4 pt-4">
                     {service.title}
                   </h3>
-                  <p className="text-black leading-relaxed text-sm sm:text-base flex-grow">
+                  <p className="text-black leading-relaxed text-sm sm:text-base flex-grow px-4 pb-4">
                     {service.description}
                   </p>
                 </div>
