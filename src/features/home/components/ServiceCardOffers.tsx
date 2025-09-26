@@ -24,7 +24,7 @@ const ServiceCardOffers = () => {
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 lg:gap-12">
           {/* Left column - Title and Services List */}
           <div className="xl:col-span-1 mb-8 xl:mb-0">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-10 md:mb-12 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-10 md:mb-12 md:-translate-x-4 leading-tight ">
               What We Offer.
             </h2>
             
