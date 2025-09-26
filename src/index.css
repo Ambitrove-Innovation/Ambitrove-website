@@ -99,10 +99,10 @@
     @apply text-lg sm:text-xl md:text-2xl font-semibold;
   }
   .card_title {
-    @apply text-lg sm:text-xl md:text-2xl text-gray-300 ml-1;
+    @apply text-lg sm:text-xl md:text-2xl text-gray-300 ml-2 delay-200 hover:text-green-400;
   }
   .title_wrapper {
-    @apply flex-wrap items-baseline hover:bg-gray-500 p-2 rounded-lg;
+    @apply flex-wrap items-baseline hover:bg-white hover:text-black hover:scale-110 delay-200 transform transition-all p-2 rounded-lg;
   }
 }
 
