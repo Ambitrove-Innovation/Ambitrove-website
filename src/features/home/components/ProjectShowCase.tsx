@@ -1,6 +1,45 @@
 import { Link } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const ProjectShowCase = () => {
+  useGSAP(() => {
+  // H1 from left
+  gsap.from(".showIn-h1", {
+    x: -100,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power3.out",
+  });
+
+  // H2 from bottom
+  gsap.from(".showIn-h2", {
+    y: 50,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power3.out",
+    delay: 0.2,
+  });
+
+  // Paragraph from right
+  gsap.from(".showIn-p", {
+    x: 100,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power3.out",
+    delay: 0.4,
+  });
+
+  // Image slides in from right
+  gsap.fromTo(
+  ".showIn-image",
+  { x: 100, opacity: 0 }, // start
+  { x: 0, opacity: 1,  duration: 0.5, ease: "elastic.in", delay: 0.5 } // end
+
+);
+}, []);
+
+
   return (
     <section className="bg-gradient-to-br from-green-400 via-black to-black  min-h-screen flex items-center px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
       <div className="max-w-7xl mx-auto w-full">
@@ -8,16 +47,16 @@ const ProjectShowCase = () => {
 
           {/* Left Content */}
           
-          <div className="lg:col-span-7 xl:col-span-6 text-white space-y-6 sm:space-y-8 md:space-y-10 order-2 lg:order-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-bold leading-[1.1] sm:leading-[1.2]">
+          <div className="lg:col-span-7 xl:col-span-6 text-white space-y-6 sm:space-y-8 md:space-y-6 order-2 lg:order-1 showIn-text">
+            <h1 className="showIn-h1 text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-bold leading-[1.1] sm:leading-[1.2]">
               Building fully functional modern software applications.
             </h1>
 
             <div className="space-y-4 sm:space-y-5 md:space-y-2">
-              <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-xl xl:text-2xl font-semibold  ">
+              <h2 className="showIn-h2 text-xl sm:text-2xl md:text-2xl lg:text-xl xl:text-2xl font-semibold  ">
                 South African Excellence:
               </h2>
-              <p className="text-base sm:text-lg md:text-xl lg:text-base xl:text-lg 2xl:text-xl text-gray-300 leading-relaxed max-w-xl xl:max-w-2xl">
+              <p className="showIn-p text-base sm:text-lg md:text-xl lg:text-base xl:text-lg 2xl:text-xl text-gray-300 leading-relaxed max-w-xl xl:max-w-2xl">
                 Leveraging our local talent pool, we're building the future of
                 tech in Africa while serving global clients with quality and
                 collaboration.
@@ -41,7 +80,7 @@ const ProjectShowCase = () => {
                 <img
                   src="/images/Project showcase.webp"
                   alt="Resume Review Application Interface"
-                  className="relative  w-4xl rounded-xl transform group-hover:scale-[1.02] transition-all duration-500 object-contain"
+                  className="relative  w-4xl rounded-xl transform group-hover:scale-[1.02] transition-all duration-500 object-contain showIn-image"
                   loading="lazy"
                 />
               </div>
