@@ -24,10 +24,10 @@ const Navbar = () => {
             <Link to="/about">About us</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <a href="#contact-us">Contact</a>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+            <a href="#services">Services</a>
           </li>
         </ul>
 
@@ -40,7 +40,7 @@ const Navbar = () => {
             className="flex items-center gap-2"
           >
             Follow us
-            <span className="text-teal-500 delay-200 h-6 hover:text-white w-6">
+            <span className="text-teal-500 delay-200 h-6 hover:text-white w-6 ">
               <LinkedinIcon />
             </span>
           </Link>
