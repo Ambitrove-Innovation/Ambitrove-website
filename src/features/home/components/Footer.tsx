@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
 
         {/* Contact Info + Socials */}
-        <div className="md:w-1/3 ">
+        <div className="md:w-1/3 " id="contact-us">
           <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
           <p>Email: <a href="mailto:info@ambitrove.com" className="hover:text-white transition">info@ambitrove.com</a></p>
           <p>Phone: <a href="tel:+27761972861" className="hover:text-white transition">+27 761972861</a></p>
