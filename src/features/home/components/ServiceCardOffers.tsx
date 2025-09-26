@@ -81,7 +81,7 @@ const ServiceCardOffers = () => {
                   key={index}
                   className="bg-white bg-opacity-60 backdrop-blur-sm border border-gray-600 rounded-2xl sm:rounded-3xl hover:bg-opacity-80 transition-all duration-300 hover:transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-2xl min-h-[200px] sm:min-h-[220px] md:min-h-[240px] flex flex-col"
                 >
-                <Badge className="translate-x-75 translate-y-3.5 md:translate-x-68 lg:md:translate-x-80 -rotate-4 z-10 outline-green-400 outline-1 text-green-400">{service.badgeTitle}</Badge>
+                <Badge className="translate-x-68 sm:translate-x-70 translate-y-3.5 md:translate-x-68 lg:md:translate-x-80 -rotate-4 z-10 outline-green-400 outline-1 text-green-400 ">{service.badgeTitle}</Badge>
                   
                  <img className="w-fit h-fit object-contain rounded-t-2xl -translate-y-6 sm:rounded-t-3xl" loading="lazy" decoding="async" src={service.image} alt={service.alt} /> 
 
