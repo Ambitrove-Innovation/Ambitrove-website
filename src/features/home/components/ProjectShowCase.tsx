@@ -1,43 +1,43 @@
 import { Link } from "react-router-dom";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+// import { useGSAP } from "@gsap/react";
+// import gsap from "gsap";
 
 const ProjectShowCase = () => {
-  useGSAP(() => {
-  // H1 from left
-  gsap.from(".showIn-h1", {
-    x: -100,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power3.out",
-  });
+//   useGSAP(() => {
+//   // H1 from left
+//   gsap.from(".showIn-h1", {
+//     x: -100,
+//     opacity: 0,
+//     duration: 1.2,
+//     ease: "power3.out",
+//   });
 
-  // H2 from bottom
-  gsap.from(".showIn-h2", {
-    y: 50,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power3.out",
-    delay: 0.2,
-  });
+//   // H2 from bottom
+//   gsap.from(".showIn-h2", {
+//     y: 50,
+//     opacity: 0,
+//     duration: 1.2,
+//     ease: "power3.out",
+//     delay: 0.2,
+//   });
 
-  // Paragraph from right
-  gsap.from(".showIn-p", {
-    x: 100,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power3.out",
-    delay: 0.4,
-  });
+//   // Paragraph from right
+//   gsap.from(".showIn-p", {
+//     x: 100,
+//     opacity: 0,
+//     duration: 1.2,
+//     ease: "power3.out",
+//     delay: 0.4,
+//   });
 
-  // Image slides in from right
-  gsap.fromTo(
-  ".showIn-image",
-  { x: 100, opacity: 0 }, // start
-  { x: 0, opacity: 1,  duration: 0.5, ease: "elastic.in", delay: 0.5 } // end
+//   // Image slides in from right
+//   gsap.fromTo(
+//   ".showIn-image",
+//   { x: 100, opacity: 0 }, // start
+//   { x: 0, opacity: 1, duration: 1.5, ease: "power3.out", delay: 0.5 } // end
 
-);
-}, []);
+// );
+// }, []);
 
 
   return (
