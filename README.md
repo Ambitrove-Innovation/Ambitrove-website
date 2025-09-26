@@ -57,29 +57,34 @@ The company website will serve as:
 To keep our workflow clean and consistent, we follow these branch naming conventions:
 
 ## Main Branch
-- **`main`** → The production-ready branch. Always stable.  
-  - Only merge tested and reviewed code here.  
-  - Deployments are triggered from this branch.  
+
+- **`main`** → The production-ready branch. Always stable.
+  - Only merge tested and reviewed code here.
+  - Deployments are triggered from this branch.
 
 ## Working Branches
+
 - **`fix/...`** → Fixes for specific issues.  
-  Example: `fix/layout`, `fix/navbar`.  
+  Example: `fix/layout`, `fix/navbar`.
 
 - **`hotFix`** → Urgent fixes that must go directly into production.  
-  Use only when critical.  
+  Use only when critical.
 
 - **`feature/...`** → New features or major updates.  
-  Example: `feature/contact-form`.  
+  Example: `feature/contact-form`.
 
 - **`code/fix`** → General branch for ongoing code updates, refactors, or maintenance.  
-  Ideal for small improvements not tied to a feature.  
+  Ideal for small improvements not tied to a feature.
 
 ## Team Guidelines
-- Always branch from `main` before starting new work.  
-- Push new branches to the remote so the team can see them:  
+
+- Always branch from `main` before starting new work.
+- Push new branches to the remote so the team can see them:
+
   ```bash
   git push -u origin branch-name
-  
+
+  ```
 
 ---
 
@@ -115,26 +120,31 @@ src/
  │    │    ├── ui/
  │    │    │    ├── Navbar.tsx
  │    │    ├── Navbar.tsx
- │    ├── home/          # Homepage
- │    │    ├── index.tsx
- │    │    ├── components/
- │    │    │    ├── Navbar.tsx
- │    │    │    ├── Sidebar.tsx
- │    │    │    └── HeroSection.tsx
- │    │    └── hooks/
  │    ├── about/         # About page
  │    │    └── index.tsx
  │    └── contact/       # Contact page
  │         └── index.tsx
- ├── shared/             # Reusable across features
+ │    ├── home/          # Homepage
+ │    │    ├── components/
+ │    │    │    ├── Footer.tsx
+ │    │    │    ├── HeroSection.tsx
+ │    │    │    └── ProjectShowCase.tsx
+ │    │    │    ├── ServiceCardOffers.tsx
+ │    │    │    ├── Whychoose.tsx
+ │    │    ├── homePage.tsx
+ │    │    └── hooks/
+ ├── lib/             # Reusable across features
  │    ├── components/
- │    │    └── Button.tsx
- │    └── utils/
+ │    │    └── utils.ts
  ├── types/
  │    └── index.d.ts
- ├── styles/
- │    └── index.css
- └── index.tsx
+ ├── App.tsx
+ ├── index.css
+ ├── main.tsx
+ ├── routes.tsx
+ ├── vite-env.d.ts
+ ├── gitignore.tsx
+
 
 🌍 Deployment
 We recommend deploying via:
