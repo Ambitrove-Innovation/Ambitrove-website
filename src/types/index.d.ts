@@ -3,4 +3,5 @@ interface CompanyService {
     title: string;
     description: string;
     alt?:string
+    badgeTitle?:string
 }
