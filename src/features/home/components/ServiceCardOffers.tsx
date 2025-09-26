@@ -1,5 +1,5 @@
 const ServiceCardOffers = () => {
-  const services = [
+  const services: CompanyService[] = [
     {
       title: "Software Development",
       description: "Turn your ideas into scalable web, mobile, and desktop apps from concept to launch, tailored for your business needs."

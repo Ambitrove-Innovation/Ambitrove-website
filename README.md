@@ -52,6 +52,35 @@ The company website will serve as:
    - Contact forms and call-to-actions to convert visitors into leads.
    - Integrated with company LinkedIn, GitHub, and social media.
 
+## 🌿Branching Strategy
+
+To keep our workflow clean and consistent, we follow these branch naming conventions:
+
+## Main Branch
+- **`main`** → The production-ready branch. Always stable.  
+  - Only merge tested and reviewed code here.  
+  - Deployments are triggered from this branch.  
+
+## Working Branches
+- **`fix/...`** → Fixes for specific issues.  
+  Example: `fix/layout`, `fix/navbar`.  
+
+- **`hotFix`** → Urgent fixes that must go directly into production.  
+  Use only when critical.  
+
+- **`feature/...`** → New features or major updates.  
+  Example: `feature/contact-form`.  
+
+- **`code/fix`** → General branch for ongoing code updates, refactors, or maintenance.  
+  Ideal for small improvements not tied to a feature.  
+
+## Team Guidelines
+- Always branch from `main` before starting new work.  
+- Push new branches to the remote so the team can see them:  
+  ```bash
+  git push -u origin branch-name
+  
+
 ---
 
 ## 🛠 Development Setup
