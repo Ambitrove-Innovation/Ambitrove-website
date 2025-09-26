@@ -112,18 +112,15 @@ npm run dev
 We follow a clean and scalable project structure:
 
 src/
- ├── app/                # Root app setup (routing, providers, etc.)
- │    ├── App.tsx
- │    └── routes.tsx
- ├── features/
  │    ├── components/    #Shared components.
  │    │    ├── ui/
  │    │    │    ├── Navbar.tsx
- │    │    ├── Navbar.tsx
+ │    │    ├── Navbar.tsx              # Root app setup (routing, providers, etc.
+ ├── features/
  │    ├── about/         # About page
- │    │    └── index.tsx
+ │    │    └── aboutPage.tsx
  │    └── contact/       # Contact page
- │         └── index.tsx
+ │         └── contactPage.tsx
  │    ├── home/          # Homepage
  │    │    ├── components/
  │    │    │    ├── Footer.tsx
@@ -132,7 +129,6 @@ src/
  │    │    │    ├── ServiceCardOffers.tsx
  │    │    │    ├── Whychoose.tsx
  │    │    ├── homePage.tsx
- │    │    └── hooks/
  ├── lib/             # Reusable across features
  │    ├── components/
  │    │    └── utils.ts
