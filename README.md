@@ -108,10 +108,9 @@ src/
  └── index.tsx
 
 🌍 Deployment
-We recommend deploying via:
 
 Netlify → Quick deployment & free tier for prototypes.
-Vercel → Ideal for production React/Next.js apps.
+
 
 Each push to the main branch will trigger an automated build & deployment.
 
