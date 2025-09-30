@@ -45,7 +45,7 @@ const LeadershipTeam = () => {
       linkedInUrl: "https://www.linkedin.com/in/dean-meyer-385342247/"
     },
     {
-      image: "/images/Team/Emmanuel.jpg",
+      image: "/images/Team/Emmanuel-Ambitrove.jpeg.jpg",
       alt: "Emmanuel Bediako CIO and Marketing lead",
       name: "Emmanuel Bediako",
       position: "CIO & Marketing",
