@@ -34,7 +34,7 @@ const AboutAmbitrove = () => {
           </p>
 
           <p className="text-gray-300 leading-relaxed">
-            Founded by Kamogelo Enoch Mogasoa, alongside Co-Founder 
+            Founded by Kamogelo Mogasoa, alongside Co-Founder 
             Dean Meyer and a team of strategic shareholders, Ambitrove 
             brings together passionate professionals in software engineering, 
             digital innovation, and business solutions. 
