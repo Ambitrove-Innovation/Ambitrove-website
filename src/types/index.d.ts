@@ -5,3 +5,11 @@ interface CompanyService {
     alt?:string
     badgeTitle?:string
 }
+
+interface LeadershipCard {
+    image: string;
+    alt: string;
+    name: string;
+    position: string;
+    linkedInUrl: string;
+}
