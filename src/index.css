@@ -104,6 +104,9 @@
   .title_wrapper {
     @apply flex-wrap items-baseline hover:bg-white hover:text-black hover:scale-110 delay-200 transform transition-all p-2 rounded-lg;
   }
+  .gradient-Green-bg {
+    @apply bg-gradient-to-br from-green-400 via-black to-black  min-h-screen;
+  }
 }
 
 :root {
