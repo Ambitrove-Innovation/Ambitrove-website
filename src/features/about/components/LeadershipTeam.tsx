@@ -56,11 +56,6 @@ const LeadershipTeam = () => {
     }
   ];
 
-// const checkLinkedInUrl = (url: string) => {
-//   type LinkedInUrl = `${string} ` | "N/A";
-//   if(url == "N/A") return "N/A";
-//   return url as LinkedInUrl;
-// }
 
   return (
     <section className="py-16 px-6 md:px-12 gradient-Green-bg" id="ourJourney">

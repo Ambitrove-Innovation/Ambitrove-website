@@ -2,7 +2,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const OurJourney = () => {
-  // GSAP animation can be added here if needed
   useGSAP(() => {
     gsap.from(".fade-in", {
       opacity: 0,
