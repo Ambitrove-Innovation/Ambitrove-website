@@ -82,7 +82,8 @@ const LeadershipTeam = () => {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="bg-black hover:saturate-150 rounded-3xl transition-all hover:scale-110 delay-300  pb-5 border-1 border-solid border-gray-500 flex flex-col items-center text-center hover:transform duration-300 pop-up"
+                className="bg-black hover:saturate-150 active:saturate-150 rounded-3xl transition-all hover:scale-110 active:scale-105 delay-300 pb-5 border border-gray-500 flex flex-col items-center text-center duration-300 pop-up"
+
               >
                 <div className="w-fit h-full rounded overflow-hidden mb-4">
                   <img className="w-full h-full rounded-t-3xl object-cover" src={member.image} alt={member.alt} loading="lazy"/>
