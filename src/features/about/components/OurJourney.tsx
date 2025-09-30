@@ -1,5 +1,14 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import {
+  Timeline,
+  TimelineDate,
+  TimelineHeader,
+  TimelineIndicator,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineTitle,
+} from "@/components/ui/timeline"
 
 const OurJourney = () => {
 useGSAP(() => {
@@ -14,81 +23,88 @@ useGSAP(() => {
 }, []);
 
 
+const items = [
+  {
+     id: 1,
+    date: "July 2025",
+    title: "Ambitrove company initial creation",
+    description: "Writing company documents & legal structure."
+  },
+  {
+    id: 2,
+    date: "Early August 2025",
+    title: "Building core team and foundational projects",
+    description: "Launched first Full-stack project."
+  },
+  {
+  id: 3,
+    date: "Mid August 2025",
+    title: "Designed Company's official website",
+    description: "Created a modern and user-friendly website to showcase our services."
+  },
+  {
+    id: 4,
+    date: "Future",
+    title: "Next Phase",
+    description: "Expanding operations and reaching new markets",
+    isFuture: true
+  },
+  {
+    id: 5,
+    date: "May 3, 2024",
+    title: "User Training",
+  },
+  {
+    id: 6,
+    date: "May 17, 2024",
+    title: "Project Handover",
+  },
+]
+
+
   return (
     <section className="py-16 px-6 md:px-12" id="ourJourney">
       <div className="bg-gradient-radial from-green-400 text-white min-h-screen p-8 md:p-16">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16">
           
-          {/*<!-- Left Column - Timeline -->*/}
-          <div className="pop-in ">
-            {/*<!-- Header -->*/}
+          {/* Left Column - Timeline */}
+          <div className="pop-in">
+            {/* Header */}
             <div className="flex items-center gap-3 mb-12">
               <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
               </div>
               <h2 className="text-4xl font-bold">Our Journey</h2>
             </div>
 
-            {/*<!-- Timeline -->*/}
-            <div className="relative">
-              {/*<!-- Vertical Line -->*/}
-              <div className="absolute left-0 top-0 bottom-20 w-0.5 bg-gray-700 ml-4"></div>
-
-              {/*<!-- Timeline Item 1 -->*/}
-              <div className="relative flex gap-6 mb-16">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 rounded-full border-4 border-gray-900 bg-white"></div>
-                </div>
-                <div className="pt-1">
-                  <h3 className="text-xl font-semibold mb-1">July 2025</h3>
-                  <p className="text-gray-400 mb-3">Ambitrove company initial creation.</p>
-                  <p className="text-sm text-gray-400">
-                    Writing company<br />documents & legal<br />structure.
-                  </p>
-                </div>
-              </div>
-
-              {/*<!-- Timeline Item 2 -->*/}
-              <div className="relative flex gap-6 mb-16">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 rounded-full border-4 border-gray-900 bg-white"></div>
-                </div>
-                <div className="pt-1">
-                  <h3 className="text-xl font-semibold mb-1">Early August 2025</h3>
-                  <p className="text-gray-400 mb-3">Building core team and foundational projects.</p>
-                  <p className="text-sm text-gray-400">
-                    Launched first<br/>Full-stack project.
-                  </p>
-                </div>
-              </div>
-
-              {/*<!-- Timeline Item 3 -->*/}
-              <div className="relative flex gap-6 mb-16">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 rounded-full border-4 border-gray-900 bg-white"></div>
-                </div>
-                <div className="pt-1">
-                  <h3 className="text-xl font-semibold mb-1">Mid August 2025</h3>
-                  <p className="text-gray-400">Designed Company's official website.</p>
-                </div>
-              </div>
-
-              {/*<!-- Timeline Item 4 (Future) -->*/}
-              <div className="relative flex gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 rounded-full border-4 border-gray-900 bg-gray-600"></div>
-                </div>
-              </div>
-            </div>
+{/* Timeline */}
+  <Timeline className="pop-in" defaultValue={3}>
+      {items.map((item) => (
+        <TimelineItem
+          key={item.id}
+          step={item.id}
+          className="w-[calc(50%-1.5rem)] odd:ms-auto even:text-right even:group-data-[orientation=vertical]/timeline:ms-0 even:group-data-[orientation=vertical]/timeline:me-8 even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-indicator]]:-right-6 even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-indicator]]:left-auto even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-indicator]]:translate-x-1/2 even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-separator]]:-right-6 even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-separator]]:left-auto even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-separator]]:translate-x-1/2"
+        >
+          <TimelineHeader>
+            <TimelineSeparator />
+            <TimelineDate>{item.date}</TimelineDate>
+            <TimelineTitle>{item.title}</TimelineTitle>
+            <TimelineIndicator />
+          </TimelineHeader>
+        </TimelineItem>
+      ))}
+    </Timeline>
+  
+     
           </div>
 
-          {/*<!-- Right Column - Mission & Vision -->*/}
+          {/* Right Column - Mission & Vision */}
           <div className="space-y-8 fade-in">
-            {/*<!-- Mission Section -->*/}
-            <div>
+            {/* Mission Section */}
+            <div className="text-left">
               <h2 className="text-4xl font-bold mb-6">Our Mission.</h2>
               <p className="text-gray-300 leading-relaxed">
                 To empower businesses and entrepreneurs by delivering innovative digital products, 
@@ -98,8 +114,8 @@ useGSAP(() => {
               </p>
             </div>
 
-            {/*<!-- Vision Section -->*/}
-            <div>
+            {/* Vision Section */}
+            <div className="text-left">
               <h2 className="text-4xl font-bold mb-6">Our Vision.</h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
@@ -125,7 +141,8 @@ useGSAP(() => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
+
 
 export default OurJourney;
