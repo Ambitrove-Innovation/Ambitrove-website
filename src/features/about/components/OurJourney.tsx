@@ -2,15 +2,17 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const OurJourney = () => {
-  useGSAP(() => {
-    gsap.from(".fade-in", {
-      opacity: 0,
-      y: 70,
-      stagger: 0.3,
-      duration: 1.2,
-      ease: "power3.out",
-    });
-  }, []);
+useGSAP(() => {
+  gsap.from(".pop-in", {
+    opacity: 0,      // start invisible
+    y: 30,           // start slightly below
+    scale: 0.95,     // start a bit smaller
+    duration: 0.8,   // animation duration
+    ease: "back.out(1.7)", // bouncy pop effect
+    stagger: 0.2     // stagger multiple elements
+  });
+}, []);
+
 
   return (
     <section className="py-16 px-6 md:px-12" id="ourJourney">
@@ -18,7 +20,7 @@ const OurJourney = () => {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16">
           
           {/*<!-- Left Column - Timeline -->*/}
-          <div>
+          <div className="pop-in ">
             {/*<!-- Header -->*/}
             <div className="flex items-center gap-3 mb-12">
               <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center">
@@ -84,7 +86,7 @@ const OurJourney = () => {
           </div>
 
           {/*<!-- Right Column - Mission & Vision -->*/}
-          <div className="space-y-8">
+          <div className="space-y-8 fade-in">
             {/*<!-- Mission Section -->*/}
             <div>
               <h2 className="text-4xl font-bold mb-6">Our Mission.</h2>

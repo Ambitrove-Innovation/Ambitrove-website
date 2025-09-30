@@ -13,13 +13,17 @@ interface LeadershipCard {
 const LeadershipTeam = () => {
   useGSAP(() => {
   gsap.fromTo(
-  "pop-up",{
+  ".slide-right",
+  {
     opacity: 0,
-    y: 20
+    x: 100,
   },
   {
-    opacity: 1, 
-    y: 0,
+    opacity: 1,
+    x: 0,
+    duration: 0.8,
+    ease: "power3.out",
+    stagger: 0.2,
   }
 );
 
@@ -63,7 +67,7 @@ const LeadershipTeam = () => {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center pop-up">
           
           {/* Left Column - Text Content */}
-          <div className="space-y-6 text-left">
+          <div className="space-y-6 text-left fade-in">
             <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold">Meet Our Leadership Team.</h1>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
@@ -78,7 +82,7 @@ const LeadershipTeam = () => {
           </div>
 
           {/* Right Column - Team Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-12 slide-right">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
@@ -86,8 +90,9 @@ const LeadershipTeam = () => {
 
               >
                 <div className="w-fit h-full rounded overflow-hidden mb-4">
-                  <img className="w-full h-full rounded-t-3xl object-cover" src={member.image} alt={member.alt} loading="lazy"/>
+                  <img className="w-full h-full rounded-t-3xl object-cover fade-in hover:animate-pulse" src={member.image} alt={member.alt} loading="lazy"/>
                 </div>
+                <div className="slide-right">
                 <h3 className="text-lg font-semibold mb-1 flex items-center justify-center">{member.name} <span className="ml-1 text-green-500"><VerifiedIcon size={16} /></span></h3>
                 <p className="text-sm text-gray-400">{member.position}</p>
                 <a
@@ -97,8 +102,9 @@ const LeadershipTeam = () => {
                   className="mt-3 inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   <Linkedin className="w-5 h-5" />
-                  <span className="text-sm font-medium">LinkedIn</span>
+                  <span className="text-sm font-medium fade-in">LinkedIn</span>
                 </a> 
+                </div>
               </div>
             ))}
           </div>
