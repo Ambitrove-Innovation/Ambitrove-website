@@ -3,8 +3,8 @@ import { Button } from "./components/ui/button";
 import TimelineComponent from "./TimelineComponent";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import ParticleButton from "./components/kokonutui/particle-button";
-import BentoGrid from "./components/kokonutui/bento-grid";
+
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,10 +35,10 @@ function App() {
           count is {count}
         </Button>
 
-        <ParticleButton className="bg-white text-black">Click</ParticleButton>
+       
       </div>
       <TimelineComponent />
-      <BentoGrid />
+    
     </>
   );
 }
