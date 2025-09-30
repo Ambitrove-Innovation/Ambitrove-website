@@ -27,21 +27,21 @@ const LeadershipTeam = () => {
       alt: "Kamogelo Mogasoa Founder of Ambitrove",
       name: "Kamogelo Mogasoa",
       position: "Founder & CEO",
-      linkedInUrl: "https://www.linkedin.com/in/kamogelo-mogasoa-5b4b3b1b4/"
+      linkedInUrl: "https://www.linkedin.com/in/kamogelo-mogasoa-5021a52b1/"
     },
     {
       image: "/images/Team/Dean.png",
       alt: "Dean Meyer Co-founder",
       name: "Dean Meyer",
       position: "Co-Founder & CTO",
-      linkedInUrl: "https://www.linkedin.com/in/dean-meyer-5b4b3b1b4/"
+      linkedInUrl: "https://www.linkedin.com/in/dean-meyer-385342247/"
     },
     {
       image: "/images/Team/Emmanuel.jpg",
       alt: "Emmanuel Bediako CIO and Marketing lead",
       name: "Emmanuel Bediako",
       position: "CIO & Marketing",
-      linkedInUrl: "https://www.linkedin.com/in/emmanuel-bediako-5b4b3b1b4/" 
+      linkedInUrl: "https://www.linkedin.com/in/emmanuel-bediako-1766b4305/" 
     },
     {
       image: "/images/Team/Phemelo.jpg",
@@ -80,7 +80,7 @@ const LeadershipTeam = () => {
                 className="bg-gray-800/40 backdrop-blur-sm rounded-3xl transition-all hover:scale-110 delay-300  pb-5 border-2 border-dotted border-gray-600 flex flex-col items-center text-center hover:transform duration-300 fade-in"
               >
                 <div className="w-fit h-full rounded overflow-hidden mb-4">
-                  <img className="w-full h-full rounded-t-3xl object-cover" src={member.image} alt={member.alt} />
+                  <img className="w-full h-full rounded-t-3xl object-cover" src={member.image} alt={member.alt} loading="lazy"/>
                 </div>
                 <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
                 <p className="text-sm text-gray-400">{member.position}</p>
@@ -92,7 +92,7 @@ const LeadershipTeam = () => {
                 >
                   <Linkedin className="w-5 h-5" />
                   <span className="text-sm font-medium">LinkedIn</span>
-                </a>
+                </a> 
               </div>
             ))}
           </div>
