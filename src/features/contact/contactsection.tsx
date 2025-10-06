@@ -42,7 +42,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-neutral-950 text-gray-300 py-20 px-6" id="contact">
+    <section className=" text-gray-300 py-20 px-6" id="contact">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
@@ -114,7 +114,7 @@ const ContactSection = () => {
             </div>
 
             {/* Business Hours */}
-            <div className="bg-neutral-900 p-6 rounded-lg border border-neutral-800">
+            <div className="bg-gradient p-6 rounded-lg border border-neutral-800">
               <h4 className="text-white font-semibold mb-4">Business Hours</h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
@@ -154,6 +154,7 @@ const ContactSection = () => {
                     Full Name *
                   </div>
                   <input
+                    required={true}
                     type="text"
                     name="name"
                     value={formData.name}
@@ -168,6 +169,7 @@ const ContactSection = () => {
                     Email Address *
                   </div>
                   <input
+                    required={true}
                     type="email"
                     name="email"
                     value={formData.email}
@@ -182,6 +184,7 @@ const ContactSection = () => {
                     Phone Number
                   </div>
                   <input
+                    required={true}
                     type="tel"
                     name="phone"
                     value={formData.phone}
@@ -196,6 +199,7 @@ const ContactSection = () => {
                     Subject *
                   </div>
                   <input
+                    required={true}
                     type="text"
                     name="subject"
                     value={formData.subject}
