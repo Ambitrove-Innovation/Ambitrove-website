@@ -26,7 +26,8 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
