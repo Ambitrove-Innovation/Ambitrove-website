@@ -26,7 +26,8 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -41,7 +42,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-neutral-950 text-gray-300 py-20 px-6" id="contact">
+    <section className=" text-gray-300 py-20 px-6" id="contact">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
