@@ -40,7 +40,7 @@ const HeroSection = () => {
       </div>
       <Button
         variant={"default"}
-        disabled={true}
+        disabled={false}
         className="outline-solid outline-1 bg-transparent outline-gray-500 px-4 py-2 text-sm sm:text-base md:text-lg"
       >
         <Link to="/contact">Contact Us</Link>
