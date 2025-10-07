@@ -74,7 +74,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu - Slides down when open */}
+
         {isMenuOpen && (
           <div className="md:hidden mt-4 pt-4 border-t border-gray-200">
             <ul className="flex flex-col gap-4 text-lg font-semibold">
