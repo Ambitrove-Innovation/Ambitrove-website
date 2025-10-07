@@ -12,9 +12,9 @@ const Navbar = () => {
   return (
     <header className="text-black py-4 sm:py-6 m-3.5">
       <nav className="bg-white container mx-auto max-w-4xl rounded-lg sm:rounded-full p-3 shadow-lg border-b-2 border-green-400 shadow-teal-500/50">
-        {/* Desktop & Mobile Header */}
+        
         <div className="flex justify-between items-center">
-          {/* Logo */}
+        
           <Link
             to="/"
             aria-label="Company logo"
