@@ -13,3 +13,4 @@ interface LeadershipCard {
     position: string;
     linkedInUrl: string;
 }
+
