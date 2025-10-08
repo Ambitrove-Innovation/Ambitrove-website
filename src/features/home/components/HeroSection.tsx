@@ -41,7 +41,8 @@ const HeroSection = () => {
       <Button
         variant={"default"}
         disabled={false}
-        className="outline-solid outline-1 bg-transparent outline-gray-500 px-4 py-2 text-sm sm:text-base md:text-lg"
+        className="outline-solid outline-1 outline-gray-500 text-sm sm:text-base md:text-lg font-semibold
+        mt-4 px-6 py-2 bg-transparent border border-white text-white hover:bg-white hover:text-black transition duration-300 md:w-35"
       >
         <Link to="/contact">Contact Us</Link>
       </Button>
