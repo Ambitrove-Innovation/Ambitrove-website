@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, LoaderCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 interface FormData {
   name: string;
@@ -18,6 +19,7 @@ const ContactSection = () => {
     message: ''
   });
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -26,9 +28,43 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    setLoading(true);
+
+    const serviceID = import.meta.env.VITE_SERVICE_ID!;
+    const templateID = import.meta.env.VITE_TEMPLATE_ID!;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY!;
+
+    try {
+
+      await emailjs.send(
+        //"service_k18htjq",
+        serviceID,
+        templateID,
+        {
+          subject: formData.subject,
+          name: formData.name,
+          email: formData.email,
+          number: formData.phone,
+          message: formData.message,
+        },
+        {
+          publicKey: publicKey,
+        },
+      );
+
+      setSubmitted(true);
+      setLoading(false);
+
+    } catch (err) {
+
+      alert("Error: " + JSON.stringify(err));
+      setSubmitted(false);
+
+    }
+
     setTimeout(() => {
       setSubmitted(false);
       setFormData({
@@ -38,7 +74,7 @@ const ContactSection = () => {
         subject: '',
         message: ''
       });
-    }, 3000);
+    }, 1500);
   };
 
   return (
@@ -227,8 +263,20 @@ const ContactSection = () => {
                   onClick={handleSubmit}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center space-x-2 cursor-pointer"
                 >
-                  <span>Send Message</span>
-                  <Send size={18} />
+                  {loading ?
+                  (
+                    <span>
+                      <LoaderCircle className='animate-spin' size={18}/>
+                    </span> 
+                  )
+                  :
+                  (
+                  <div className='flex flex-row'>
+                    <span>Send Message</span>
+                    <Send size={18} />
+                  </div>
+                )
+                }
                 </button>
               </div>
             )}
