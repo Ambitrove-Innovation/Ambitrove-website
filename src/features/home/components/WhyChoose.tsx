@@ -4,15 +4,21 @@ import gsap from "gsap";
 
 const WhyChoose = () => {
   // GSAP animation can be added here if needed
-  useGSAP(() => {
-    gsap.from(".fade-in", {
-      opacity: 0,
-      y: 70,
-      stagger: 0.3,
-      duration: 1.2,
-      ease: "power3.out",
-    });
-  }, []);
+  
+useGSAP(() => {
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (prefersReducedMotion) return; // Skip animations if user disabled them
+
+  gsap.from(".fade-in", {
+    opacity: 0,
+    y: 70,
+    stagger: 0.3,
+    duration: 1.2,
+    ease: "power3.out",
+  });
+}, []);
+
 
   return (
     <section className=" py-16 px-6 md:px-12" id="about">
@@ -41,9 +47,10 @@ const WhyChoose = () => {
             problems with innovative solutions.
           </p>
 
-          <Button className="mt-4 px-6 py-2 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-black transition duration-300 rounded-tr-lg rounded-bl-lg md:w-35">
-            Learn more
-          </Button>
+        <Button asChild className="mt-4 px-6 py-2 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-black transition duration-300 rounded-tr-lg rounded-bl-lg md:w-35">
+          <a href="#learn" aria-label="Learn more about Ambitrove Innovation">Learn more</a>
+        </Button>
+
         </div>
 
         {/* Right Image */}
