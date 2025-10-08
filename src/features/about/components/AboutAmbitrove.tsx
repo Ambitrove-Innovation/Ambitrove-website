@@ -3,24 +3,29 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const AboutAmbitrove = () => {
+
   useGSAP(() => {
-    gsap.from(".fade-in", {
-      opacity: 0,
-      y: 70,
-      stagger: 0.3,
-      duration: 1.2,
-      ease: "power3.out",
-    });
-  }, []);
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (prefersReducedMotion) return; // Skip animations if user disabled them
+
+  gsap.from(".fade-in", {
+    opacity: 0,
+    y: 70,
+    stagger: 0.3,
+    duration: 1.2,
+    ease: "power3.out",
+  });
+}, []);
+
 
   return (
-    <section className="fade-in py-16 px-6 md:px-12" id="about">
-      <div className="max-w-6xl mx-auto grid  md:grid-cols-2 gap-12 items-center">
+    <section className="fade-in py-16 px-6 md:px-12 scroll-mt-24" id="about">
+      <div className="max-w-6xl mx-auto grid  md:grid-cols-2 gap-12 items-center" id="learn">
         {/* Left Content */}
         <div className="space-y-6 text-left">
             <h2 className="text-2xl md:text-4xl shadow-2xl font-extrabold text-white">
-                About{" "}
-                <span className="text-white drop-shadow-lg">Ambitrove</span>
+                <span className="text-white drop-shadow-lg">Ambitrove Innovation</span>
             </h2>
 
           <p className="text-xl md:text-2xl font-medium text-white leading-relaxed">
@@ -46,7 +51,7 @@ const AboutAmbitrove = () => {
           </p>
 
           <Button className="mt-4 px-6 py-2 rounded bg-transparent border border-white text-white hover:bg-white hover:text-black transition duration-300 md:w-35">
-            Meet the Team
+            <a href="#leadership_team">Meet the Team</a>
           </Button>
         </div>
 
