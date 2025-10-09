@@ -3,7 +3,7 @@ import Footer from "../../components/Footer";
 import LeadershipTeam from "./components/LeadershipTeam";
 import OurJourney from "./components/OurJourney";
 
-const AboutUs = () => {
+const AboutPage = () => {
   return (
     <>
       {/* 🧠 Page Metadata */}
@@ -34,4 +34,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutPage;

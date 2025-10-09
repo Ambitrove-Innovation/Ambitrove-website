@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./features/home/homePage";
-import AboutUs from "./features/about/aboutUs";
-import ContactSection from "./features/contact/contactsection";
+import AboutPage from "./features/about/aboutpage";
+import ContactPage from "./features/contact/contactpage";
 import Navbar from "./components/Navbar";
 import PageErrorRedirect from "./features/pageNotFound/PageErrorRedirect";
 
@@ -11,8 +11,8 @@ const Routespath = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<ContactSection />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<PageErrorRedirect />} />
       </Routes>
     </Router>
