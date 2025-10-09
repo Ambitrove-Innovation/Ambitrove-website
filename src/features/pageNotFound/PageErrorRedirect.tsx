@@ -5,6 +5,7 @@ const PageErrorRedirect = () => {
       role="main" 
       aria-labelledby="page-title"
     >
+      <title>Error 404 - Page Not Found</title>
       {/* Main Error Heading */}
       <h1 
         id="page-title" 
