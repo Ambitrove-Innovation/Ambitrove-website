@@ -10,7 +10,7 @@ interface FormData {
   message: string;
 }
 
-const ContactSection = () => {
+const ContactPage = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -78,7 +78,25 @@ const ContactSection = () => {
   };
 
   return (
-    <section className=" text-gray-300 py-20 px-6" id="contact">
+    <section className=" text-gray-300 py-20 px-6" id="contact" aria-labelledby="contact-heading">
+      <title>Contact Us</title>
+      <meta
+        name="description"
+        content="Get in touch with Ambitrove Innovation. Reach out for software development, SaaS, or digital solutions. Let’s collaborate to build South Africa’s tech future."
+      />
+      <meta
+        name="keywords"
+        content="Ambitrove contact, tech company South Africa, Ambitrove Innovation, contact form, Kamogelo Mogasoa, Dean Meyer"
+      />
+      <meta property="og:title" content="Contact | Ambitrove Innovation" />
+      <meta
+        property="og:description"
+        content="Connect with Ambitrove Innovation to discuss your next project or partnership."
+      />
+      <meta property="og:url" content="https://ambitrove.com/contact" />
+      <meta property="og:type" content="website" />
+      <link rel="canonical" href="https://ambitrove.com/contact" />
+
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
@@ -110,7 +128,7 @@ const ContactSection = () => {
             <div className="space-y-6">
               <div className="flex items-start space-x-4 p-4 bg-neutral-900 rounded-lg border border-neutral-800 hover:border-neutral-700 transition">
                 <div className="bg-blue-500/10 p-3 rounded-lg">
-                  <Mail className="text-blue-500" size={24} />
+                  <Mail aria-hidden="true" className="text-blue-500" size={24} />
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Email</h4>
@@ -287,4 +305,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default ContactPage;
