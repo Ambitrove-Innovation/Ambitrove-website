@@ -10,7 +10,7 @@ interface FormData {
   message: string;
 }
 
-const ContactSection = () => {
+const ContactPage = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -305,4 +305,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default ContactPage;
