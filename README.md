@@ -1,6 +1,6 @@
-# 🚀 Ambitrove Innovation Inc – Company Website
+# Ambitrove Innovation ™Pty Ltd – Company Website
 
-This repository contains the official **company website** for **Ambitrove Innovation Inc**, a South African-founded technology startup.
+This repository contains the official **company website** for **Ambitrove Innovation Pty Ltd**, a South African-founded technology startup.
 Our website is built with modern tools to reflect our mission of delivering impactful digital solutions, showcasing our services, portfolio, and innovation culture.
 
 ---
