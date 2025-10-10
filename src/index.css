@@ -144,15 +144,6 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply text-white antialiased text-center min-h-screen flex flex-col;
-  }
-}
-
 @layer utilities {
   .bg-gradient {
     background: radial-gradient(
