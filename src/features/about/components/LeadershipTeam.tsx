@@ -37,11 +37,11 @@ const LeadershipTeam = () => {
     },
     {
       image: "/images/Team/Dean.png",
-      alt: "Portrait of Dean Meyer, Co-founder",
+      alt: "Portrait of Dean Meyer, Co-founder & CTO",
       name: "Dean Meyer",
       position: "Co-Founder & CTO",
       linkedInUrl: "https://www.linkedin.com/in/dean-meyer-385342247/",
-      bio: `Dean Meyer is a technical leader with strong expertise in full-stack development, DevOps, and scalable architecture design. As CTO, he leads Ambitrove’s engineering vision and ensures the company delivers robust and efficient systems.`,
+      bio: `Dean Meyer is a passionate software engineer and technical innovator dedicated to building intelligent, scalable, and user-focused digital systems. He began his journey in software development during high school, where his early curiosity for coding and problem-solving quickly grew into a lifelong pursuit. After matriculating, Dean enrolled at university to study Application Development, where he built a strong foundation in Java, Python, web technologies, and mobile app development. His commitment to mastering both backend and frontend technologies, combined with his drive for excellence, set him apart as a self-taught achiever with professional discipline.`,
     },
     {
       image: "/images/Team/Emmanuel-Ambitrove.jpeg.jpg",
@@ -84,7 +84,7 @@ const LeadershipTeam = () => {
           </div>
 
           {/* Right Column - Team Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-12 slide-right">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-12 slide-right" id="leadership_team">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
