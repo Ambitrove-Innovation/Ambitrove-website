@@ -37,7 +37,7 @@ const LeadershipTeam = () => {
     },
     {
       image: "/images/Team/Dean.png",
-      alt: "Portrait of Dean Meyer, Co-founder",
+      alt: "Portrait of Dean Meyer, Co-founder & CTO",
       name: "Dean Meyer",
       position: "Co-Founder & CTO",
       linkedInUrl: "https://www.linkedin.com/in/dean-meyer-385342247/",
