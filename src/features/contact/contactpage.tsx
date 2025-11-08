@@ -1,6 +1,14 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle, LoaderCircle } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+import { useState } from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
+  LoaderCircle,
+} from "lucide-react";
+import emailjs from "@emailjs/browser";
+import Footer from "@/components/Footer";
 
 interface FormData {
   name: string;
@@ -12,19 +20,21 @@ interface FormData {
 
 const ContactPage = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -38,7 +48,6 @@ const ContactPage = () => {
     const publicKey = import.meta.env.VITE_PUBLIC_KEY!;
 
     try {
-
       await emailjs.send(
         serviceID,
         templateID,
@@ -51,33 +60,33 @@ const ContactPage = () => {
         },
         {
           publicKey: publicKey,
-        },
+        }
       );
 
       setSubmitted(true);
       setLoading(false);
-
     } catch (err) {
-
       alert("Error: " + JSON.stringify(err));
       setSubmitted(false);
-
     }
 
     setTimeout(() => {
       setSubmitted(false);
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
       });
     }, 1500);
   };
 
   return (
-    <section className=" text-gray-300 py-20 px-6" id="contact" aria-labelledby="contact-heading">
+    <section
+      className=" text-gray-300 py-20 px-6"
+      id="contact"
+      aria-labelledby="contact-heading">
       <title>Contact Us</title>
       <meta
         name="description"
@@ -97,20 +106,18 @@ const ContactPage = () => {
       <link rel="canonical" href="https://ambitrove.com/contact" />
 
       <div className="max-w-7xl mx-auto">
-        
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Get In Touch
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Ready to bring your project to life? We'd love to hear from you. 
+            Ready to bring your project to life? We'd love to hear from you.
             Reach out and let's create something amazing together.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -127,14 +134,17 @@ const ContactPage = () => {
             <div className="space-y-6">
               <div className="flex items-start space-x-4 p-4 bg-neutral-900 rounded-lg border border-neutral-800 hover:border-neutral-700 transition">
                 <div className="bg-blue-500/10 p-3 rounded-lg">
-                  <Mail aria-hidden="true" className="text-blue-500" size={24} />
+                  <Mail
+                    aria-hidden="true"
+                    className="text-blue-500"
+                    size={24}
+                  />
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Email</h4>
-                  <a 
-                    href="mailto:contact@ambitrove.com" 
-                    className="text-gray-400 hover:text-blue-500 transition"
-                  >
+                  <a
+                    href="mailto:contact@ambitrove.com"
+                    className="text-gray-400 hover:text-blue-500 transition">
                     contact@ambitrove.com
                   </a>
                 </div>
@@ -146,10 +156,9 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Phone</h4>
-                  <a 
-                    href="tel:+27761972861" 
-                    className="text-gray-400 hover:text-green-500 transition"
-                  >
+                  <a
+                    href="tel:+27761972861"
+                    className="text-gray-400 hover:text-green-500 transition">
                     +27 76 197 2861
                   </a>
                 </div>
@@ -187,17 +196,20 @@ const ContactPage = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-neutral-900 p-8 rounded-lg border border-neutral-800">
+          <div className="bg-neutral-900 p-8 rounded-lg border border-neutral-800 mb-12 md:mb-32">
             <h3 className="text-2xl font-semibold text-white mb-6">
               Send Us a Message
             </h3>
-            
+
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-12">
                 <CheckCircle className="text-green-500 mb-4" size={64} />
-                <h4 className="text-xl font-semibold text-white mb-2">Thank You!</h4>
+                <h4 className="text-xl font-semibold text-white mb-2">
+                  Thank You!
+                </h4>
                 <p className="text-gray-400 text-center">
-                  Your message has been sent successfully. We'll get back to you soon.
+                  Your message has been sent successfully. We'll get back to you
+                  soon.
                 </p>
               </div>
             ) : (
@@ -272,34 +284,29 @@ const ContactPage = () => {
                     onChange={handleChange}
                     rows={5}
                     className="w-full px-4 py-3 bg-neutral-950 border border-neutral-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition resize-none"
-                    placeholder="Tell us about your project..."
-                  ></textarea>
+                    placeholder="Tell us about your project..."></textarea>
                 </div>
 
                 <button
                   onClick={handleSubmit}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center space-x-2 cursor-pointer"
-                >
-                  {loading ?
-                  (
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center space-x-2 cursor-pointer">
+                  {loading ? (
                     <span>
-                      <LoaderCircle className='animate-spin' size={18}/>
-                    </span> 
-                  )
-                  :
-                  (
-                  <div className='flex flex-row'>
-                    <span>Send Message</span>
-                    <Send size={18} />
-                  </div>
-                )
-                }
+                      <LoaderCircle className="animate-spin" size={18} />
+                    </span>
+                  ) : (
+                    <div className="flex flex-row">
+                      <span>Send Message</span>
+                      <Send size={18} />
+                    </div>
+                  )}
                 </button>
               </div>
             )}
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };
