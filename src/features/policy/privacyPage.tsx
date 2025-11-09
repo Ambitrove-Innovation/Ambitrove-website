@@ -15,9 +15,9 @@ const PrivacyPage = () => {
 
     gsap.from(".fade-in", {
       opacity: 0,
-      y: 70,
-      stagger: 0.2,
-      duration: 1,
+      y: 50,
+      stagger: 0.1,
+      duration: 0.8,
       ease: "power3.out",
     });
   }, []);
@@ -28,22 +28,24 @@ const PrivacyPage = () => {
       <PrivacyMetaData />
 
       {/* Hero Section */}
-      <HeroSection />
+      <div className="mt-4">
+        <HeroSection />
+      </div>
 
       {/* Content Section */}
-      <section className="py-12 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto space-y-12">
+      <section className="py-8 px-6 md:px-12 mb-12">
+        <div className="max-w-5xl mx-auto space-y-8">
           {/* Introduction */}
-          <div className="fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
+          <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
               <div className="bg-blue-500/10 p-3 rounded-lg flex-shrink-0">
                 <FileText className="w-6 h-6 text-blue-500" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h2 className="text-2xl font-bold text-white mb-4">
                   Introduction
                 </h2>
-                <p className="text-gray-300 leading-relaxed mb-4">
+                <p className="text-gray-300 leading-relaxed mb-3">
                   Welcome to Ambitrove Innovation (Pty) Ltd ("Ambitrove," "we,"
                   "us," or "our"). We are committed to protecting your personal
                   information and your right to privacy. This Privacy Policy
@@ -61,12 +63,12 @@ const PrivacyPage = () => {
           </div>
 
           {/* Information We Collect */}
-          <div className="fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
+          <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
               <div className="bg-green-500/10 p-3 rounded-lg flex-shrink-0">
                 <Eye className="w-6 h-6 text-green-500" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h2 className="text-2xl font-bold text-white mb-4">
                   Information We Collect
                 </h2>
@@ -107,16 +109,16 @@ const PrivacyPage = () => {
           </div>
 
           {/* How We Use Your Information */}
-          <div className="fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
+          <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
               <div className="bg-purple-500/10 p-3 rounded-lg flex-shrink-0">
                 <Lock className="w-6 h-6 text-purple-500" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h2 className="text-2xl font-bold text-white mb-4">
                   How We Use Your Information
                 </h2>
-                <p className="text-gray-300 leading-relaxed mb-4">
+                <p className="text-gray-300 leading-relaxed mb-3">
                   We use the information we collect or receive:
                 </p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
@@ -142,16 +144,16 @@ const PrivacyPage = () => {
           </div>
 
           {/* Data Protection & Security */}
-          <div className="fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
+          <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
               <div className="bg-red-500/10 p-3 rounded-lg flex-shrink-0">
                 <Shield className="w-6 h-6 text-red-500" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h2 className="text-2xl font-bold text-white mb-4">
                   Data Protection & Security
                 </h2>
-                <p className="text-gray-300 leading-relaxed mb-4">
+                <p className="text-gray-300 leading-relaxed mb-3">
                   We implement appropriate technical and organizational security
                   measures to protect your personal information, including:
                 </p>
@@ -172,16 +174,16 @@ const PrivacyPage = () => {
           </div>
 
           {/* Your Rights (POPIA Compliance) */}
-          <div className="fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
+          <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
               <div className="bg-teal-500/10 p-3 rounded-lg flex-shrink-0">
                 <UserCheck className="w-6 h-6 text-teal-500" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h2 className="text-2xl font-bold text-white mb-4">
                   Your Rights Under POPIA
                 </h2>
-                <p className="text-gray-300 leading-relaxed mb-4">
+                <p className="text-gray-300 leading-relaxed mb-3">
                   As a South African company, we comply with the Protection of
                   Personal Information Act (POPIA). You have the right to:
                 </p>
@@ -206,16 +208,16 @@ const PrivacyPage = () => {
           </div>
 
           {/* International Transfers */}
-          <div className="fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
+          <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
               <div className="bg-yellow-500/10 p-3 rounded-lg flex-shrink-0">
                 <Globe className="w-6 h-6 text-yellow-500" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h2 className="text-2xl font-bold text-white mb-4">
                   International Data Transfers
                 </h2>
-                <p className="text-gray-300 leading-relaxed mb-4">
+                <p className="text-gray-300 leading-relaxed mb-3">
                   Your information may be transferred to and maintained on
                   servers located outside of South Africa. We ensure appropriate
                   safeguards are in place for such transfers, including:
@@ -229,106 +231,8 @@ const PrivacyPage = () => {
             </div>
           </div>
 
-          {/* Cookies & Tracking */}
-          <div className="fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Cookies & Tracking Technologies
-            </h2>
-            <p className="text-gray-300 leading-relaxed mb-4">
-              We use cookies and similar tracking technologies to enhance your
-              experience. These include:
-            </p>
-            <div className="space-y-3">
-              <div className="bg-neutral-800 p-4 rounded-lg">
-                <h3 className="text-white font-semibold mb-2">
-                  Essential Cookies
-                </h3>
-                <p className="text-gray-300 text-sm">
-                  Required for basic site functionality and security
-                </p>
-              </div>
-              <div className="bg-neutral-800 p-4 rounded-lg">
-                <h3 className="text-white font-semibold mb-2">
-                  Analytics Cookies
-                </h3>
-                <p className="text-gray-300 text-sm">
-                  Help us understand how visitors interact with our website
-                </p>
-              </div>
-              <div className="bg-neutral-800 p-4 rounded-lg">
-                <h3 className="text-white font-semibold mb-2">
-                  Marketing Cookies
-                </h3>
-                <p className="text-gray-300 text-sm">
-                  Used to deliver relevant advertisements and track campaign
-                  effectiveness
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Third-Party Services */}
-          <div className="fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Third-Party Services
-            </h2>
-            <p className="text-gray-300 leading-relaxed mb-4">
-              We may use third-party services that collect, monitor, and analyze
-              data, including:
-            </p>
-            <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-              <li>EmailJS for contact form functionality</li>
-              <li>Cloud hosting providers (Netlify, Vercel, Firebase)</li>
-              <li>Analytics platforms for website performance</li>
-              <li>Payment processors for billing services</li>
-            </ul>
-            <p className="text-gray-300 leading-relaxed mt-4">
-              These third parties have their own privacy policies. We encourage
-              you to review their policies before providing any information.
-            </p>
-          </div>
-
-          {/* Data Retention */}
-          <div className="fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Data Retention
-            </h2>
-            <p className="text-gray-300 leading-relaxed">
-              We retain your personal information only for as long as necessary
-              to fulfill the purposes outlined in this Privacy Policy, unless a
-              longer retention period is required or permitted by law. When data
-              is no longer needed, we securely delete or anonymize it.
-            </p>
-          </div>
-
-          {/* Children's Privacy */}
-          <div className="fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Children's Privacy
-            </h2>
-            <p className="text-gray-300 leading-relaxed">
-              Our services are not intended for individuals under the age of 18.
-              We do not knowingly collect personal information from children. If
-              you believe we have collected information from a child, please
-              contact us immediately.
-            </p>
-          </div>
-
-          {/* Changes to Privacy Policy */}
-          <div className="fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Changes to This Privacy Policy
-            </h2>
-            <p className="text-gray-300 leading-relaxed">
-              We may update this Privacy Policy from time to time. We will
-              notify you of any changes by posting the new policy on this page
-              and updating the "Last Updated" date. You are advised to review
-              this policy periodically for any changes.
-            </p>
-          </div>
-
           {/* Contact Information */}
-          <div className="fade-in bg-gradient-to-r from-blue-500/10 to-teal-500/10 p-8 rounded-2xl border border-blue-500/20">
+          <div className="fade-in bg-gradient-to-r from-blue-500/10 to-teal-500/10 p-6 md:p-8 rounded-2xl border border-blue-500/20">
             <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
             <p className="text-gray-300 leading-relaxed mb-4">
               If you have any questions about this Privacy Policy or our data
