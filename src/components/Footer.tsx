@@ -151,7 +151,7 @@ const Footer = () => {
         <div className="border-t border-neutral-800 mt-16 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <p>© {year} Ambitrove Innovation (Pty) Ltd. All rights reserved.</p>
           <p className="mt-3 md:mt-0">
-            Designed & Developed by{" "}
+            Designed & Developed by
             <span className="text-white font-medium">Ambitrove Team</span>
           </p>
         </div>
