@@ -225,7 +225,7 @@ const ContactPage = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-neutral-950 border border-neutral-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition"
-                    placeholder="John Doe"
+                    placeholder="Your Name"
                   />
                 </div>
 
@@ -240,7 +240,7 @@ const ContactPage = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-neutral-950 border border-neutral-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition"
-                    placeholder="john@example.com"
+                    placeholder="Your Email"
                   />
                 </div>
 
@@ -255,7 +255,7 @@ const ContactPage = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-neutral-950 border border-neutral-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition"
-                    placeholder="+27 XX XXX XXXX"
+                    placeholder="Phone Number"
                   />
                 </div>
 
