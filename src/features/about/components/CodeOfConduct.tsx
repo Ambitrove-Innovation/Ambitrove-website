@@ -166,7 +166,7 @@ const CodeOfConduct = () => {
         {/* Company Resources */}
         <div className="mb-12 conduct-fade-in">
           <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 p-8 md:p-10 rounded-2xl border border-purple-500/20">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <Lock className="w-8 h-8 text-purple-500" />
               <h3 className="text-3xl font-bold text-white">
                 Use of Company Resources
