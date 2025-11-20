@@ -28,7 +28,7 @@ const LeadershipTeam = () => {
 
   const teamMembers: LeadershipCard[] = [
     {
-      image: "/images/Team/Kamogelo-mogasoa.webp",
+      image: "/images/Team/Kamogelo_headShot.jpg",
       alt: "Portrait of Kamogelo Mogasoa, Founder & CEO",
       name: "Kamogelo Mogasoa",
       position: "Founder & CEO",
@@ -84,7 +84,9 @@ const LeadershipTeam = () => {
           </div>
 
           {/* Right Column - Team Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-12 slide-right" id="leadership_team">
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-12 slide-right"
+            id="leadership_team">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
