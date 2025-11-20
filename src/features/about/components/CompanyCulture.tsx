@@ -97,11 +97,11 @@ const CompanyCulture = () => {
           {coreValues.map((value, index) => (
             <div
               key={index}
-              className="culture-fade-in bg-neutral-900 p-8 rounded-2xl border border-neutral-800 hover:border-neutral-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
+              className=" bg-neutral-900 p-8 rounded-2xl border border-neutral-800 hover:border-neutral-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
               {/* Icon with Gradient Background */}
               <div
-                className={`w-16 h-16 rounded-full bg-gradient-to-br ${value.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <span className="text-white">{value.icon}</span>
+                className={`w-16 h-16 rounded-full bg-gradient-to-br ${value.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 translate-x-28 md:translate-x-36`}>
+                <span className="text-white ">{value.icon}</span>
               </div>
 
               {/* Title */}

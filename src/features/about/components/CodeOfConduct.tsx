@@ -88,7 +88,7 @@ const CodeOfConduct = () => {
         {/* Expected Behavior Section */}
         <div className="mb-12 conduct-fade-in">
           <div className="bg-gradient-to-br from-green-500/10 to-teal-500/10 p-8 md:p-10 rounded-2xl border border-green-500/20">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <CheckCircle className="w-8 h-8 text-green-500" />
               <h3 className="text-3xl font-bold text-white">
                 Expected Behaviour
@@ -102,7 +102,7 @@ const CodeOfConduct = () => {
               {expectedBehaviors.map((behavior, index) => (
                 <li
                   key={index}
-                  className="flex items-start gap-3 text-gray-300 leading-relaxed">
+                  className="flex items-center justify-center gap-3 text-gray-300 leading-relaxed">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
                   <span>{behavior}</span>
                 </li>
@@ -114,7 +114,7 @@ const CodeOfConduct = () => {
         {/* Unacceptable Behavior Section */}
         <div className="mb-12 conduct-fade-in">
           <div className="bg-gradient-to-br from-red-500/10 to-orange-500/10 p-8 md:p-10 rounded-2xl border border-red-500/20">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <XCircle className="w-8 h-8 text-red-500" />
               <h3 className="text-3xl font-bold text-white">
                 Unacceptable Behaviour
@@ -127,7 +127,7 @@ const CodeOfConduct = () => {
               {unacceptableBehaviors.map((behavior, index) => (
                 <li
                   key={index}
-                  className="flex items-start gap-3 text-gray-300 leading-relaxed">
+                  className="flex items-center justify-center gap-3 text-gray-300 leading-relaxed">
                   <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-1" />
                   <span>{behavior}</span>
                 </li>
@@ -137,9 +137,9 @@ const CodeOfConduct = () => {
         </div>
 
         {/* Client & Partner Relations */}
-        <div className="mb-12 conduct-fade-in">
+        <div className="mb-12 conduct-fade-in ">
           <div className="bg-neutral-900 p-8 md:p-10 rounded-2xl border border-neutral-800">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <Users className="w-8 h-8 text-blue-500" />
               <h3 className="text-3xl font-bold text-white">
                 Client & Partner Relations
@@ -188,7 +188,7 @@ const CodeOfConduct = () => {
         <div className="grid md:grid-cols-2 gap-8 conduct-fade-in">
           {/* Reporting Violations */}
           <div className="bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <AlertTriangle className="w-8 h-8 text-yellow-500" />
               <h3 className="text-2xl font-bold text-white">
                 Reporting Violations
@@ -219,9 +219,9 @@ const CodeOfConduct = () => {
 
           {/* Consequences */}
           <div className="bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <Shield className="w-8 h-8 text-red-500" />
-              <h3 className="text-2xl font-bold text-white">Consequences</h3>
+              <h3 className="text-2xl font-bold text-white ">Consequences</h3>
             </div>
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-start gap-2">
