@@ -1,8 +1,19 @@
-# Redirect all HTTP traffic to HTTPS
-http://* https://:splat 301!
+# 1. Force HTTPS
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
 
-# Force www version
-https://ambitrove.com/* https://www.ambitrove.com/:splat 301!
+# 2. Force WWW (this must come before the SPA rewrite!)
+[[redirects]]
+  from = "https://ambitrove.com/*"
+  to = "https://www.ambitrove.com/:splat"
+  status = 301
+  force = true
 
-# Handle client-side routing (React / Vite)
-/* /index.html 200
+# 3. SPA fallback for Vite/React
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
