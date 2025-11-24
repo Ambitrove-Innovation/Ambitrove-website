@@ -5,10 +5,10 @@
   status = 301
   force = true
 
-# 2. Force WWW (this must come before the SPA rewrite!)
+# Redirect WWW to apex
 [[redirects]]
-  from = "https://ambitrove.com/*"
-  to = "https://www.ambitrove.com/:splat"
+  from = "https://www.ambitrove.com/*"
+  to = "https://ambitrove.com/:splat"
   status = 301
   force = true
 
