@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { Link } from "react-router";
 
 const WhyChoose = () => {
   // GSAP animation can be added here if needed
@@ -48,7 +49,7 @@ useGSAP(() => {
           </p>
 
         <Button asChild className="mt-4 px-6 py-2 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-black transition duration-300 rounded-tr-lg rounded-bl-lg md:w-35">
-          <a href="#learn" aria-label="Learn more about Ambitrove Innovation">Learn more</a>
+          <Link to="/about" aria-label="Learn more about Ambitrove Innovation">Learn more</Link>
         </Button>
 
         </div>

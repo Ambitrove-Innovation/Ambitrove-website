@@ -152,7 +152,7 @@ const Footer = () => {
           <p>© {year} Ambitrove Innovation (Pty) Ltd. All rights reserved.</p>
           <p className="mt-3 md:mt-0">
             Designed & Developed by
-            <span className="text-white font-medium">Ambitrove Team</span>
+            <span className="text-white font-medium"> Ambitrove Team</span>
           </p>
         </div>
       </div>
