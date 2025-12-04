@@ -95,11 +95,12 @@ const Footer = () => {
                 Resources
               </h3>
               <ul className="space-y-2" aria-disabled={true}>
-                <li>
+                 {/*<li>
                   <a href="/careers" className="hover:text-white transition">
                     Careers
                   </a>
                 </li>
+                */}
                 <li>
                   <a href="/blog" className="hover:text-white transition">
                     Blog
