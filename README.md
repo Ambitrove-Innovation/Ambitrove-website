@@ -157,8 +157,8 @@ Leadership Team – CIO, Executives & Strategic Shareholders
 📈 Roadmap
 ✅ Design prototype in Figma
 ✅ Create GitHub Organization & repo
-⬜ Develop MVP website (React + TS + ShadCN + GSAP)
-⬜ Launch website (linked to company domain)
-⬜ Add company portfolio & projects
-⬜ Integrate marketing (LinkedIn, TikTok, GitHub showcases)
+✅ Develop MVP website (React + TS + ShadCN + GSAP)
+✅ Launch website (linked to company domain)
+✅ Add company portfolio & projects
+✅ Integrate marketing (LinkedIn, TikTok, GitHub showcases)
 ```
