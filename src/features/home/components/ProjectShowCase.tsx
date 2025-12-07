@@ -95,7 +95,7 @@ const ProjectShowCase = () => {
 
                   <video
                     controls={true}
-                    src="/public/videos/Ambitrove_promoVide.mp4"
+                    src="/videos/Ambitrove_promoVide.mp4"
                     className="rounded-xl shadow-lg object-cover w-4xl transform group-hover:scale-[1.02] my-7 transition-all duration-500 
                     "
                   />
