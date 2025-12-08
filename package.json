@@ -12,7 +12,10 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.2",
+<<<<<<< HEAD
     "@radix-ui/react-accordion": "^1.2.12",
+=======
+>>>>>>> 72c397170fcefcb38b1672a7c3eea1462acfa942
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.12",
     "class-variance-authority": "^0.7.1",
