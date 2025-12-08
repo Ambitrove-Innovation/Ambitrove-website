@@ -159,12 +159,4 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-
-  .shady-gray {
-    background-color: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 4px 6px rgba(36, 36, 36, 0.804);
-  }
-  .bg-caroalt {
-    background-color: #2a2a2a;
-  }
 }
