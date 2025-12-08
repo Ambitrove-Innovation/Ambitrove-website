@@ -93,12 +93,15 @@ const ProjectShowCase = () => {
                     with confidence.
                   </p>
 
-                  <video
-                    controls={true}
-                    src="/videos/Ambitrove_promoVide.mp4"
-                    className="rounded-xl shadow-lg object-cover w-4xl transform group-hover:scale-[1.02] my-7 transition-all duration-500 
-                    "
-                  />
+                  <div className="relative my-7 overflow-hidden rounded-xl shadow-lg transform group-hover:scale-[1.02] transition-all duration-500 aspect-video">
+                    <iframe
+                      className="absolute inset-0 w-full h-full object-cover"
+                      src="https://player.vimeo.com/video/1144355042?badge=0&autopause=0"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      title="Ambitrove_promoVide"
+                    />
+                  </div>
 
                   <h2 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-2xl font-bold leading-[1.1] sm:leading-[1.2]">
                     How it works.
