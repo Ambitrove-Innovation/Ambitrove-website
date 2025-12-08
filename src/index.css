@@ -159,4 +159,11 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  .bg-caroalt {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .shady-gray {
+    box-shadow: 0 4px 30px rgba(60, 192, 91, 0.522);
+    backdrop-filter: blur(5px);
+  }
 }
