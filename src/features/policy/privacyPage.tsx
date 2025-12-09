@@ -38,7 +38,7 @@ const PrivacyPage = () => {
           {/* Introduction */}
           <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
-              <div className="bg-blue-500/10 p-3 rounded-lg flex-shrink-0">
+              <div className="bg-blue-500/10 p-3 rounded-lg shrink-0">
                 <FileText className="w-6 h-6 text-blue-500" />
               </div>
               <div className="flex-1">
@@ -65,7 +65,7 @@ const PrivacyPage = () => {
           {/* Information We Collect */}
           <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
-              <div className="bg-green-500/10 p-3 rounded-lg flex-shrink-0">
+              <div className="bg-green-500/10 p-3 rounded-lg shrink-0">
                 <Eye className="w-6 h-6 text-green-500" />
               </div>
               <div className="flex-1">
@@ -111,7 +111,7 @@ const PrivacyPage = () => {
           {/* How We Use Your Information */}
           <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
-              <div className="bg-purple-500/10 p-3 rounded-lg flex-shrink-0">
+              <div className="bg-purple-500/10 p-3 rounded-lg shrink-0">
                 <Lock className="w-6 h-6 text-purple-500" />
               </div>
               <div className="flex-1">
@@ -146,7 +146,7 @@ const PrivacyPage = () => {
           {/* Data Protection & Security */}
           <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
-              <div className="bg-red-500/10 p-3 rounded-lg flex-shrink-0">
+              <div className="bg-red-500/10 p-3 rounded-lg shrink-0">
                 <Shield className="w-6 h-6 text-red-500" />
               </div>
               <div className="flex-1">
@@ -176,7 +176,7 @@ const PrivacyPage = () => {
           {/* Your Rights (POPIA Compliance) */}
           <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
-              <div className="bg-teal-500/10 p-3 rounded-lg flex-shrink-0">
+              <div className="bg-teal-500/10 p-3 rounded-lg shrink-0">
                 <UserCheck className="w-6 h-6 text-teal-500" />
               </div>
               <div className="flex-1">
@@ -210,7 +210,7 @@ const PrivacyPage = () => {
           {/* International Transfers */}
           <div className="fade-in bg-neutral-900 p-6 md:p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-start gap-4">
-              <div className="bg-yellow-500/10 p-3 rounded-lg flex-shrink-0">
+              <div className="bg-yellow-500/10 p-3 rounded-lg shrink-0">
                 <Globe className="w-6 h-6 text-yellow-500" />
               </div>
               <div className="flex-1">
@@ -232,7 +232,7 @@ const PrivacyPage = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="fade-in bg-gradient-to-r from-blue-500/10 to-teal-500/10 p-6 md:p-8 rounded-2xl border border-blue-500/20">
+          <div className="fade-in bg-linear-to-r from-blue-500/10 to-teal-500/10 p-6 md:p-8 rounded-2xl border border-blue-500/20">
             <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
             <p className="text-gray-300 leading-relaxed mb-4">
               If you have any questions about this Privacy Policy or our data
