@@ -52,3 +52,17 @@ interface BlogPost {
   author: string;
   content?: string;
 }
+interface PricingFeature {
+  name: string;
+  included: boolean;
+  value?: string;
+}
+interface PricingTier {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: PricingFeature[];
+  highlighted?: boolean;
+  cta: string;
+}
