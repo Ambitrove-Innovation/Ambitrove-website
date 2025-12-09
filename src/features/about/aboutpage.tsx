@@ -9,7 +9,7 @@ const AboutPage = () => {
   return (
     <>
       {/* 🧠 Page Metadata */}
-      <title>About Ambitrove</title>
+      <title>About </title>
       <meta
         name="description"
         content="Learn more about Ambitrove Innovation — a South African-born tech company driving the continent’s digital future through innovation and scalable software solutions."

@@ -1,7 +1,7 @@
 const ServicesMetaData = () => {
   return (
     <>
-      <title>Services & Pricing | Ambitrove Innovation</title>
+      <title>Services & Pricing </title>
       <meta
         name="description"
         content="Affordable website development packages in South Africa. From R8,000. SEO, responsive design, e-commerce, hosting, and maintenance included."

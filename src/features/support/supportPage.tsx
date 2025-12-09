@@ -94,7 +94,7 @@ const SupportPage = () => {
       <section className="py-12 px-6 md:px-12">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
           {/* Email Support */}
-          <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
+          <div className="bg-linear-to-br from-blue-500/10 to-blue-600/10 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
             <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Mail className="w-6 h-6 text-blue-500" />
             </div>
@@ -112,7 +112,7 @@ const SupportPage = () => {
           </div>
 
           {/* Phone Support */}
-          <div className=" bg-gradient-to-br from-green-500/10 to-green-600/10 p-6 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
+          <div className=" bg-linear-to-br from-green-500/10 to-green-600/10 p-6 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
             <div className="bg-green-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Phone className="w-6 h-6 text-green-500" />
             </div>
@@ -130,7 +130,7 @@ const SupportPage = () => {
           </div>
 
           {/* Business Hours */}
-          <div className=" bg-gradient-to-br from-purple-500/10 to-purple-600/10 p-6 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+          <div className=" bg-linear-to-br from-purple-500/10 to-purple-600/10 p-6 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
             <div className="bg-purple-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Clock className="w-6 h-6 text-purple-500" />
             </div>
@@ -187,7 +187,7 @@ const SupportPage = () => {
       {/* Contact Support CTA */}
       <section className="py-12 px-6 md:px-12">
         <div className="max-w-4xl mx-auto fade-in">
-          <div className="bg-gradient-to-r from-blue-500/10 to-teal-500/10 p-8 md:p-12 rounded-2xl border border-blue-500/20 text-center">
+          <div className="bg-linear-to-r from-blue-500/10 to-teal-500/10 p-8 md:p-12 rounded-2xl border border-blue-500/20 text-center">
             <MessageSquare className="w-12 h-12 text-teal-500 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-white mb-4">
               Still Need Help?
