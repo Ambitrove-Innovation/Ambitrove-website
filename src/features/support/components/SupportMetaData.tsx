@@ -1,7 +1,7 @@
 const SupportMetaData = () => {
   return (
     <div>
-      <title>Support & Help Center | Ambitrove Innovation</title>
+      <title>Support & Help Center</title>
       <meta
         name="description"
         content="Get support from Ambitrove Innovation. Find answers to common questions, contact our team, and access resources for your software development needs."

@@ -76,9 +76,9 @@ const ProjectShowCase = () => {
           {/* Right Content - Project Image */}
           <div className="lg:col-span-5 xl:col-span-6 flex justify-center lg:justify-end order-1 lg:order-2">
             <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl">
-              <div className=" flex justify-center align-center mb-8 border-1 border-double border-gray-900 p-1.5 bg-caroalt rounded-xl overflow-hidden mask-b-from-90% mask-t-from-96%">
-                <div className="border-1 border-double px-2.5 py-7 border-gray-700 rounded-xl">
-                  <h2 className="text-left bg-gradient font-medium uppercase border-1 border-double border-gray-800 px-3 py-1 rounded-full text-sm mb-4 w-fit shady-gray flex items-center shady-gray">
+              <div className=" flex justify-center align-center mb-8 border border-double border-gray-900 p-1.5 bg-caroalt rounded-xl overflow-hidden mask-b-from-90% mask-t-from-96%">
+                <div className="border border-double px-2.5 py-7 border-gray-700 rounded-xl">
+                  <h2 className="text-left bg-gradient font-medium uppercase border border-double border-gray-800 px-3 py-1 rounded-full text-sm mb-4 w-fit shady-gray flex items-center shady-gray">
                     ats-application{" "}
                     <span className="ml-1 text-green-500">
                       <VerifiedIcon size={16} />

@@ -1,7 +1,7 @@
 const BlogPageMetaData = () => {
   return (
     <head>
-      <title>Blog | Ambitrove Innovation</title>
+      <title>Blogs </title>
       <meta
         name="description"
         content="Read the latest insights on technology, software development, Web3, and digital innovation from the Ambitrove team."

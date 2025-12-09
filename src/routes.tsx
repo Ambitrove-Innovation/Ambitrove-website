@@ -6,6 +6,7 @@ import PrivacyPage from "./features/policy/privacyPage";
 import SupportPage from "./features/support/supportPage";
 import CareersPage from "./features/careers/careersPage";
 import BlogPage from "./features/blog/blogPage";
+import ServicesPage from "./features/services/servicesPage";
 import Navbar from "./components/Navbar";
 import PageErrorRedirect from "./features/pageNotFound/PageErrorRedirect";
 
@@ -19,6 +20,7 @@ const Routespath = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/support" element={<SupportPage />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="*" element={<PageErrorRedirect />} />

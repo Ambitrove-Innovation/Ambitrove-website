@@ -1,7 +1,7 @@
 const PrivacyMetaData = () => {
   return (
     <div>
-      <title>Privacy Policy | Ambitrove Innovation</title>
+      <title>Privacy Policy</title>
       <meta
         name="description"
         content="Read Ambitrove Innovation's Privacy Policy. Learn how we collect, use, and protect your personal information in compliance with POPIA and GDPR."

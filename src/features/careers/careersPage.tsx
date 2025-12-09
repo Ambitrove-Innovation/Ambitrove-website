@@ -193,7 +193,7 @@ const CareersPage = () => {
                     <li
                       key={index}
                       className="flex items-start gap-2 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
                       <span>{req}</span>
                     </li>
                   ))}
