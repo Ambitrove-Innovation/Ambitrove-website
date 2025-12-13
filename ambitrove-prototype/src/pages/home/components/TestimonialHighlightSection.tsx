@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 
-// ==================== TESTIMONIAL HIGHLIGHT SECTION ====================
+
 const TestimonialHighlightSection = () => {
   return (
     <section className="py-24 bg-blue-600 dark:bg-blue-900 relative overflow-hidden">

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { TrendingUp, Clock, Target } from "lucide-react";
 
-// ==================== PROBLEM SECTION ====================
 const ProblemSection = () => {
   const problems = [
     {
