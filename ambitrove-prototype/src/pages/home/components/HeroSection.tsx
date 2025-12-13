@@ -3,7 +3,7 @@ import { Sparkles, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-white dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900">
+    <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-linear-to-br from-white via-blue-50/30 to-white dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
       <div className="container mx-auto relative z-10">

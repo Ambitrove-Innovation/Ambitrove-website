@@ -5,7 +5,7 @@ import { Quote } from "lucide-react";
 const TestimonialHighlightSection = () => {
   return (
     <section className="py-24 bg-blue-600 dark:bg-blue-900 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-700 to-blue-500 dark:from-blue-900 dark:to-blue-700 opacity-50"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-blue-700 to-blue-500 dark:from-blue-900 dark:to-blue-700 opacity-50"></div>
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
