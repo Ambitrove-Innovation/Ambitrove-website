@@ -61,8 +61,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
             className="mt-16 relative">
-            <div className="absolute inset-0  dark:from-gray-900 to-transparent h-32 bottom-0 z-10"></div>
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-1 shadow-2xl">
+            <div className="absolute inset-0 p-12 dark:from-gray-900 to-transparent h-32 bottom-0 z-10"></div>
+            <div className="rounded-2xl border-2 border-blue-500 shadow-2xl">
               <div className="bg-gray-900 rounded-xl p-6 min-h-100 flex items-center justify-center">
                 <div className="text-left w-full max-w-2xl">
                   <div className="flex items-center space-x-2 mb-4">
@@ -70,7 +70,7 @@ const HeroSection = () => {
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-                  <pre className="text-blue-400 text-sm font-mono">
+                  <pre className="text-gray-500 text-sm font-mono ">
                     {`// Initialize Sytic-AI Agent
 const agent = new SyticAI({
   model: "gpt-4-turbo",

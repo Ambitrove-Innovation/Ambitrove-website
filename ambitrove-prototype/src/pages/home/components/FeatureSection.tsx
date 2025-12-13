@@ -71,8 +71,8 @@ const FeatureSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl hover:shadow-2xl transition-all hover:-translate-y-2">
-              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              className="group bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl hover:shadow-2xl transition-all hover:-translate-y-2 border border-gray-700">
+              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform ">
                 <feature.icon className="w-7 h-7 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">

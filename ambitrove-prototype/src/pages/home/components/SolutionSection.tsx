@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Zap, Shield, Brain, CheckCircle2 } from "lucide-react";
 
-// ==================== SOLUTION SECTION ====================
 const SolutionSection = () => {
   const solutions = [
     {
