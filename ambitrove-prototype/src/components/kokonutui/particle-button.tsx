@@ -11,10 +11,10 @@
  */
 
 import { useState, useRef, type RefObject } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/button";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
-import type { ButtonProps } from "@/components/ui/button";
+import type { ButtonProps } from "@/components/button";
 import { MousePointerClick } from "lucide-react";
 
 interface ParticleButtonProps extends ButtonProps {
