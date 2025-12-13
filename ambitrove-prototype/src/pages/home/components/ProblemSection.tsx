@@ -44,7 +44,7 @@ const ProblemSection = () => {
               Companies are stuck in a cycle of hiring more people to handle
               more work, creating unsustainable cost structures and bottlenecks.
             </p>
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border-l-4 border-red-500">
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border-l-4 border-red-500 border-2 ">
               <p className="text-gray-700 dark:text-gray-300 font-medium">
                 "We were spending $500K annually on repetitive data entry and
                 customer support tasks. Our team was exhausted, and we couldn't
@@ -69,7 +69,7 @@ const ProblemSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2 }}
-                className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-700">
                 <problem.icon className="w-10 h-10 text-red-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   {problem.title}

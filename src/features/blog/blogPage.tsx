@@ -335,7 +335,7 @@ The tools and techniques for data analysis are more accessible than ever. From s
                 alt={selectedPost.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-neutral-900 to-transparent"></div>
               <div className="absolute bottom-6 left-6">
                 <span className="bg-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                   {selectedPost.category}

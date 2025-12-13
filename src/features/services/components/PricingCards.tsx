@@ -1,9 +1,12 @@
 import { Check, X, Zap, Shield, Clock } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const PricingCards = () => {
   //   const [billingCycle, setBillingCycle] = useState<"monthly" | "annual">(
   //     "monthly"
   //   );
+
+  const navigate = useNavigate();
 
   const tiers: PricingTier[] = [
     {
@@ -12,6 +15,7 @@ export const PricingCards = () => {
       period: "one-time",
       description: "Perfect for startups and personal brands",
       cta: "Get Started",
+      ctaLink: "/contact",
       features: [
         { name: "Number of Pages", included: true, value: "3-5 pages" },
         { name: "Responsive Design", included: true },
@@ -139,7 +143,7 @@ export const PricingCards = () => {
       <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left column */}
         <div className="space-y-4 ">
-          <h2 className="text-4xl font-bold text-white leading-tight md:-translate-x-12">
+          <h2 className="text-2xl font-bold text-white md:text-4xl leading-tight md:-translate-x-12">
             Transparent Pricing.
             <span className="text-teal-500 mx-1.5">No Surprises.</span>
           </h2>
@@ -229,6 +233,7 @@ export const PricingCards = () => {
               </div>
 
               <button
+                onClick={() => tier.ctaLink && navigate("/contact")}
                 className={`w-full py-3 rounded-lg font-semibold transition-all mb-6 ${
                   tier.highlighted
                     ? "bg-teal-600 hover:bg-teal-700 text-white"

@@ -65,4 +65,5 @@ interface PricingTier {
   features: PricingFeature[];
   highlighted?: boolean;
   cta: string;
+  ctaLink?: string;
 }

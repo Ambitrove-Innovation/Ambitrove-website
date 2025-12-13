@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Zap, Shield, Brain, CheckCircle2 } from "lucide-react";
 
-// ==================== SOLUTION SECTION ====================
 const SolutionSection = () => {
   const solutions = [
     {
@@ -25,7 +24,7 @@ const SolutionSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-gray-900">
+    <section className="py-24 bg-white dark:bg-gray-900" id="solutions">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <motion.div

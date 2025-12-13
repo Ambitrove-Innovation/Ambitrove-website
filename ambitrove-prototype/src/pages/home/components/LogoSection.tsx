@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-// ==================== LOGOS SECTION ====================
 const LogoSection = () => {
   const companies = [
     "TechCorp",

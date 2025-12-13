@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ServicesCTA = () => (
   <section className="py-12 px-6 md:px-12">
@@ -11,12 +12,12 @@ const ServicesCTA = () => (
           Every business is unique. Let's discuss your specific requirements and
           create a tailored package that fits your needs and budget.
         </p>
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all">
           Get Custom Quote
           <ArrowRight className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
     </div>
   </section>
