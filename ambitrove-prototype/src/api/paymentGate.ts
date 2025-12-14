@@ -10,8 +10,8 @@ const paymentGateWay = async () => {
       console.log(`Susccesful status ${response.data}`);
 
     return response.data;
-  } catch (error) {
-    console.error(`Sorry seems we something went wrong ${error}`);
+  } catch (err) {
+    console.error(`Sorry seems we something went wrong ${err}`);
     return null;
   }
 };
