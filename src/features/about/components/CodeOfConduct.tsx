@@ -73,7 +73,7 @@ const CodeOfConduct = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 conduct-fade-in">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full mb-6">
+          <div className="inline-flex items-center justify-center w-20 h-20  bg-linear-to-r from-blue-500 to-purple-500 rounded-full mb-6">
             <Shield className="w-10 h-10 text-white" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -87,7 +87,7 @@ const CodeOfConduct = () => {
 
         {/* Expected Behavior Section */}
         <div className="mb-12 conduct-fade-in">
-          <div className="bg-gradient-to-br from-green-500/10 to-teal-500/10 p-8 md:p-10 rounded-2xl border border-green-500/20">
+          <div className=" bg-linear-to-r from-green-500/10 to-teal-500/10 p-8 md:p-10 rounded-2xl border border-green-500/20">
             <div className="flex items-center justify-center gap-3 mb-6">
               <CheckCircle className="w-8 h-8 text-green-500" />
               <h3 className="text-3xl font-bold text-white">
@@ -103,7 +103,7 @@ const CodeOfConduct = () => {
                 <li
                   key={index}
                   className="flex items-center justify-center gap-3 text-gray-300 leading-relaxed">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-5 h-5 text-green-500 shrink-0 mt-1" />
                   <span>{behavior}</span>
                 </li>
               ))}
@@ -113,7 +113,7 @@ const CodeOfConduct = () => {
 
         {/* Unacceptable Behavior Section */}
         <div className="mb-12 conduct-fade-in">
-          <div className="bg-gradient-to-br from-red-500/10 to-orange-500/10 p-8 md:p-10 rounded-2xl border border-red-500/20">
+          <div className="bg-linear-to-r from-red-500/10 to-orange-500/10 p-8 md:p-10 rounded-2xl border border-red-500/20">
             <div className="flex items-center justify-center gap-3 mb-6">
               <XCircle className="w-8 h-8 text-red-500" />
               <h3 className="text-3xl font-bold text-white">
@@ -128,7 +128,7 @@ const CodeOfConduct = () => {
                 <li
                   key={index}
                   className="flex items-center justify-center gap-3 text-gray-300 leading-relaxed">
-                  <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-1" />
+                  <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-1" />
                   <span>{behavior}</span>
                 </li>
               ))}
@@ -165,7 +165,7 @@ const CodeOfConduct = () => {
 
         {/* Company Resources */}
         <div className="mb-12 conduct-fade-in">
-          <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 p-8 md:p-10 rounded-2xl border border-purple-500/20">
+          <div className="bg-linear-to-r from-purple-500/10 to-pink-500/10 p-8 md:p-10 rounded-2xl border border-purple-500/20">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Lock className="w-8 h-8 text-purple-500" />
               <h3 className="text-3xl font-bold text-white">
@@ -246,7 +246,7 @@ const CodeOfConduct = () => {
 
         {/* Bottom Statement */}
         <div className="mt-12 conduct-fade-in">
-          <div className="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 p-8 md:p-10 rounded-2xl border border-blue-500/20 text-center">
+          <div className="bg-linear-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 p-8 md:p-10 rounded-2xl border border-blue-500/20 text-center">
             <p className="text-xl text-gray-300 leading-relaxed">
               By adhering to this Code of Conduct, we create an environment
               where innovation thrives, trust is earned, and excellence is
