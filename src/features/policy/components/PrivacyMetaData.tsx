@@ -1,6 +1,8 @@
+import { Helmet } from "react-helmet-async";
+
 const PrivacyMetaData = () => {
   return (
-    <div>
+    <Helmet>
       <title>Privacy Policy</title>
       <meta
         name="description"
@@ -11,7 +13,7 @@ const PrivacyMetaData = () => {
         content="Ambitrove Privacy Policy, POPIA compliance, data protection, South Africa tech company"
       />
       <link rel="canonical" href="https://ambitrove.com/privacy" />
-    </div>
+    </Helmet>
   );
 };
 

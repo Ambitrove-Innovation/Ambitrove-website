@@ -10,6 +10,7 @@ import {
 import emailjs from "@emailjs/browser";
 import { Turnstile } from "@marsidev/react-turnstile";
 import Footer from "@/components/Footer";
+import ContactMetaData from "./components/ContactMetaData";
 
 interface FormData {
   name: string;
@@ -97,23 +98,8 @@ const ContactPage = () => {
       className=" text-gray-300 py-20 px-6"
       id="contact"
       aria-labelledby="contact-heading">
-      <title>Contact Us</title>
-      <meta
-        name="description"
-        content="Get in touch with Ambitrove Innovation. Reach out for software development, SaaS, or digital solutions. Let's collaborate to build South Africa's tech future."
-      />
-      <meta
-        name="keywords"
-        content="Ambitrove contact, tech company South Africa, Ambitrove Innovation, contact form, Kamogelo Mogasoa, Dean Meyer"
-      />
-      <meta property="og:title" content="Contact | Ambitrove Innovation" />
-      <meta
-        property="og:description"
-        content="Connect with Ambitrove Innovation to discuss your next project or partnership."
-      />
-      <meta property="og:url" content="https://ambitrove.com/contact" />
-      <meta property="og:type" content="website" />
-      <link rel="canonical" href="https://ambitrove.com/contact" />
+      {/* { SEO Metadata} */}
+      <ContactMetaData />
 
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -302,7 +288,7 @@ const ContactPage = () => {
                 {/* Cloudflare Turnstile Widget */}
                 <div className="flex justify-center py-2">
                   <Turnstile
-                  className="rounded-md"
+                    className="rounded-md"
                     siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY!}
                     onSuccess={(token) => setTurnstileToken(token)}
                     onError={() => setTurnstileToken("")}

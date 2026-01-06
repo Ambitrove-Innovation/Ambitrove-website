@@ -1,6 +1,8 @@
+import { Helmet } from "react-helmet-async";
+
 const ServicesMetaData = () => {
   return (
-    <>
+    <Helmet>
       <title>Services & Pricing </title>
       <meta
         name="description"
@@ -11,7 +13,7 @@ const ServicesMetaData = () => {
         content="website development pricing, South Africa web design, affordable websites, e-commerce development, SaaS pricing"
       />
       <link rel="canonical" href="https://ambitrove.com/services" />
-    </>
+    </Helmet>
   );
 };
 export default ServicesMetaData;
