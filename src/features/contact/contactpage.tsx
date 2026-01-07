@@ -8,7 +8,7 @@ import {
   LoaderCircle,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import { Turnstile } from "@marsidev/react-turnstile";
+//import { Turnstile } from "@marsidev/react-turnstile";
 import Footer from "@/components/Footer";
 import ContactMetaData from "./components/ContactMetaData";
 
@@ -30,7 +30,7 @@ const ContactPage = () => {
   });
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
-  const [turnstileToken, setTurnstileToken] = useState<string>("");
+  //const [turnstileToken, setTurnstileToken] = useState<string>("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -45,10 +45,12 @@ const ContactPage = () => {
     e.preventDefault();
 
     // Verify Turnstile token
+    /*
     if (!turnstileToken) {
       alert("Please complete the security verification");
       return;
     }
+    */
 
     setLoading(true);
 
@@ -82,7 +84,7 @@ const ContactPage = () => {
 
     setTimeout(() => {
       setSubmitted(false);
-      setTurnstileToken(""); // Reset token
+      //setTurnstileToken(""); // Reset token
       setFormData({
         name: "",
         email: "",
@@ -286,6 +288,7 @@ const ContactPage = () => {
                 </div>
 
                 {/* Cloudflare Turnstile Widget */}
+                {/*
                 <div className="flex justify-center py-2">
                   <Turnstile
                     className="rounded-md"
@@ -295,7 +298,8 @@ const ContactPage = () => {
                     onExpire={() => setTurnstileToken("")}
                   />
                 </div>
-
+                */}
+                
                 <button
                   onClick={handleSubmit}
                   //disabled={!turnstileToken || loading}
