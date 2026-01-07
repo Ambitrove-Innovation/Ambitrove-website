@@ -8,7 +8,9 @@ import {
   LoaderCircle,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { Turnstile } from "@marsidev/react-turnstile";
 import Footer from "@/components/Footer";
+import ContactMetaData from "./components/ContactMetaData";
 
 interface FormData {
   name: string;
@@ -28,6 +30,7 @@ const ContactPage = () => {
   });
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
+  const [turnstileToken, setTurnstileToken] = useState<string>("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -40,6 +43,12 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+
+    // Verify Turnstile token
+    if (!turnstileToken) {
+      alert("Please complete the security verification");
+      return;
+    }
 
     setLoading(true);
 
@@ -68,10 +77,12 @@ const ContactPage = () => {
     } catch (err) {
       alert("Error: " + JSON.stringify(err));
       setSubmitted(false);
+      setLoading(false);
     }
 
     setTimeout(() => {
       setSubmitted(false);
+      setTurnstileToken(""); // Reset token
       setFormData({
         name: "",
         email: "",
@@ -87,23 +98,8 @@ const ContactPage = () => {
       className=" text-gray-300 py-20 px-6"
       id="contact"
       aria-labelledby="contact-heading">
-      <title>Contact Us</title>
-      <meta
-        name="description"
-        content="Get in touch with Ambitrove Innovation. Reach out for software development, SaaS, or digital solutions. Let’s collaborate to build South Africa’s tech future."
-      />
-      <meta
-        name="keywords"
-        content="Ambitrove contact, tech company South Africa, Ambitrove Innovation, contact form, Kamogelo Mogasoa, Dean Meyer"
-      />
-      <meta property="og:title" content="Contact | Ambitrove Innovation" />
-      <meta
-        property="og:description"
-        content="Connect with Ambitrove Innovation to discuss your next project or partnership."
-      />
-      <meta property="og:url" content="https://ambitrove.com/contact" />
-      <meta property="og:type" content="website" />
-      <link rel="canonical" href="https://ambitrove.com/contact" />
+      {/* { SEO Metadata} */}
+      <ContactMetaData />
 
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -142,6 +138,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Email</h4>
+
                   <a
                     href="mailto:contact@ambitrove.com"
                     className="text-gray-400 hover:text-blue-500 transition">
@@ -156,6 +153,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Phone</h4>
+
                   <a
                     href="tel:+27761972861"
                     className="text-gray-400 hover:text-green-500 transition">
@@ -287,15 +285,27 @@ const ContactPage = () => {
                     placeholder="Tell us about your project..."></textarea>
                 </div>
 
+                {/* Cloudflare Turnstile Widget */}
+                <div className="flex justify-center py-2">
+                  <Turnstile
+                    className="rounded-md"
+                    siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY!}
+                    onSuccess={(token) => setTurnstileToken(token)}
+                    onError={() => setTurnstileToken("")}
+                    onExpire={() => setTurnstileToken("")}
+                  />
+                </div>
+
                 <button
                   onClick={handleSubmit}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center space-x-2 cursor-pointer">
+                  disabled={!turnstileToken || loading}
+                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center space-x-2">
                   {loading ? (
                     <span>
                       <LoaderCircle className="animate-spin" size={18} />
                     </span>
                   ) : (
-                    <div className="flex flex-row">
+                    <div className="flex flex-row gap-2">
                       <span>Send Message</span>
                       <Send size={18} />
                     </div>

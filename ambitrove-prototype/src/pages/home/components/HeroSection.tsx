@@ -23,11 +23,15 @@ const HeroSection = () => {
             </span>
           </motion.div>
 
+          {/* <HeadingTag className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+            Transform Your Business with{" "}
+            <span className="text-blue-600">Intelligent AI Agents</span>
+          </HeadingTag> */}
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+            transition={{ delay: 0.3 }}>
             Transform Your Business with{" "}
             <span className="text-blue-600">Intelligent AI Agents</span>
           </motion.h1>

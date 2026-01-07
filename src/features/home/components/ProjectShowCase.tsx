@@ -46,9 +46,9 @@ const ProjectShowCase = () => {
           {/* Left Content */}
 
           <div className="lg:col-span-7 xl:col-span-6 text-white space-y-6 sm:space-y-8 md:space-y-6 order-2 lg:order-1 showIn-text">
-            <h1 className="showIn-h1 text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-bold leading-[1.1] sm:leading-[1.2]">
+            <h2 className="showIn-h1 text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-bold leading-[1.1] sm:leading-[1.2]">
               Building fully functional modern software applications.
-            </h1>
+            </h2>
 
             <div className="space-y-4 sm:space-y-5 md:space-y-2">
               <h2 className="showIn-h2 text-xl sm:text-2xl md:text-2xl lg:text-xl xl:text-2xl font-semibold  ">
