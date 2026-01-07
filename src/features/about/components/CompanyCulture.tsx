@@ -77,7 +77,7 @@ const CompanyCulture = () => {
 
   return (
     <section
-      className="culture-section py-16 px-6 md:px-12 bg-gradient-to-br from-neutral-900 via-black to-neutral-900"
+      className="culture-section py-16 px-6 md:px-12 bg-linear-to-br from-neutral-900 via-black to-neutral-900"
       id="culture">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -100,7 +100,7 @@ const CompanyCulture = () => {
               className=" bg-neutral-900 p-8 rounded-2xl border border-neutral-800 hover:border-neutral-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
               {/* Icon with Gradient Background */}
               <div
-                className={`w-16 h-16 rounded-full bg-gradient-to-br ${value.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 translate-x-28 md:translate-x-36`}>
+                className={`w-16 h-16 rounded-full bg-linear-to-br ${value.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 translate-x-28 md:translate-x-36`}>
                 <span className="text-white ">{value.icon}</span>
               </div>
 
@@ -119,7 +119,7 @@ const CompanyCulture = () => {
 
         {/* Bottom Section - Culture Statement */}
         <div className="mt-16 culture-fade-in">
-          <div className="bg-gradient-to-r from-teal-500/10 via-green-500/10 to-blue-500/10 p-8 md:p-12 rounded-2xl border border-teal-500/20">
+          <div className="bg-linear-to-r from-teal-500/10 via-green-500/10 to-blue-500/10 p-8 md:p-12 rounded-2xl border border-teal-500/20">
             <h3 className="text-3xl font-bold text-white mb-6 text-center">
               Why Our Culture Matters
             </h3>

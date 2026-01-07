@@ -1,6 +1,8 @@
+import { Helmet } from "react-helmet-async";
+
 const BlogPageMetaData = () => {
   return (
-    <head>
+    <Helmet>
       <title>Blogs </title>
       <meta
         name="description"
@@ -11,7 +13,7 @@ const BlogPageMetaData = () => {
         content="Ambitrove blog, tech insights, software development, Web3, South Africa tech"
       />
       <link rel="canonical" href="https://ambitrove.com/blog" />
-    </head>
+    </Helmet>
   );
 };
 
