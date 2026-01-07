@@ -290,7 +290,7 @@ const ContactPage = () => {
                   <Turnstile
                     className="rounded-md"
                     siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY!}
-                    onSuccess={(token) => setTurnstileToken(token)}
+                    onSuccess={(token: string) => setTurnstileToken(token)}
                     onError={() => setTurnstileToken("")}
                     onExpire={() => setTurnstileToken("")}
                   />
@@ -298,7 +298,8 @@ const ContactPage = () => {
 
                 <button
                   onClick={handleSubmit}
-                  disabled={!turnstileToken || loading}
+                  //disabled={!turnstileToken || loading}
+                  disabled={loading}
                   className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center space-x-2">
                   {loading ? (
                     <span>
