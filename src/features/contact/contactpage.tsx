@@ -45,10 +45,12 @@ const ContactPage = () => {
     e.preventDefault();
 
     // Verify Turnstile token
+    /*
     if (!turnstileToken) {
       alert("Please complete the security verification");
       return;
     }
+    */
 
     setLoading(true);
 
