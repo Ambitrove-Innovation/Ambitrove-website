@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Download, Shield } from "lucide-react";
@@ -7,7 +6,7 @@ import PrivacyMetaData from "./components/PrivacyMetaData";
 const PrivacyPage = () => {
   useGSAP(() => {
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     if (prefersReducedMotion) return;
@@ -275,8 +274,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };

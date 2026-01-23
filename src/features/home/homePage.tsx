@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import HeroSection from "./components/HeroSection";
 import ProjectShowCase from "./components/ProjectShowCase";
 import ServiceCardOffers from "./components/ServiceCardOffers";
@@ -11,7 +10,6 @@ const Homepage = () => {
       <WhyChoose />
       <ServiceCardOffers />
       <ProjectShowCase />
-      <Footer />
     </>
   );
 };
