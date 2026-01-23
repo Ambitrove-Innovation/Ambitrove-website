@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 //import { Turnstile } from "@marsidev/react-turnstile";
-import Footer from "@/components/Footer";
+
 import ContactMetaData from "./components/ContactMetaData";
 
 interface FormData {
@@ -33,7 +33,7 @@ const ContactPage = () => {
   //const [turnstileToken, setTurnstileToken] = useState<string>("");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -71,7 +71,7 @@ const ContactPage = () => {
         },
         {
           publicKey: publicKey,
-        }
+        },
       );
 
       setSubmitted(true);
@@ -299,7 +299,7 @@ const ContactPage = () => {
                   />
                 </div>
                 */}
-                
+
                 <button
                   onClick={handleSubmit}
                   //disabled={!turnstileToken || loading}
@@ -321,7 +321,6 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </section>
   );
 };

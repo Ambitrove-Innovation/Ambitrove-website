@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import {
@@ -20,7 +19,7 @@ const CareersPage = () => {
 
   useGSAP(() => {
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     if (prefersReducedMotion) return;
@@ -203,7 +202,7 @@ const CareersPage = () => {
               <div className="pt-4">
                 <a
                   href={`/contact?subject=Application: ${encodeURIComponent(
-                    selectedJob.title
+                    selectedJob.title,
                   )}`}
                   className="inline-flex items-center justify-center gap-2 w-full px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all">
                   Apply Now
@@ -213,7 +212,7 @@ const CareersPage = () => {
                   Or email your CV to{" "}
                   <a
                     href={`mailto:contact@ambitrove.com?subject=Application: ${encodeURIComponent(
-                      selectedJob.title
+                      selectedJob.title,
                     )}`}
                     className="text-teal-400 hover:text-teal-300 underline">
                     contact@ambitrove.com
@@ -227,9 +226,6 @@ const CareersPage = () => {
 
       {/* CTA Section */}
       <CareersCTA />
-
-      {/* Footer */}
-      <Footer />
     </>
   );
 };

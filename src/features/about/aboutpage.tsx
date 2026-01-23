@@ -1,5 +1,4 @@
 import AboutAmbitrove from "./components/AboutAmbitrove";
-import Footer from "../../components/Footer";
 import LeadershipTeam from "./components/LeadershipTeam";
 import OurJourney from "./components/OurJourney";
 import CompanyCulture from "./components/CompanyCulture";
@@ -18,7 +17,6 @@ const AboutPage = () => {
       <LeadershipTeam />
       <CompanyCulture />
       <CodeOfConduct />
-      <Footer />
     </>
   );
 };

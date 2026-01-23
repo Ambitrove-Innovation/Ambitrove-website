@@ -9,6 +9,7 @@ import BlogPage from "./features/blog/blogPage";
 import ServicesPage from "./features/services/servicesPage";
 import Navbar from "./components/Navbar";
 import PageErrorRedirect from "./features/pageNotFound/PageErrorRedirect";
+import Footer from "./components/Footer";
 
 const Routespath = () => {
   return (
@@ -25,6 +26,7 @@ const Routespath = () => {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="*" element={<PageErrorRedirect />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
