@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import {
@@ -28,7 +27,7 @@ type FAQItem = {
 const SupportPage = () => {
   useGSAP(() => {
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     if (prefersReducedMotion) return;
@@ -235,8 +234,6 @@ const SupportPage = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };

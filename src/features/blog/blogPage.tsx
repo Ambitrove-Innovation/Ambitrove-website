@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Calendar, Clock, ArrowRight, Tag, X } from "lucide-react";
@@ -13,7 +12,7 @@ const BlogPage = () => {
 
   useGSAP(() => {
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     if (prefersReducedMotion) return;
@@ -370,7 +369,7 @@ The tools and techniques for data analysis are more accessible than ever. From s
                         className="text-gray-300 leading-relaxed mb-4">
                         {paragraph}
                       </p>
-                    )
+                    ),
                 )}
               </div>
 
@@ -392,8 +391,6 @@ The tools and techniques for data analysis are more accessible than ever. From s
 
       {/* Newsletter CTA */}
       <NewLetterCTA />
-
-      <Footer />
     </>
   );
 };
