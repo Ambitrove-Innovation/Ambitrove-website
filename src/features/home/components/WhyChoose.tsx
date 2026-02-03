@@ -58,7 +58,7 @@ useGSAP(() => {
         <div className="flex justify-center md:justify-end">
           <div className="overflow-hidden rounded-tr-[4rem] rounded-bl-[4rem] border-b-4 border-teal-500  shadow-xl shadow-black/40">
             <img
-              src="/images/board-meeting.jpg"
+              src="/images/board-meeting.webp"
               alt="Team working on digital solutions"
               className="w-full h-auto object-cover rounded-tr-lg rounded-bl-lg"
             />

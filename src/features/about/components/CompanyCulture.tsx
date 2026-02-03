@@ -12,7 +12,7 @@ import {
 const CompanyCulture = () => {
   useGSAP(() => {
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     if (prefersReducedMotion) return;
@@ -126,7 +126,7 @@ const CompanyCulture = () => {
             <div className="grid md:grid-cols-2 gap-8 text-gray-300">
               <div>
                 <p className="leading-relaxed mb-4">
-                  Our culture isn't just words on a page—it's the heartbeat of
+                  Our culture isn't just words on a page it's the heartbeat of
                   Ambitrove. Every team member embodies these values, creating
                   an environment where innovation thrives, creativity is
                   celebrated, and excellence is the standard.

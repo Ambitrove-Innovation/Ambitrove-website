@@ -1,6 +1,29 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-SemiBold.woff") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter_24pt-Regular.ttf");
+}
+
+/*TODO: Turn inter font to woff and remove old ttf*/
+
+/* @font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} */
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -8,6 +31,8 @@
 }
 
 @theme inline {
+  --font-inter: "Inter", system-ui, aria-label, Arial, sans-serif;
+  --font-grotesk: "Space Grotesk", system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -84,7 +109,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-slate-900 text-white antialiased text-center min-h-screen flex flex-col;
+    @apply font-inter bg-slate-900 text-white antialiased text-center min-h-screen flex flex-col;
   }
 }
 
@@ -146,12 +171,13 @@
 
 @layer utilities {
   .bg-gradient {
-    background: radial-gradient(
+    background:
+      radial-gradient(
         ellipse 80% 60% at 50% 0%,
-        rgba(16, 185, 129, 0.25),
+        rgba(31, 31, 31, 0.648),
         transparent 70%
       ),
-      #000000;
+      #070707;
   }
   .text-gradient {
     background: var(--color-textGradient);

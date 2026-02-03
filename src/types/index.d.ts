@@ -52,6 +52,23 @@ interface BlogPost {
   author: string;
   content?: string;
 }
+
+interface Props {
+  plan: Plan;
+  billing: BillingType;
+}
+
+type BillingType = "once" | "monthly" | "yearly";
+type AudienceType = "individual" | "team";
+
+interface Plan {
+  name: string;
+  popular?: boolean;
+  bestValue?: boolean;
+  pricing: Record<BillingType, number>;
+  description: string;
+  features: string[];
+}
 interface PricingFeature {
   name: string;
   included: boolean;
@@ -66,4 +83,11 @@ interface PricingTier {
   highlighted?: boolean;
   cta: string;
   ctaLink?: string;
+}
+
+// BillingToggle.tsx
+
+interface Props {
+  billing: BillingType;
+  setBilling: (b: BillingType) => void;
 }
