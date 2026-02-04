@@ -134,7 +134,7 @@
     @apply flex-wrap items-baseline hover:bg-white hover:text-black hover:scale-110 delay-200 transform transition-all p-2 rounded-lg;
   }
   .gradient-Green-bg {
-    @apply bg-gradient-to-br from-green-400 via-black to-black  min-h-screen;
+    @apply bg-linear-to-br mask-t-from-87%  mask-b-from-80% mask-l-from-75% mask-y-from-white via-black to-black  min-h-screen;
   }
 }
 
@@ -178,10 +178,10 @@
     background:
       radial-gradient(
         ellipse 80% 60% at 50% 0%,
-        rgba(31, 31, 31, 0.648),
+        oklch(25.419% 0.01517 256.837 / 0.601) 0%,
         transparent 70%
       ),
-      #070707;
+      oklch(12.856% 0.00001 271.152);
   }
   .text-gradient {
     background: var(--color-textGradient);
@@ -190,10 +190,10 @@
     background-clip: text;
   }
   .bg-caroalt {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: oklch(100% 0.00011 271.152 / 0.1);
   }
   .shady-gray {
-    box-shadow: 0 4px 30px rgba(60, 192, 91, 0.522);
+    box-shadow: 0 4px 30px oklch(71.412% 0.18143 147.608 / 0.522);
     backdrop-filter: blur(5px);
   }
 }
