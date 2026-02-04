@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between gap-12">
           {/* Brand Info */}
           <div className="md:w-1/3">
-            <h2 className="text-2xl font-semibold text-white mb-3">
+            <h2 className="text-2xl font-inter text-white mb-3">
               Ambitrove Innovation
             </h2>
             <p className="leading-relaxed text-gray-400 mb-6">
@@ -64,7 +64,7 @@ const Footer = () => {
           {/* Navigation Links */}
           <div className="md:w-1/3 flex justify-between">
             <div>
-              <h3 className="text-sm font-semibold text-white uppercase mb-4 tracking-wide">
+              <h3 className="text-sm font-inter text-white uppercase mb-4 tracking-wide">
                 Company
               </h3>
               <ul className="space-y-2">
@@ -91,7 +91,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-white uppercase mb-4 tracking-wide">
+              <h3 className="text-sm font-inter text-white uppercase mb-4 tracking-wide">
                 Resources
               </h3>
               <ul className="space-y-2" aria-disabled={true}>
@@ -122,7 +122,7 @@ const Footer = () => {
 
           {/* Contact Section */}
           <div className=" space-y-4">
-            <h3 className="text-sm font-semibold text-white uppercase mb-4  tracking-wide">
+            <h3 className="text-sm font-inter text-white uppercase mb-4  tracking-wide">
               Contact
             </h3>
             <div className="flex items-center space-x-3">
@@ -153,7 +153,7 @@ const Footer = () => {
           <p>© {year} Ambitrove Innovation (Pty) Ltd. All rights reserved.</p>
           <p className="mt-3 md:mt-0">
             Designed & Developed by
-            <span className="text-white font-medium"> Ambitrove Team</span>
+            <span className="text-white font-inter"> Ambitrove Team</span>
           </p>
         </div>
       </div>
