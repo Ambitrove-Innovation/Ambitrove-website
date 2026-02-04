@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import { PACKAGES } from "@/constants/data";
-import gsap from "gsap";
+// import gsap from "gsap";
 import { Check, Star, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -14,17 +14,17 @@ export const PricingPackages = () => {
 
     if (prefersReducedMotion) return;
 
-    gsap.from(".pricing-card", {
-      opacity: 0,
-      y: 30,
-      stagger: 0.1,
-      duration: 0.5,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".pricing-section",
-        start: "top 75%",
-      },
-    });
+    // gsap.from(".pricing-card", {
+    //   opacity: 0,
+    //   y: 30,
+    //   stagger: 0.1,
+    //   duration: 0.5,
+    //   ease: "power3.out",
+    //   scrollTrigger: {
+    //     trigger: ".pricing-section",
+    //     start: "top 75%",
+    //   },
+    // });
   }, []);
 
   const getThemeClasses = (theme: string, highlighted?: boolean) => {

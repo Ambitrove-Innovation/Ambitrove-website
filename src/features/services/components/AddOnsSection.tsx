@@ -1,5 +1,5 @@
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+// import gsap from "gsap";
 import { Palette, TrendingUp, Shield, Zap, Plug } from "lucide-react";
 import { ADDONS } from "../../../constants/data";
 import type { JSX } from "react";
@@ -15,17 +15,17 @@ export const AddOnsSection = () => {
 
     if (prefersReducedMotion) return;
 
-    gsap.from(".addon-card", {
-      opacity: 0,
-      y: 25,
-      stagger: 0.08,
-      duration: 0.5,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".addons-section",
-        start: "top 45%",
-      },
-    });
+    // gsap.from(".addon-card", {
+    //   opacity: 0,
+    //   y: 25,
+    //   stagger: 0.08,
+    //   duration: 0.5,
+    //   ease: "power3.out",
+    //   scrollTrigger: {
+    //     trigger: ".addons-section",
+    //     start: "top 45%",
+    //   },
+    // });
   }, []);
 
   const getCategoryIcon = (category: string) => {
