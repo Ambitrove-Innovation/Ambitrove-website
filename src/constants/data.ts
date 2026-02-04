@@ -1,3 +1,4 @@
+// Pricing Packages Data
 export const PACKAGES: WebsiteBuildPackage[] = [
   {
     id: "starter",
@@ -284,5 +285,188 @@ export const FEATURESFAQ: FAQItem[] = [
     question: "What payment methods do you accept?",
     answer:
       "We accept bank transfers (EFT), credit/debit cards, and can set up payment plans for larger projects. For recurring service care plans, we typically use automated monthly billing via card or debit order. Enterprise clients can also arrange invoice-based billing.",
+  },
+];
+
+export const ADDONS: AddOnService[] = [
+  {
+    id: "logo-design",
+    title: "Logo & Brand Identity",
+    description:
+      "Professional logo design with brand guidelines, color palette, and typography recommendations.",
+    pricing: {
+      type: "one-time",
+      amount: "R2,500 - R8,000",
+    },
+    complexity: "medium",
+    category: "branding",
+    features: [
+      "3-5 logo concepts",
+      "Unlimited revisions",
+      "Brand style guide",
+      "Multiple file formats",
+    ],
+  },
+  {
+    id: "seo-package",
+    title: "Advanced SEO Optimization",
+    description:
+      "Comprehensive SEO strategy including keyword research, on-page optimization, and monthly reporting.",
+    pricing: {
+      type: "recurring",
+      amount: "R3,000/month",
+    },
+    complexity: "high",
+    category: "marketing",
+    features: [
+      "Keyword research",
+      "Technical SEO audit",
+      "Content optimization",
+      "Monthly analytics reports",
+    ],
+  },
+  {
+    id: "content-writing",
+    title: "Professional Content Writing",
+    description:
+      "SEO-optimized content creation for blogs, landing pages, and product descriptions.",
+    pricing: {
+      type: "recurring",
+      amount: "R800/page",
+    },
+    complexity: "low",
+    category: "marketing",
+    features: [
+      "SEO-optimized copy",
+      "Industry research",
+      "2 rounds of revisions",
+      "Plagiarism-free guarantee",
+    ],
+  },
+  {
+    id: "ssl-security",
+    title: "Enhanced Security Package",
+    description:
+      "Advanced security measures including SSL certificates, malware scanning, and DDoS protection.",
+    pricing: {
+      type: "recurring",
+      amount: "R800/month",
+    },
+    complexity: "medium",
+    category: "security",
+    features: [
+      "SSL certificate setup",
+      "Daily malware scans",
+      "Firewall configuration",
+      "Security monitoring",
+    ],
+  },
+  {
+    id: "speed-optimization",
+    title: "Performance Optimization",
+    description:
+      "Technical improvements to boost site speed, including image optimization and caching.",
+    pricing: {
+      type: "one-time",
+      amount: "R3,500",
+    },
+    complexity: "high",
+    category: "performance",
+    features: [
+      "Image compression",
+      "Code minification",
+      "Caching setup",
+      "CDN integration",
+    ],
+  },
+  {
+    id: "email-marketing",
+    title: "Email Marketing Integration",
+    description:
+      "Set up automated email campaigns with newsletter design and mailing list management.",
+    pricing: {
+      type: "recurring",
+      amount: "R2,500/month",
+    },
+    complexity: "medium",
+    category: "marketing",
+    features: [
+      "Email template design",
+      "Automation setup",
+      "List management",
+      "Analytics tracking",
+    ],
+  },
+  {
+    id: "analytics-setup",
+    title: "Analytics & Tracking Setup",
+    description:
+      "Comprehensive analytics implementation with custom dashboards and conversion tracking.",
+    pricing: {
+      type: "one-time",
+      amount: "R2,000",
+    },
+    complexity: "medium",
+    category: "performance",
+    features: [
+      "Google Analytics 4 setup",
+      "Event tracking",
+      "Custom dashboards",
+      "Goal configuration",
+    ],
+  },
+  {
+    id: "api-integration",
+    title: "Third-Party API Integration",
+    description:
+      "Connect your website with external services like payment gateways, CRMs, or social platforms.",
+    pricing: {
+      type: "custom",
+      amount: "From R5,000",
+    },
+    complexity: "high",
+    category: "integration",
+    features: [
+      "Custom API development",
+      "Data synchronization",
+      "Error handling",
+      "Documentation",
+    ],
+  },
+  {
+    id: "photography",
+    title: "Professional Photography",
+    description:
+      "Custom product photography or corporate headshots for your website and marketing materials.",
+    pricing: {
+      type: "one-time",
+      amount: "R3,500/session",
+    },
+    complexity: "low",
+    category: "branding",
+    features: [
+      "2-hour photo session",
+      "20+ edited photos",
+      "High-resolution files",
+      "Commercial usage rights",
+    ],
+  },
+  {
+    id: "database-design",
+    title: "Custom Database Design",
+    description:
+      "Design and implement custom database solutions for complex data management needs.",
+    pricing: {
+      type: "custom",
+      amount: "From R8,000",
+    },
+    complexity: "high",
+    category: "integration",
+    features: [
+      "Database architecture",
+      "Data modeling",
+      "Query optimization",
+      "Backup solutions",
+    ],
   },
 ];
