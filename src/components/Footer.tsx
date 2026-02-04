@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer
-      className=" text-gray-400 border-t border-neutral-800"
+      className=" text-gray-400 border-t border-neutral-800  mt-auto"
       aria-roledescription="Footer">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
         {/* Top Section */}
@@ -95,7 +95,7 @@ const Footer = () => {
                 Resources
               </h3>
               <ul className="space-y-2" aria-disabled={true}>
-                 {/*<li>
+                {/*<li>
                   <a href="/careers" className="hover:text-white transition">
                     Careers
                   </a>
