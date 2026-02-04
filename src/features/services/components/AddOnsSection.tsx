@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Palette, TrendingUp, Shield, Zap, Plug } from "lucide-react";
+import { ADDONS } from "../../../constants/data";
 import type { JSX } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -26,189 +27,6 @@ export const AddOnsSection = () => {
       },
     });
   }, []);
-
-  const addOns: AddOnService[] = [
-    {
-      id: "logo-design",
-      title: "Logo & Brand Identity",
-      description:
-        "Professional logo design with brand guidelines, color palette, and typography recommendations.",
-      pricing: {
-        type: "one-time",
-        amount: "R2,500 - R8,000",
-      },
-      complexity: "medium",
-      category: "branding",
-      features: [
-        "3-5 logo concepts",
-        "Unlimited revisions",
-        "Brand style guide",
-        "Multiple file formats",
-      ],
-    },
-    {
-      id: "seo-package",
-      title: "Advanced SEO Optimization",
-      description:
-        "Comprehensive SEO strategy including keyword research, on-page optimization, and monthly reporting.",
-      pricing: {
-        type: "recurring",
-        amount: "R3,000/month",
-      },
-      complexity: "high",
-      category: "marketing",
-      features: [
-        "Keyword research",
-        "Technical SEO audit",
-        "Content optimization",
-        "Monthly analytics reports",
-      ],
-    },
-    {
-      id: "content-writing",
-      title: "Professional Content Writing",
-      description:
-        "SEO-optimized content creation for blogs, landing pages, and product descriptions.",
-      pricing: {
-        type: "recurring",
-        amount: "R800/page",
-      },
-      complexity: "low",
-      category: "marketing",
-      features: [
-        "SEO-optimized copy",
-        "Industry research",
-        "2 rounds of revisions",
-        "Plagiarism-free guarantee",
-      ],
-    },
-    {
-      id: "ssl-security",
-      title: "Enhanced Security Package",
-      description:
-        "Advanced security measures including SSL certificates, malware scanning, and DDoS protection.",
-      pricing: {
-        type: "recurring",
-        amount: "R800/month",
-      },
-      complexity: "medium",
-      category: "security",
-      features: [
-        "SSL certificate setup",
-        "Daily malware scans",
-        "Firewall configuration",
-        "Security monitoring",
-      ],
-    },
-    {
-      id: "speed-optimization",
-      title: "Performance Optimization",
-      description:
-        "Technical improvements to boost site speed, including image optimization and caching.",
-      pricing: {
-        type: "one-time",
-        amount: "R3,500",
-      },
-      complexity: "high",
-      category: "performance",
-      features: [
-        "Image compression",
-        "Code minification",
-        "Caching setup",
-        "CDN integration",
-      ],
-    },
-    {
-      id: "email-marketing",
-      title: "Email Marketing Integration",
-      description:
-        "Set up automated email campaigns with newsletter design and mailing list management.",
-      pricing: {
-        type: "recurring",
-        amount: "R2,500/month",
-      },
-      complexity: "medium",
-      category: "marketing",
-      features: [
-        "Email template design",
-        "Automation setup",
-        "List management",
-        "Analytics tracking",
-      ],
-    },
-    {
-      id: "analytics-setup",
-      title: "Analytics & Tracking Setup",
-      description:
-        "Comprehensive analytics implementation with custom dashboards and conversion tracking.",
-      pricing: {
-        type: "one-time",
-        amount: "R2,000",
-      },
-      complexity: "medium",
-      category: "performance",
-      features: [
-        "Google Analytics 4 setup",
-        "Event tracking",
-        "Custom dashboards",
-        "Goal configuration",
-      ],
-    },
-    {
-      id: "api-integration",
-      title: "Third-Party API Integration",
-      description:
-        "Connect your website with external services like payment gateways, CRMs, or social platforms.",
-      pricing: {
-        type: "custom",
-        amount: "From R5,000",
-      },
-      complexity: "high",
-      category: "integration",
-      features: [
-        "Custom API development",
-        "Data synchronization",
-        "Error handling",
-        "Documentation",
-      ],
-    },
-    {
-      id: "photography",
-      title: "Professional Photography",
-      description:
-        "Custom product photography or corporate headshots for your website and marketing materials.",
-      pricing: {
-        type: "one-time",
-        amount: "R3,500/session",
-      },
-      complexity: "low",
-      category: "branding",
-      features: [
-        "2-hour photo session",
-        "20+ edited photos",
-        "High-resolution files",
-        "Commercial usage rights",
-      ],
-    },
-    {
-      id: "database-design",
-      title: "Custom Database Design",
-      description:
-        "Design and implement custom database solutions for complex data management needs.",
-      pricing: {
-        type: "custom",
-        amount: "From R8,000",
-      },
-      complexity: "high",
-      category: "integration",
-      features: [
-        "Database architecture",
-        "Data modeling",
-        "Query optimization",
-        "Backup solutions",
-      ],
-    },
-  ];
 
   const getCategoryIcon = (category: string) => {
     const icons: { [key: string]: JSX.Element } = {
@@ -263,7 +81,7 @@ export const AddOnsSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <h2 className=" md:text-5xl font-bold text-white mb-4">
+          <h2 className=" md:text-5xl font-grotesk text-white mb-4">
             Our Special Add-ons plan
           </h2>
           <p className="text-gray-400 text-lg text-center max-w-4xl mx-auto">
@@ -275,7 +93,7 @@ export const AddOnsSection = () => {
 
         {/* Add-ons Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {addOns.map((addon) => (
+          {ADDONS.map((addon) => (
             <div
               key={addon.id}
               className=" bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-all duration-300 hover:scale-105 flex flex-col">
@@ -291,7 +109,7 @@ export const AddOnsSection = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-xl font-bold text-white mb-2 font-inter">
                 {addon.title}
               </h3>
 
@@ -324,14 +142,14 @@ export const AddOnsSection = () => {
                         ? "One-time"
                         : "Custom"}
                   </span>
-                  <span className="text-lg font-bold text-white">
+                  <span className="text-lg font-bold text-white font-inter">
                     {addon.pricing.amount}
                   </span>
                 </div>
 
                 <button
                   onClick={() => navigate("/contact")}
-                  className="w-full py-2 bg-white hover:bg-gray-100 text-black font-semibold rounded-lg transition-all text-sm">
+                  className="w-full py-2 bg-white hover:bg-gray-100 text-black font-semibold rounded-lg transition-all text-sm font-inter">
                   Add to Package
                 </button>
               </div>
@@ -347,7 +165,7 @@ export const AddOnsSection = () => {
           </p>
           <button
             onClick={() => navigate("/contact")}
-            className="px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all">
+            className="px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all font-inter">
             Request Custom Add-on
           </button>
         </div>
