@@ -58,7 +58,7 @@ export const ServiceCarePlans = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-grotesk text-white mb-4">
             Website Service Care Plans
           </h2>
           <p className="text-gray-400 text-lg mb-8">

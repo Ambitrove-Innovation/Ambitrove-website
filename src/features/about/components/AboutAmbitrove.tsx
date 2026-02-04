@@ -25,11 +25,11 @@ const AboutAmbitrove = () => {
         id="learn">
         {/* LEFT CONTENT */}
         <div className="space-y-6 text-left">
-          <h2 className="text-2xl md:text-4xl shadow-2xl font-extrabold text-white">
+          <h2 className="text-2xl md:text-4xl shadow-2xl font-inter text-white">
             <span className="drop-shadow-lg">Ambitrove Innovation</span>
           </h2>
 
-          <p className="text-xl md:text-2xl font-medium text-white leading-relaxed">
+          <p className="text-xl md:text-2xl font-inter font-medium text-white leading-relaxed">
             Pioneering South Africa's Tech Future
           </p>
 

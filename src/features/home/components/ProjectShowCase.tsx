@@ -46,12 +46,12 @@ const ProjectShowCase = () => {
           {/* Left Content */}
 
           <div className="lg:col-span-7 xl:col-span-6 text-white space-y-6 sm:space-y-8 md:space-y-6 order-2 lg:order-1 showIn-text">
-            <h2 className="showIn-h1 text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-bold leading-[1.1] sm:leading-[1.2]">
+            <h2 className="showIn-h1 text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-inter leading-[1.1] sm:leading-[1.2]">
               Building fully functional modern software applications.
             </h2>
 
             <div className="space-y-4 sm:space-y-5 md:space-y-2">
-              <h2 className="showIn-h2 text-xl sm:text-2xl md:text-2xl lg:text-xl xl:text-2xl font-semibold  ">
+              <h2 className="showIn-h2 text-xl sm:text-2xl md:text-2xl lg:text-xl xl:text-2xl font-inter  ">
                 South African Excellence:
               </h2>
               <p className="showIn-p text-base sm:text-lg md:text-xl lg:text-base xl:text-lg 2xl:text-xl text-gray-300 leading-relaxed max-w-xl xl:max-w-2xl">
@@ -103,7 +103,7 @@ const ProjectShowCase = () => {
                     />
                   </div>
 
-                  <h2 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-2xl font-bold leading-[1.1] sm:leading-[1.2]">
+                  <h2 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-2xl font-inter leading-[1.1] sm:leading-[1.2]">
                     How it works.
                   </h2>
 

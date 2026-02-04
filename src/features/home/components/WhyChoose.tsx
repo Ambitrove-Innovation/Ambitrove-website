@@ -26,12 +26,12 @@ useGSAP(() => {
       <div className="max-w-6xl mx-auto grid  md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div className="space-y-6 text-left">
-          <h2 className="text-2xl md:text-4xl  shadow-2xl font-extrabold text-white fade-in">
+          <h2 className="text-2xl md:text-4xl  shadow-2xl font-inter text-white fade-in">
             Why Choose{" "}
             <span className="text-white drop-shadow-lg">Ambitrove ?</span>
           </h2>
 
-          <p className="text-xl md:text-2xl font-medium text-white leading-relaxed">
+          <p className="text-xl md:text-2xl font-inter text-white leading-relaxed">
             ✓ Fostering client trust by solving real problems with great
             communication &amp; attention to detail
           </p>
@@ -48,10 +48,15 @@ useGSAP(() => {
             problems with innovative solutions.
           </p>
 
-        <Button asChild className="mt-4 px-6 py-2 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-black transition duration-300 rounded-tr-lg rounded-bl-lg md:w-35">
-          <Link to="/about" aria-label="Learn more about Ambitrove Innovation">Learn more</Link>
-        </Button>
-
+          <Button
+            asChild
+            className="mt-4 px-6 py-2 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-black transition duration-300 rounded-tr-lg rounded-bl-lg md:w-35">
+            <Link
+              to="/about"
+              aria-label="Learn more about Ambitrove Innovation">
+              Learn more
+            </Link>
+          </Button>
         </div>
 
         {/* Right Image */}

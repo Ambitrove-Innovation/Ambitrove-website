@@ -40,8 +40,8 @@ export const PricingFAQ = () => {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-br from-blue-500 to-purple-500 rounded-full mb-6">
             <HelpCircle className="w-8 h-8 text-white" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Frequently Asked Questions
+          <h2 className="text-4xl md:text-5xl font-grotesk text-white mb-4 ">
+            Your Questions Answered
           </h2>
           <p className="text-gray-400 text-lg">
             Everything you need to know about our pricing, packages, and
@@ -58,7 +58,7 @@ export const PricingFAQ = () => {
                 value={`item-${index}`}
                 className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-neutral-700 transition-colors">
                 <AccordionTrigger className="px-6 py-5 text-left hover:bg-neutral-800/50">
-                  <span className="text-white font-semibold pr-4">
+                  <span className="text-white font-semibold font-inter pr-4">
                     {faq.question}
                   </span>
                 </AccordionTrigger>
@@ -73,7 +73,7 @@ export const PricingFAQ = () => {
         {/* Bottom CTA */}
         <div className="mt-12 text-center faq-section">
           <div className="bg-linear-to-r from-teal-500/10 to-blue-500/10 border border-teal-500/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-3">
+            <h3 className="text-2xl font-bold text-white mb-3 font-inter">
               Still have questions?
             </h3>
             <p className="text-gray-400 mb-6">
@@ -82,7 +82,7 @@ export const PricingFAQ = () => {
             </p>
             <button
               onClick={() => navigate("/contact")}
-              className="px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all">
+              className="px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all font-inter">
               Contact Our Team
             </button>
           </div>

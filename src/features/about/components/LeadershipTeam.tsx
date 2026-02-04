@@ -67,7 +67,7 @@ const LeadershipTeam = () => {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center pop-up">
           {/* Left Text Column */}
           <div className="space-y-6 text-left fade-in">
-            <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold">
+            <h1 className="text-4xl md:text-4xl lg:text-5xl font-inter font-bold">
               Meet Our Leadership Team.
             </h1>
             <div className="space-y-4 text-gray-300 leading-relaxed">
@@ -98,7 +98,7 @@ const LeadershipTeam = () => {
                   loading="lazy"
                 />
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-1 flex items-center justify-center">
+                  <h3 className="text-lg font-inter font-semibold mb-1 flex items-center justify-center">
                     {member.name}{" "}
                     <span className="ml-1 text-green-500">
                       <VerifiedIcon size={16} />

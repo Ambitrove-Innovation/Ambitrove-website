@@ -42,7 +42,7 @@ export const PricingHero = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-inter text-white mb-6 leading-tight">
             Affordable, Scalable Solutions
             <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-teal-400 to-green-400">
@@ -50,7 +50,7 @@ export const PricingHero = () => {
             </span>
           </h1>
 
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
             Choose the perfect package for your business. From startups to
             enterprises, we've got you covered with transparent pricing and
             premium features.

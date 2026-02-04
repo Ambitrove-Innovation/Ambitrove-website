@@ -91,7 +91,7 @@ const OurJourney = () => {
                   />
                 </svg>
               </div>
-              <h2 className="text-4xl font-bold">Our Journey</h2>
+              <h2 className="text-4xl font-bold font-inter">Our Journey</h2>
             </div>
 
             {/* Timeline */}
@@ -117,7 +117,9 @@ const OurJourney = () => {
           <div className="space-y-8 fade-in">
             {/* Mission Section */}
             <div className="text-left">
-              <h2 className="text-4xl font-bold mb-6">Our Mission.</h2>
+              <h2 className="text-4xl font-inter font-bold mb-6">
+                Our Mission.
+              </h2>
               <p className="text-gray-300 leading-relaxed">
                 To empower businesses and entrepreneurs by delivering innovative
                 digital products, providing expert consulting services, and
@@ -130,7 +132,9 @@ const OurJourney = () => {
 
             {/* Vision Section */}
             <div className="text-left">
-              <h2 className="text-4xl font-bold mb-6">Our Vision.</h2>
+              <h2 className="text-4xl font-bold mb-6 font-inter">
+                Our Vision.
+              </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
                   To establish Ambitrove as a leading South African technology
