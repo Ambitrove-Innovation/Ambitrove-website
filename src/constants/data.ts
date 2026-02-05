@@ -32,7 +32,7 @@ export const PACKAGES: WebsiteBuildPackage[] = [
     name: "Standard Package",
     description:
       "Perfect for small businesses needing a robust multi-page site.",
-    price: "R3,500",
+    price: "R2,500",
     priceNote: "Once-off",
     features: [
       { text: "7-12 Days Delivery", included: true },
