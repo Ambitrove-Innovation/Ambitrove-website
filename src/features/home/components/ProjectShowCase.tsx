@@ -40,7 +40,7 @@ const ProjectShowCase = () => {
   }, []);
 
   return (
-    <section className="flex flex-row items-center px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+    <section className="flex flex-row items-center px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 xl:px-16 2xl:px-20" id="projects">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 items-center">
           {/* Left Content */}
