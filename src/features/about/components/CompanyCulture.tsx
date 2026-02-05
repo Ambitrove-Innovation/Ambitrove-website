@@ -12,7 +12,7 @@ import {
 const CompanyCulture = () => {
   useGSAP(() => {
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     if (prefersReducedMotion) return;
@@ -82,7 +82,7 @@ const CompanyCulture = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 culture-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold  font-inter text-white mb-4">
             Our Culture & Values
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -105,7 +105,7 @@ const CompanyCulture = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-2xl font-bold   font-inter text-white mb-4">
                 {value.title}
               </h3>
 
@@ -120,13 +120,13 @@ const CompanyCulture = () => {
         {/* Bottom Section - Culture Statement */}
         <div className="mt-16 culture-fade-in">
           <div className="bg-linear-to-r from-teal-500/10 via-green-500/10 to-blue-500/10 p-8 md:p-12 rounded-2xl border border-teal-500/20">
-            <h3 className="text-3xl font-bold text-white mb-6 text-center">
+            <h3 className="text-3xl font-bold text-white mb-6 text-center font-inter">
               Why Our Culture Matters
             </h3>
             <div className="grid md:grid-cols-2 gap-8 text-gray-300">
               <div>
                 <p className="leading-relaxed mb-4">
-                  Our culture isn't just words on a page—it's the heartbeat of
+                  Our culture isn't just words on a page it's the heartbeat of
                   Ambitrove. Every team member embodies these values, creating
                   an environment where innovation thrives, creativity is
                   celebrated, and excellence is the standard.

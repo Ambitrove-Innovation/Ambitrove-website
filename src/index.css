@@ -1,13 +1,42 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Bold.woff") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*TODO: Turn inter font to woff and remove old ttf*/
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter24pt-SemiBold.woff") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("/public/fonts/Geist-Regular.woff") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --color-textGradient: linear-gradient(90deg, #000000, #c4c4c4, #00fd94);
+  --color-textGradient: linear-gradient(90deg, #747474, #dddddd, #00fd94);
 }
 
 @theme inline {
+  --font-geist: "Geist ", system-ui, sans-serif;
+  --font-inter: "Inter", system-ui, aria-label, Arial, sans-serif;
+  --font-grotesk: "Space Grotesk", system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -84,19 +113,19 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-slate-900 text-white antialiased text-center min-h-screen flex flex-col;
+    @apply  bg-slate-900 text-white antialiased text-center min-h-screen flex flex-col;
   }
 }
 
 @layer components {
   .service_card {
-    @apply flex items-start space-x-3 sm:space-x-4;
+    @apply flex  items-start space-x-3 sm:space-x-4 ;
   }
   .card_dots {
-    @apply w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0;
+    @apply w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 shrink-0;
   }
   .bold_title {
-    @apply text-lg sm:text-xl md:text-2xl font-semibold;
+    @apply text-lg sm:text-xl md:text-2xl font-inter;
   }
   .card_title {
     @apply text-lg sm:text-xl md:text-2xl text-gray-300 ml-2 delay-200 hover:text-green-400;
@@ -105,7 +134,7 @@
     @apply flex-wrap items-baseline hover:bg-white hover:text-black hover:scale-110 delay-200 transform transition-all p-2 rounded-lg;
   }
   .gradient-Green-bg {
-    @apply bg-gradient-to-br from-green-400 via-black to-black  min-h-screen;
+    @apply bg-linear-to-br mask-t-from-87%  mask-b-from-80% mask-l-from-75% mask-y-from-white via-black to-black  min-h-screen;
   }
 }
 
@@ -146,12 +175,13 @@
 
 @layer utilities {
   .bg-gradient {
-    background: radial-gradient(
+    background:
+      radial-gradient(
         ellipse 80% 60% at 50% 0%,
-        rgba(16, 185, 129, 0.25),
+        oklch(26.343% 0.00148 198.183 / 0.516) 0%,
         transparent 70%
       ),
-      #000000;
+      oklch(12.856% 0.00001 271.152);
   }
   .text-gradient {
     background: var(--color-textGradient);
@@ -160,10 +190,10 @@
     background-clip: text;
   }
   .bg-caroalt {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: oklch(100% 0.00011 271.152 / 0.1);
   }
   .shady-gray {
-    box-shadow: 0 4px 30px rgba(60, 192, 91, 0.522);
+    box-shadow: 0 4px 30px oklch(71.412% 0.18143 147.608 / 0.522);
     backdrop-filter: blur(5px);
   }
 }

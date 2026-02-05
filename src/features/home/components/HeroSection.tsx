@@ -28,7 +28,7 @@ const HeroSection = () => {
         ✓ Trusted Innovative Solutions⚡
       </Button>
       <div className="slide-left">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient bg-clip-text text-transparent bg-linear-to-r from-black via-white to-teal-500 max-w-3xl leading-snug sm:leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-inter text-gradient bg-clip-text text-transparent bg-linear-to-r from-black via-white to-teal-500 max-w-3xl leading-snug sm:leading-tight">
           Enhancing your ideas with Innovative digital Solutions
         </h1>
       </div>

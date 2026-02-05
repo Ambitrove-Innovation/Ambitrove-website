@@ -76,7 +76,7 @@ const CodeOfConduct = () => {
           <div className="inline-flex items-center justify-center w-20 h-20  bg-linear-to-r from-blue-500 to-purple-500 rounded-full mb-6">
             <Shield className="w-10 h-10 text-white" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold  font-inter text-white mb-4">
             Code of Conduct & Ethics
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -90,7 +90,7 @@ const CodeOfConduct = () => {
           <div className=" bg-linear-to-r from-green-500/10 to-teal-500/10 p-8 md:p-10 rounded-2xl border border-green-500/20">
             <div className="flex items-center justify-center gap-3 mb-6">
               <CheckCircle className="w-8 h-8 text-green-500" />
-              <h3 className="text-3xl font-bold text-white">
+              <h3 className="text-3xl font-bold  font-inter text-white">
                 Expected Behaviour
               </h3>
             </div>
@@ -116,7 +116,7 @@ const CodeOfConduct = () => {
           <div className="bg-linear-to-r from-red-500/10 to-orange-500/10 p-8 md:p-10 rounded-2xl border border-red-500/20">
             <div className="flex items-center justify-center gap-3 mb-6">
               <XCircle className="w-8 h-8 text-red-500" />
-              <h3 className="text-3xl font-bold text-white">
+              <h3 className="text-3xl font-bold  font-inter text-white">
                 Unacceptable Behaviour
               </h3>
             </div>
@@ -141,7 +141,7 @@ const CodeOfConduct = () => {
           <div className="bg-neutral-900 p-8 md:p-10 rounded-2xl border border-neutral-800">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Users className="w-8 h-8 text-blue-500" />
-              <h3 className="text-3xl font-bold text-white">
+              <h3 className="text-3xl font-bold text-white  font-inter">
                 Client & Partner Relations
               </h3>
             </div>
@@ -153,7 +153,7 @@ const CodeOfConduct = () => {
                 <div
                   key={index}
                   className="bg-neutral-800/50 p-6 rounded-xl border border-neutral-700 hover:border-blue-500/50 transition-all">
-                  <h4 className="text-xl font-bold text-white mb-3">
+                  <h4 className="text-xl font-bold text-white mb-3  font-inter">
                     {principle.title}
                   </h4>
                   <p className="text-gray-300">{principle.description}</p>
@@ -168,7 +168,7 @@ const CodeOfConduct = () => {
           <div className="bg-linear-to-r from-purple-500/10 to-pink-500/10 p-8 md:p-10 rounded-2xl border border-purple-500/20">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Lock className="w-8 h-8 text-purple-500" />
-              <h3 className="text-3xl font-bold text-white">
+              <h3 className="text-3xl font-bold text-white  font-inter">
                 Use of Company Resources
               </h3>
             </div>
@@ -190,7 +190,7 @@ const CodeOfConduct = () => {
           <div className="bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-center justify-center gap-3 mb-6">
               <AlertTriangle className="w-8 h-8 text-yellow-500" />
-              <h3 className="text-2xl font-bold text-white">
+              <h3 className="text-2xl font-bold text-white font-inter">
                 Reporting Violations
               </h3>
             </div>
@@ -221,7 +221,9 @@ const CodeOfConduct = () => {
           <div className="bg-neutral-900 p-8 rounded-2xl border border-neutral-800">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Shield className="w-8 h-8 text-red-500" />
-              <h3 className="text-2xl font-bold text-white ">Consequences</h3>
+              <h3 className="text-2xl font-bold text-white font-inter">
+                Consequences
+              </h3>
             </div>
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-start gap-2">

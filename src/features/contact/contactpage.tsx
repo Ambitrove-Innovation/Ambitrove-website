@@ -106,7 +106,7 @@ const ContactPage = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl  font-inter text-white mb-4">
             Get In Touch
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
@@ -119,7 +119,7 @@ const ContactPage = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">
+              <h3 className="text-2xl font-semibold text-white mb-6  font-inter">
                 Contact Information
               </h3>
               <p className="text-gray-400 leading-relaxed mb-8">
@@ -177,7 +177,9 @@ const ContactPage = () => {
 
             {/* Business Hours */}
             <div className="bg-gradient p-6 rounded-lg border border-neutral-800">
-              <h4 className="text-white font-semibold mb-4">Business Hours</h4>
+              <h4 className="text-white font-semibold mb-4 font-inter">
+                Business Hours
+              </h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-gray-400">Monday - Friday</span>
@@ -197,7 +199,7 @@ const ContactPage = () => {
 
           {/* Contact Form */}
           <div className="bg-neutral-900 p-8 rounded-lg border border-neutral-800 mb-12 md:mb-32">
-            <h3 className="text-2xl font-semibold text-white mb-6">
+            <h3 className="text-2xl font-semibold text-white mb-6 font-inter">
               Send Us a Message
             </h3>
 
