@@ -86,6 +86,51 @@ To keep our workflow clean and consistent, we follow these branch naming convent
 
   ```
 
+  # Clean Professional Workflow For Ambitrove
+
+## Flow should be:
+`feature → PR → dev → PR → main`
+
+## Not:
+`feature → main directly`
+
+Goal is syncing timelines:
+`git switch dev → git pull origin dev`
+`git merge main → git push origin dev`
+
+## 🗿About Branch Explosion → When a feature is merged fully:
+
+🙏Delete the feature branch locally AND remotely e.g:
+`git branch -d update/pricing`
+`git push origin --delete update/pricing`
+
+## FINAL GOAL📝
+Make `dev` contain everything `main` has that’s it, timeline synchronization.
+## ✅Method 1 (Merge Approach Most Explicit + Team Friendly)
+```
+git switch dev
+git pull origin dev
+git merge origin/main
+git push origin dev
+```
+
+## ✅Method 2 (Pull Main Directly Into Dev)
+```
+git switch dev
+git pull origin main
+git push origin dev
+```
+
+## Why Method 1 Is Cleaner - Method 1 forces you to:
+`
+Update dev first
+Then merge main intentionally
+`
+This avoids weird situations where:
+- Your dev branch is outdated locally
+- Merge conflicts become chaotic
+- History gets messy
+
 ---
 
 ## 🛠 Development Setup
