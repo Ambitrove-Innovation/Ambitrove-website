@@ -182,8 +182,8 @@ export const SERVICESFEATURES: ServiceFeature[] = [
 export const CAREPLANS: ServiceCarePlan[] = [
   {
     name: "Starter Package",
-    monthlyPrice: "R500",
-    yearlyPrice: "R3,500",
+    monthlyPrice: "R250",
+    yearlyPrice: "R3,000",
     features: {
       "Priority Support": true,
       Security: true,
@@ -195,8 +195,8 @@ export const CAREPLANS: ServiceCarePlan[] = [
   },
   {
     name: "Standard Package",
-    monthlyPrice: "R1,200",
-    yearlyPrice: "R4,500",
+    monthlyPrice: "R450",
+    yearlyPrice: "R5,400",
     features: {
       "Priority Support": true,
       Security: true,
@@ -208,8 +208,8 @@ export const CAREPLANS: ServiceCarePlan[] = [
   },
   {
     name: "Premium Package",
-    monthlyPrice: "R3,500",
-    yearlyPrice: "R15,000",
+    monthlyPrice: "R650",
+    yearlyPrice: "R7,800",
     features: {
       "Priority Support": true,
       Security: true,
@@ -433,24 +433,24 @@ export const ADDONS: AddOnService[] = [
       "Documentation",
     ],
   },
-  {
-    id: "photography",
-    title: "Professional Photography",
-    description:
-      "Custom product photography or corporate headshots for your website and marketing materials.",
-    pricing: {
-      type: "one-time",
-      amount: "R3,500/session",
-    },
-    complexity: "low",
-    category: "branding",
-    features: [
-      "2-hour photo session",
-      "20+ edited photos",
-      "High-resolution files",
-      "Commercial usage rights",
-    ],
-  },
+  // {
+  //   id: "photography",
+  //   title: "Professional Photography",
+  //   description:
+  //     "Custom product photography or corporate headshots for your website and marketing materials.",
+  //   pricing: {
+  //     type: "one-time",
+  //     amount: "R3,500/session",
+  //   },
+  //   complexity: "low",
+  //   category: "branding",
+  //   features: [
+  //     "2-hour photo session",
+  //     "20+ edited photos",
+  //     "High-resolution files",
+  //     "Commercial usage rights",
+  //   ],
+  // },
   {
     id: "database-design",
     title: "Custom Database Design",
