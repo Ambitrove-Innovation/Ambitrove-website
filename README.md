@@ -26,12 +26,10 @@ Our website is built using the following technologies:
 The company website will serve as:
 
 1. **Digital Identity**
-
    - Showcase Ambitrove’s mission, vision, and services.
    - Build trust with potential clients and partners.
 
 2. **Services Overview**
-
    - Custom Software Development
    - SaaS Product Development
    - Web3 & Emerging Tech
@@ -39,12 +37,10 @@ The company website will serve as:
    - Ongoing Support & Maintenance
 
 3. **Portfolio & Projects**
-
    - Highlight our in-house and client projects.
    - Demonstrate technical expertise (e.g., ATS Resume Helper with AI feedback).
 
 4. **Team & Careers**
-
    - Introduce Ambitrove leadership & co-founders.
    - Display open roles and collaboration opportunities.
 
@@ -75,6 +71,23 @@ To keep our workflow clean and consistent, we follow these branch naming convent
 
 - **`code/fix`** → General branch for ongoing code updates, refactors, or maintenance.  
   Ideal for small improvements not tied to a feature.
+- **`update/...`** → Updates to business content, configuration, or displayed values without changing application behaviour.  
+   Example: `update/pricing`, `update/plan-details`, `update/homepage-copy`.
+
+- **`refactor/...`** → Code restructuring or optimization that improves readability, performance, or maintainability without changing functionality.  
+  Example: `refactor/auth-logic`, `refactor/api-structure`.
+
+- **`chore/...`** → Repository maintenance, tooling updates, dependency upgrades, or environment configuration changes.  
+  Example: `chore/update-dependencies`, `chore/eslint-config`.
+
+- **`docs/...`** → Documentation additions or improvements.  
+  Example: `docs/readme-update`, `docs/api-guide`.
+
+- **`test/...`** → Adding or improving automated tests without modifying application logic.  
+  Example: `test/auth-flow`, `test/payment-validation`.
+
+- **`style/...`** → UI, layout, design, or visual presentation changes that do not affect application logic or functionality.  
+  Example: `style/button-spacing`, `style/landing-page-theme`, `style/navbar-animation`.
 
 ## Team Guidelines
 
@@ -89,9 +102,11 @@ To keep our workflow clean and consistent, we follow these branch naming convent
   # Clean Professional Workflow For Ambitrove
 
 ## Flow should be:
+
 `feature → PR → dev → PR → main`
 
 ## Not:
+
 `feature → main directly`
 
 Goal is syncing timelines:
@@ -105,8 +120,11 @@ Goal is syncing timelines:
 `git push origin --delete update/pricing`
 
 ## FINAL GOAL📝
+
 Make `dev` contain everything `main` has that’s it, timeline synchronization.
+
 ## ✅Method 1 (Merge Approach Most Explicit + Team Friendly)
+
 ```
 git switch dev
 git pull origin dev
@@ -115,6 +133,7 @@ git push origin dev
 ```
 
 ## ✅Method 2 (Pull Main Directly Into Dev)
+
 ```
 git switch dev
 git pull origin main
@@ -122,11 +141,11 @@ git push origin dev
 ```
 
 ## Why Method 1 Is Cleaner - Method 1 forces you to:
-`
-Update dev first
-Then merge main intentionally
-`
+
+`Update dev first
+Then merge main intentionally`
 This avoids weird situations where:
+
 - Your dev branch is outdated locally
 - Merge conflicts become chaotic
 - History gets messy
