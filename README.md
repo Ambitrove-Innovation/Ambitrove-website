@@ -94,12 +94,15 @@ To keep our workflow clean and consistent, we follow these branch naming convent
 - Always branch from `main` before starting new work.
 - Push new branches to the remote so the team can see them:
 
-  ```bash
-  git push -u origin branch-name
+```
+git push -u origin branch-name
 
-  ```
+```
 
-  # Clean Professional Workflow For Ambitrove
+`Main` → LIVE SITE (customers see this)
+`Dev` → Pre-release testing lab
+
+# Clean Professional Workflow For Ambitrove
 
 ## Flow should be:
 
