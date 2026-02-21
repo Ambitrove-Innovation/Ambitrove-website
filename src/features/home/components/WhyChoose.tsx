@@ -44,7 +44,7 @@ useGSAP(() => {
           </p>
 
           <p className="text-gray-300 leading-relaxed">
-            We are not just building great software — we are solving real
+            We are not just building great software we are solving real
             problems with innovative solutions.
           </p>
 

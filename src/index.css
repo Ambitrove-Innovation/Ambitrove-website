@@ -178,10 +178,10 @@
     background:
       radial-gradient(
         ellipse 80% 60% at 50% 0%,
-        oklch(26.343% 0.00148 198.183 / 0.516) 0%,
+        oklch(32.605% 0.0014 15.77 / 0.668) 0%,
         transparent 70%
       ),
-      oklch(12.856% 0.00001 271.152);
+      oklch(15.907% 0.00002 271.152);
   }
   .text-gradient {
     background: var(--color-textGradient);

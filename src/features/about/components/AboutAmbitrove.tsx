@@ -34,7 +34,7 @@ const AboutAmbitrove = () => {
           </p>
 
           <p className="text-gray-300 leading-relaxed">
-            At Ambitrove Innovation, we're more than just a tech company — we're
+            At Ambitrove Innovation, we're more than just a tech company we're
             a South African-born force driving the next generation continent's
             digital revolution.
           </p>
