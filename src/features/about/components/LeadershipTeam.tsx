@@ -43,22 +43,6 @@ const LeadershipTeam = () => {
       linkedInUrl: "https://www.linkedin.com/in/dean-meyer-385342247/",
       bio: `Dean Meyer is a passionate software engineer and technical innovator dedicated to building intelligent, scalable, and user-focused digital systems. He began his journey in software development during high school, where his early curiosity for coding and problem-solving quickly grew into a lifelong pursuit. After matriculating, Dean enrolled at university to study Application Development, where he built a strong foundation in Java, Python, web technologies, and mobile app development. His commitment to mastering both backend and frontend technologies, combined with his drive for excellence, set him apart as a self-taught achiever with professional discipline.`,
     },
-    {
-      image: "/images/Team/Emmanuel-Ambitrove.jpeg.jpg",
-      alt: "Portrait of Emmanuel Bediako, CIO & Marketing Lead",
-      name: "Emmanuel Bediako",
-      position: "CIO & Marketing",
-      linkedInUrl: "https://www.linkedin.com/in/emmanuel-bediako-1766b4305/",
-      bio: `Emmanuel Bediako oversees Ambitrove’s information and marketing strategies, connecting brand vision with digital execution. His innovative approach bridges business growth and data-driven storytelling.`,
-    },
-    {
-      image: "/images/Team/Phemelo.jpg",
-      alt: "Portrait of Phemelo Mokone, Data Analyst",
-      name: "Phemelo Mokone",
-      position: "Data Analyst",
-      linkedInUrl: "N/A",
-      bio: `Phemelo Mokone specializes in data analysis and business intelligence, transforming complex datasets into actionable insights for Ambitrove’s strategic and client-focused decisions.`,
-    },
   ];
 
   return (
