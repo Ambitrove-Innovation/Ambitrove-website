@@ -5,7 +5,7 @@ export const PACKAGES: WebsiteBuildPackage[] = [
     name: "Starter Package",
     description:
       "Essential static website for individuals and small portfolios. ",
-    price: "R1,500",
+    price: "R1,000",
     priceNote: "Once-off",
     features: [
       { text: "2-3 Day Delivery", included: true },
@@ -71,7 +71,7 @@ export const PACKAGES: WebsiteBuildPackage[] = [
     id: "premium",
     name: "Premium Package",
     description: "Full-scale business solution with advanced operations.",
-    price: "R6,500",
+    price: "R5,000",
     priceNote: "Once-off",
     features: [
       { text: "12-30 Days Delivery", included: true },
