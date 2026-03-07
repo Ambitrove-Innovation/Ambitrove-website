@@ -182,8 +182,8 @@ export const SERVICESFEATURES: ServiceFeature[] = [
 export const CAREPLANS: ServiceCarePlan[] = [
   {
     name: "Starter Package",
-    monthlyPrice: "R75",
-    yearlyPrice: "R800",
+    monthlyPrice: "R150",
+    yearlyPrice: "R1650",
     features: {
       "Priority Support": true,
       Security: true,
@@ -195,8 +195,8 @@ export const CAREPLANS: ServiceCarePlan[] = [
   },
   {
     name: "Standard Package",
-    monthlyPrice: "R150",
-    yearlyPrice: "R1,650",
+    monthlyPrice: "R250",
+    yearlyPrice: "R2,650",
     features: {
       "Priority Support": true,
       Security: true,
