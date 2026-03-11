@@ -15,14 +15,14 @@ interface LeadershipCard {
 
 const LeadershipTeam = () => {
   const [selectedMember, setSelectedMember] = useState<LeadershipCard | null>(
-    null
+    null,
   );
 
   useGSAP(() => {
     gsap.fromTo(
       ".slide-right",
       { opacity: 0, x: 100 },
-      { opacity: 1, x: 0, duration: 0.8, ease: "power3.out", stagger: 0.2 }
+      { opacity: 1, x: 0, duration: 0.8, ease: "power3.out", stagger: 0.2 },
     );
   }, []);
 
@@ -42,6 +42,14 @@ const LeadershipTeam = () => {
       position: "Co-Founder & CTO",
       linkedInUrl: "https://www.linkedin.com/in/dean-meyer-385342247/",
       bio: `Dean Meyer is a passionate software engineer and technical innovator dedicated to building intelligent, scalable, and user-focused digital systems. He began his journey in software development during high school, where his early curiosity for coding and problem-solving quickly grew into a lifelong pursuit. After matriculating, Dean enrolled at university to study Application Development, where he built a strong foundation in Java, Python, web technologies, and mobile app development. His commitment to mastering both backend and frontend technologies, combined with his drive for excellence, set him apart as a self-taught achiever with professional discipline.`,
+    },
+    {
+      image: "/images/Team/oratile_COO.jpg",
+      alt: "Portrait of Oratile Kgatlhe, COO",
+      name: "Oratile Kgatlhe",
+      position: "COO",
+      linkedInUrl: "https://www.linkedin.com/in/oratile-kgatlhe-385342247/",
+      bio: `Oratile Kgatlhe is a business major currently studying for my Diploma in Public Management and dedicated operations manager with a strong background in project management and team leadership. His experience in coordinating complex initiatives and driving operational efficiency has been instrumental in advancing Ambitrove’s strategic goals.`,
     },
   ];
 
