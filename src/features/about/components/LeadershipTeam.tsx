@@ -48,7 +48,7 @@ const LeadershipTeam = () => {
       alt: "Portrait of Oratile Kgatlhe, COO",
       name: "Oratile Kgatlhe",
       position: "COO",
-      linkedInUrl: "https://www.linkedin.com/in/oratile-kgatlhe-385342247/",
+      linkedInUrl: "https://www.linkedin.com/in/oratile-kgatlhe-642a04392/",
       bio: `Oratile Kgatlhe is a business major currently studying for my Diploma in Public Management and dedicated operations manager with a strong background in project management and team leadership. His experience in coordinating complex initiatives and driving operational efficiency has been instrumental in advancing Ambitrove’s strategic goals.`,
     },
   ];
