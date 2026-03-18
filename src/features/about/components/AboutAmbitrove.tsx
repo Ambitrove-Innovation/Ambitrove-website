@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -34,8 +33,8 @@ const AboutAmbitrove = () => {
           </p>
 
           <p className="text-gray-300 leading-relaxed">
-            At Ambitrove Innovation, we're more than just a tech company we're
-            a South African-born force driving the next generation continent's
+            At Ambitrove Innovation, we're more than just a tech company we're a
+            South African-born force driving the next generation continent's
             digital revolution.
           </p>
 
@@ -50,10 +49,6 @@ const AboutAmbitrove = () => {
             Our ambition? To position South Africa as a global tech leader by
             transforming client ideas into scalable, impactful products.
           </p>
-
-          <Button className="mt-4 px-6 py-2 rounded bg-transparent border border-white text-white hover:bg-white hover:text-black transition duration-300 md:w-35">
-            <a href="#leadership_team">Meet the Team</a>
-          </Button>
         </div>
 
         {/* RIGHT IMAGES */}
