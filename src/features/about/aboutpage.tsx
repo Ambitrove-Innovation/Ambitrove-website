@@ -11,8 +11,6 @@ const AboutPage = () => {
     <>
       {/* 🧠 Page Metadata */}
       <AboutMetaData />
-
-      {/* Actual page sections */}
       <AboutAmbitrove />
       <OurJourney />
       <AmbitroveMeaning />
