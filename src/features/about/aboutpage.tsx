@@ -1,4 +1,5 @@
 import AboutAmbitrove from "./components/AboutAmbitrove";
+import AmbitroveMeaning from "./components/AmbitroveMeaning";
 import LeadershipTeam from "./components/LeadershipTeam";
 import OurJourney from "./components/OurJourney";
 import CompanyCulture from "./components/CompanyCulture";
@@ -10,10 +11,9 @@ const AboutPage = () => {
     <>
       {/* 🧠 Page Metadata */}
       <AboutMetaData />
-
-      {/* Actual page sections */}
       <AboutAmbitrove />
       <OurJourney />
+      <AmbitroveMeaning />
       <LeadershipTeam />
       <CompanyCulture />
       <CodeOfConduct />
