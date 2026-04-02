@@ -1,4 +1,4 @@
-interface CompanyService {
+export interface CompanyService {
   image?: string;
   title: string;
   description: string;
@@ -6,20 +6,21 @@ interface CompanyService {
   badgeTitle?: string;
 }
 
-interface LeadershipCard {
+export interface LeadershipCard {
   image: string;
   alt: string;
   name: string;
   position: string;
   linkedInUrl: string;
+  bio: string;
 }
 
-interface FAQItem {
+export interface FAQItem {
   question: string;
   answer: string;
 }
 
-interface JobListing {
+export interface JobListing {
   id: number;
   title: string;
   department: string;
@@ -30,18 +31,7 @@ interface JobListing {
   requirements: string[];
 }
 
-interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  category: string;
-  date: string;
-  readTime: string;
-  image: string;
-  author: string;
-}
-
-interface BlogPost {
+export interface BlogPost {
   id: number;
   title: string;
   excerpt: string;
@@ -53,15 +43,10 @@ interface BlogPost {
   content?: string;
 }
 
-interface Props {
-  plan: Plan;
-  billing: BillingType;
-}
+export type BillingType = "once" | "monthly" | "yearly";
+export type AudienceType = "individual" | "team";
 
-type BillingType = "once" | "monthly" | "yearly";
-type AudienceType = "individual" | "team";
-
-interface Plan {
+export interface Plan {
   name: string;
   popular?: boolean;
   bestValue?: boolean;
@@ -69,12 +54,24 @@ interface Plan {
   description: string;
   features: string[];
 }
-interface PricingFeature {
+
+export interface PlanCardProps {
+  plan: Plan;
+  billing: BillingType;
+}
+
+export interface BillingToggleProps {
+  billing: BillingType;
+  setBilling: (b: BillingType) => void;
+}
+
+export interface PricingFeature {
   name: string;
   included: boolean;
   value?: string;
 }
-interface PricingTier {
+
+export interface PricingTier {
   name: string;
   price: string;
   period: string;
@@ -83,11 +80,4 @@ interface PricingTier {
   highlighted?: boolean;
   cta: string;
   ctaLink?: string;
-}
-
-// BillingToggle.tsx
-
-interface Props {
-  billing: BillingType;
-  setBilling: (b: BillingType) => void;
 }

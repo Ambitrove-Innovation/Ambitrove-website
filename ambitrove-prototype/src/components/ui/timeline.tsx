@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Slot } from "radix-ui"
+import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils"
 
@@ -93,7 +93,7 @@ function TimelineDate({
   className,
   ...props
 }: TimelineDateProps) {
-  const Comp = asChild ? Slot.Root : "time"
+  const Comp = asChild ? Slot : "time"
 
   return (
     <Comp
@@ -123,7 +123,6 @@ interface TimelineIndicatorProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 function TimelineIndicator({
-  asChild = false,
   className,
   children,
   ...props

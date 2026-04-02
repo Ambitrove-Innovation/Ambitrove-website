@@ -9,6 +9,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { useState } from "react";
+import type { JobListing } from "@/types";
 import HeroSection from "./components/HeroSection";
 import CareersMetaData from "./components/CareersMetaData";
 import WhyJoinUs from "./components/WhyJoinUs";

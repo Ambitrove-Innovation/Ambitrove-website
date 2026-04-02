@@ -7,6 +7,7 @@ import {
   Linkedin,
   Github,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -69,24 +70,24 @@ const Footer = () => {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="/" className="hover:text-white transition">
+                  <Link to="/" className="hover:text-white transition">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#about" className="hover:text-white transition">
+                  <Link to="/about" className="hover:text-white transition">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#services" className="hover:text-white transition">
+                  <Link to="/services" className="hover:text-white transition">
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#projects" className="hover:text-white transition">
-                    Projects
-                  </a>
+                  <Link to="/contact" className="hover:text-white transition">
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -94,27 +95,21 @@ const Footer = () => {
               <h3 className="text-sm font-inter text-white uppercase mb-4 tracking-wide">
                 Resources
               </h3>
-              <ul className="space-y-2" aria-disabled={true}>
-                {/*<li>
-                  <a href="/careers" className="hover:text-white transition">
-                    Careers
-                  </a>
-                </li>
-                */}
+              <ul className="space-y-2">
                 <li>
-                  <a href="/blog" className="hover:text-white transition">
+                  <Link to="/blog" className="hover:text-white transition">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/support" className="hover:text-white transition">
+                  <Link to="/support" className="hover:text-white transition">
                     Support
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/privacy" className="hover:text-white transition">
+                  <Link to="/privacy" className="hover:text-white transition">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

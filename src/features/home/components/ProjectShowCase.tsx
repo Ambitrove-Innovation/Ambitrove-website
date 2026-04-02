@@ -62,14 +62,13 @@ const ProjectShowCase = () => {
             </div>
 
             <div className="pt-2 sm:pt-4">
-              <button className="inline-flex items-center px-8 py-4 sm:px-10 sm:py-2 md:px-10 md:py-3 border-2 border-teal-400 text-teal-400 rounded-full font-semibold text-base sm:text-lg hover:bg-teal-400 hover:text-gray-900 hover:shadow-lg hover:shadow-teal-400/25 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-teal-400/30">
-                <Link
-                  to="https://puter.com/app/ambitrove-ai-resume-analyzer"
+              <a
+                  href="https://puter.com/app/ambitrove-ai-resume-analyzer"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-4 sm:px-10 sm:py-2 md:px-10 md:py-3 border-2 border-teal-400 text-teal-400 rounded-full font-semibold text-base sm:text-lg hover:bg-teal-400 hover:text-gray-900 hover:shadow-lg hover:shadow-teal-400/25 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-teal-400/30">
                   Explore Our Apps
-                </Link>
-              </button>
+                </a>
             </div>
           </div>
 

@@ -53,18 +53,16 @@ const Navbar = () => {
           </ul>
 
           {/* Desktop Follow Button - Hidden on mobile */}
-          <button className="hidden md:block bg-gradient outline-1 outline-cyan-300 font-medium text-white px-4 py-2 rounded-md shadow-md shadow-black hover:scale-105 transition-transform duration-300 ease-in-out">
-            <a
-              href="https://www.linkedin.com/company/ambitrove-innovation"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2">
-              Follow us
-              <span className="text-teal-500 h-6 w-6 hover:text-white">
-                <LinkedinIcon />
-              </span>
-            </a>
-          </button>
+          <a
+            href="https://www.linkedin.com/company/ambitrove-innovation"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center gap-2 bg-gradient outline-1 outline-cyan-300 font-medium text-white px-4 py-2 rounded-md shadow-md shadow-black hover:scale-105 transition-transform duration-300 ease-in-out">
+            Follow us
+            <span className="text-teal-500 h-6 w-6 hover:text-white">
+              <LinkedinIcon />
+            </span>
+          </a>
 
           {/* Mobile Menu Button */}
           <button

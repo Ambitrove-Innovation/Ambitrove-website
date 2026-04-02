@@ -4,6 +4,7 @@ import { CAREPLANS, SERVICESFEATURES } from "@/constants/data";
 import gsap from "gsap";
 import { Check, Info } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import type { ServiceCarePlan } from "@/types/pricing";
 
 export const ServiceCarePlans = () => {
   const navigate = useNavigate();
