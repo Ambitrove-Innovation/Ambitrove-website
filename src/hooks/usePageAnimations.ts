@@ -13,43 +13,52 @@ export const usePageAnimations = (containerRef?: React.RefObject<HTMLElement | n
       if (prefersReducedMotion) return;
 
       // Slide in from left
-      gsap.from(".slide-left", {
-        x: -100,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".slide-left",
-          start: "top 85%",
-        },
-      });
+      const leftElements = gsap.utils.toArray(".slide-left", containerRef?.current || document);
+      if (leftElements.length > 0) {
+        gsap.from(leftElements, {
+          x: -100,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: leftElements[0] as Element,
+            start: "top 85%",
+          },
+        });
+      }
 
       // Slide in from right
-      gsap.from(".slide-right", {
-        x: 100,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".slide-right",
-          start: "top 85%",
-        },
-      });
+      const rightElements = gsap.utils.toArray(".slide-right", containerRef?.current || document);
+      if (rightElements.length > 0) {
+        gsap.from(rightElements, {
+          x: 100,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: rightElements[0] as Element,
+            start: "top 85%",
+          },
+        });
+      }
 
       // Simple Fade In / Slide Up
-      gsap.from(".fade-in", {
-        opacity: 0,
-        y: 40,
-        duration: 1.2,
-        stagger: 0.3,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".fade-in",
-          start: "top 90%",
-        },
-      });
+      const fadeElements = gsap.utils.toArray(".fade-in", containerRef?.current || document);
+      if (fadeElements.length > 0) {
+        gsap.from(fadeElements, {
+          opacity: 0,
+          y: 40,
+          duration: 1.2,
+          stagger: 0.3,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: fadeElements[0] as Element,
+            start: "top 90%",
+          },
+        });
+      }
     },
     { scope: containerRef }
   );

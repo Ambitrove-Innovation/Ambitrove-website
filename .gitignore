@@ -28,3 +28,4 @@ dist-ssr
 
 # System crash dumps
 *.stackdump
+/.stackdump

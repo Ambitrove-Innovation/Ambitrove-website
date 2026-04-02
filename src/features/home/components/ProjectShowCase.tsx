@@ -136,6 +136,8 @@ const ProjectShowCase = () => {
                   <img
                     src="/images/Project showcase.webp"
                     alt="ATSResume Review Application"
+                    width={800}
+                    height={600}
                     className="relative  w-4xl rounded-xl transform group-hover:scale-[1.02] transition-all duration-500 object-contain showIn-image"
                     loading="lazy"
                   />
@@ -149,6 +151,8 @@ const ProjectShowCase = () => {
                   <img
                     src="/images/Fiverr-display.webp"
                     alt="A open bar website design"
+                    width={800}
+                    height={600}
                     className="relative  w-4xl rounded-xl transform group-hover:scale-[1.02] transition-all duration-500 object-contain showIn-image"
                     loading="lazy"
                   />

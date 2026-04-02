@@ -53,6 +53,9 @@ const WhyChoose = () => {
             <img
               src="/images/board-meeting.webp"
               alt="Team working on digital solutions"
+              width={800}
+              height={600}
+              loading="lazy"
               className="w-full h-auto object-cover rounded-tr-lg rounded-bl-lg"
             />
           </div>

@@ -25,21 +25,25 @@ const PageLoader = () => (
 const Routespath = () => {
   return (
     <Router>
-      <Navbar />
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/support" element={<SupportPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/careers" element={<CareersPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="*" element={<PageErrorRedirect />} />
-        </Routes>
-      </Suspense>
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="grow">
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/support" element={<SupportPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="*" element={<PageErrorRedirect />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 };

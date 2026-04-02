@@ -35,6 +35,7 @@ const Footer = () => {
                 href="https://www.youtube.com/@AmbitroveInnovation"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ambitrove YouTube Channel"
                 className="hover:text-red-500 transition">
                 <Youtube size={20} />
               </a>
@@ -42,6 +43,7 @@ const Footer = () => {
                 href="https://x.com/ambitrove"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ambitrove Twitter Profile"
                 className="hover:text-blue-500 transition">
                 <Twitter size={20} />
               </a>
@@ -49,6 +51,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/ambitrove-innovation"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ambitrove LinkedIn Company Page"
                 className="hover:text-blue-600 transition">
                 <Linkedin size={20} />
               </a>
@@ -56,6 +59,7 @@ const Footer = () => {
                 href="https://github.com/Ambitrove-Innovation"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ambitrove GitHub Repository"
                 className="hover:text-green-500 transition">
                 <Github size={20} />
               </a>
