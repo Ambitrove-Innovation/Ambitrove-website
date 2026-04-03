@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Calendar, Clock, ArrowRight, Tag, X } from "lucide-react";
 import { useState } from "react";
+import type { BlogPost } from "@/types";
 import BlogPageMetaData from "./components/BlogPageMetaData";
 import NewLetterCTA from "./components/NewLetterCTA";
 import HeroSection from "./components/HeroSection";

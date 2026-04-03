@@ -25,3 +25,7 @@ dist-ssr
 
 #Environment Variables
 .env
+
+# System crash dumps
+*.stackdump
+/.stackdump

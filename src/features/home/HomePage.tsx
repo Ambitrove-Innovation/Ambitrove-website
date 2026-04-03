@@ -3,7 +3,7 @@ import ProjectShowCase from "./components/ProjectShowCase";
 import ServiceCardOffers from "./components/ServiceCardOffers";
 import WhyChoose from "./components/WhyChoose";
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <>
       <HeroSection />
@@ -14,4 +14,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;

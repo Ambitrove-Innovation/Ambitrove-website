@@ -3,15 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Linkedin, VerifiedIcon } from "lucide-react";
 import TeamMemberModal from "./TeamMemberModal";
-
-interface LeadershipCard {
-  image: string;
-  alt: string;
-  name: string;
-  position: string;
-  linkedInUrl: string;
-  bio: string;
-}
+import type { LeadershipCard } from "@/types";
 
 const LeadershipTeam = () => {
   const [selectedMember, setSelectedMember] = useState<LeadershipCard | null>(
