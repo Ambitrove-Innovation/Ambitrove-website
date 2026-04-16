@@ -5,7 +5,7 @@ export const PACKAGES: WebsiteBuildPackage[] = [
     name: "Starter Package",
     description:
       "Essential static website for individuals and small portfolios. ",
-    price: "R1,000",
+    price: "R1,500",
     priceNote: "Once-off",
     features: [
       { text: "2-3 Day Delivery", included: true },
@@ -22,7 +22,7 @@ export const PACKAGES: WebsiteBuildPackage[] = [
     ],
     trialAccess: {
       label: "LIMITED TRIAL ACCESS",
-      items: [{ service: "Priority Support", duration: "4 months free" }],
+      items: [{ service: "Priority Support", duration: "2 months free" }],
     },
     ctaLabel: "Select Deal",
     theme: "dark",
@@ -52,15 +52,15 @@ export const PACKAGES: WebsiteBuildPackage[] = [
       items: [
         {
           service: "Cloud Hosting",
-          duration: "6 months Free",
+          duration: "1 months Free",
           highlight: true,
         },
         {
           service: "Ongoing Maintenance",
-          duration: "6 months free",
+          duration: "2 months free",
           highlight: true,
         },
-        { service: "Priority Support", duration: "6 months Free" },
+        { service: "Priority Support", duration: "2 months Free" },
         { service: "Security", duration: "2 months Free" },
       ],
     },
@@ -89,15 +89,15 @@ export const PACKAGES: WebsiteBuildPackage[] = [
     trialAccess: {
       label: "LIMITED TRIAL ACCESS",
       items: [
-        { service: "Priority Support", duration: "6 month free" },
+        { service: "Priority Support", duration: "3 months free" },
         {
           service: "Cloud Hosting",
-          duration: "6 months Free",
+          duration: "2 months Free",
           highlight: true,
         },
         {
           service: "Ongoing Maintenance",
-          duration: "6 months free",
+          duration: "3 months free",
           highlight: true,
         },
         { service: "Security", duration: "3 months Free" },
@@ -128,14 +128,14 @@ export const PACKAGES: WebsiteBuildPackage[] = [
     trialAccess: {
       label: "LIMITED TRIAL ACCESS",
       items: [
-        { service: "Security", duration: "6 months free" },
+        { service: "Security", duration: "4 months free" },
         {
           service: "Ongoing Maintenance",
-          duration: "6 months free",
+          duration: "4 months free",
           highlight: true,
         },
-        { service: "Priority Support", duration: "6 months free" },
-        { service: "Cloud Hosting", duration: "12 months free" },
+        { service: "Priority Support", duration: "5 months free" },
+        { service: "Cloud Hosting", duration: "3 months free" },
       ],
     },
     highlighted: true,
