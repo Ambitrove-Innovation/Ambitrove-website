@@ -3,9 +3,9 @@ import gsap from "gsap";
 import { Calendar, Clock, ArrowRight, Tag, X } from "lucide-react";
 import { useState } from "react";
 import type { BlogPost } from "@/types";
-import BlogPageMetaData from "./components/BlogPageMetaData";
 import NewLetterCTA from "./components/NewLetterCTA";
 import HeroSection from "./components/HeroSection";
+import SEO from "@/components/SEO";
 
 const BlogPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -180,8 +180,12 @@ The tools and techniques for data analysis are more accessible than ever. From s
 
   return (
     <>
-      {/* SEO Metadata */}
-      <BlogPageMetaData />
+      <SEO 
+        title="Blogs"
+        description="Read the latest insights on technology, software development, Web3, and digital innovation from the Ambitrove team."
+        url="/blog"
+        keywords="Ambitrove blog, tech insights, software development, Web3, South Africa tech"
+      />
 
       {/* Hero Section */}
       <HeroSection />

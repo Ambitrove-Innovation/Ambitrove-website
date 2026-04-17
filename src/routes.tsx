@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PageErrorRedirect from "./features/pageNotFound/PageErrorRedirect";
 import { Loader2 } from "lucide-react";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Lazy loading pages for performance optimization
 const HomePage = lazy(() => import("./features/home/HomePage"));
@@ -25,9 +26,15 @@ const PageLoader = () => (
 const Routespath = () => {
   return (
     <Router>
+      <ScrollToTop />
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-teal-600 focus:text-white focus:rounded-md focus:shadow-lg">
+        Skip to content
+      </a>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <main className="grow">
+        <main id="main-content" className="grow" tabIndex={-1}>
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<HomePage />} />

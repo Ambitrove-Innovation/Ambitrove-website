@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BirdIcon, LinkedinIcon, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -25,30 +25,44 @@ const Navbar = () => {
           {/* Desktop Links - Hidden on mobile */}
           <ul className="hidden md:flex justify-evenly gap-6 text-lg font-semibold">
             <li>
-              <Link to="/" className="hover:text-teal-600 transition-colors">
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => 
+                  `transition-colors hover:text-teal-600 ${isActive ? 'text-teal-500 underline underline-offset-4 decoration-2' : ''}`
+                }
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/about"
-                className="hover:text-teal-600 transition-colors">
+                className={({ isActive }) => 
+                  `transition-colors hover:text-teal-600 ${isActive ? 'text-teal-500 underline underline-offset-4 decoration-2' : ''}`
+                }
+              >
                 About us
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/contact"
-                className="hover:text-teal-600 transition-colors">
+                className={({ isActive }) => 
+                  `transition-colors hover:text-teal-600 ${isActive ? 'text-teal-500 underline underline-offset-4 decoration-2' : ''}`
+                }
+              >
                 Contact
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/services"
-                className="hover:text-teal-600 transition-colors">
+                className={({ isActive }) => 
+                  `transition-colors hover:text-teal-600 ${isActive ? 'text-teal-500 underline underline-offset-4 decoration-2' : ''}`
+                }
+              >
                 Services
-              </Link>
+              </NavLink>
             </li>
           </ul>
 

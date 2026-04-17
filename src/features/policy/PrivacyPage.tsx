@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import PrivacyMetaData from "./components/PrivacyMetaData";
+import SEO from "@/components/SEO";
 import PrivacyHero from "./components/PrivacyHero";
 import PrivacySidebar from "./components/PrivacySidebar";
 import PolicyAccordion from "./components/PolicyAccordion";
 import AdditionalSections from "./components/AdditionalSections";
 import PrivacyCTA from "./components/PrivacyCTA";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const PrivacyPage = () => {
   const [activeSection, setActiveSection] = useState("introduction");
@@ -27,31 +28,39 @@ const PrivacyPage = () => {
     });
   }, []);
 
-  // Scroll spy for sidebar navigation
+  // Scroll spy for sidebar navigation using IntersectionObserver for better performance
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        "introduction",
-        "information-collect",
-        "how-use-data",
-        "storage-security",
-        "your-rights",
-      ];
+    const sectionIds = [
+      "introduction",
+      "information-collect",
+      "how-use-data",
+      "storage-security",
+      "your-rights",
+      "contact",
+    ];
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top >= 0 && rect.top <= 300) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
+    const observerOptions = {
+      root: null,
+      rootMargin: "-10% 0px -80% 0px", // Adjust to trigger when section is near the top
+      threshold: 0,
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -70,7 +79,12 @@ const PrivacyPage = () => {
 
   return (
     <>
-      <PrivacyMetaData />
+      <SEO
+        title="Privacy Policy"
+        description="Read Ambitrove Innovation's Privacy Policy. Learn how we collect, use, and protect your personal information in compliance with POPIA and GDPR."
+        url="/privacy"
+        keywords="Ambitrove Privacy Policy, POPIA compliance, data protection, South Africa tech company"
+      />
 
       <div className="min-h-screen ">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-12">

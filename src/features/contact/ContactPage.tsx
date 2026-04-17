@@ -8,7 +8,7 @@ import {
   LoaderCircle,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import ContactMetaData from "./components/ContactMetaData";
+import SEO from "@/components/SEO";
 
 interface FormData {
   name: string;
@@ -90,7 +90,12 @@ const ContactPage = () => {
       className=" text-gray-300 py-20 px-6"
       id="contact"
       aria-labelledby="contact-heading">
-      <ContactMetaData />
+      <SEO 
+        title="Contact Us"
+        description="Get in touch with Ambitrove Innovation. Reach out for software development, SaaS, or digital solutions. Let's collaborate to build South Africa's tech future."
+        url="/contact"
+        keywords="Ambitrove contact, tech company South Africa, Ambitrove Innovation, contact form, Kamogelo Mogasoa, Dean Meyer"
+      />
 
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
