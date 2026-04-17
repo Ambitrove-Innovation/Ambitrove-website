@@ -115,6 +115,10 @@
   body {
     @apply  bg-slate-900 text-white antialiased text-center min-h-screen flex flex-col;
   }
+  /* High contrast focus ring for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-teal-500;
+  }
 }
 
 @layer components {

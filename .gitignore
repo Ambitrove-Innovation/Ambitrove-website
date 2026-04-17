@@ -29,3 +29,8 @@ dist-ssr
 # System crash dumps
 *.stackdump
 /.stackdump
+# Local Netlify folder
+.netlify
+
+# Deno
+deno.lock

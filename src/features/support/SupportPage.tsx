@@ -10,8 +10,8 @@ import {
   Users,
   ExternalLink,
 } from "lucide-react";
-import SupportMetaData from "./components/SupportMetaData";
 import HeroSection from "./components/HeroSection";
+import SEO from "@/components/SEO";
 import {
   Accordion,
   AccordionContent,
@@ -82,7 +82,12 @@ const SupportPage = () => {
 
   return (
     <>
-      <SupportMetaData />
+      <SEO 
+        title="Support & Help Center"
+        description="Get support from Ambitrove Innovation. Find answers to common questions, contact our team, and access resources for your software development needs."
+        url="/support"
+        keywords="Ambitrove support, tech support South Africa, software development help, customer service"
+      />
       <HeroSection />
 
       {/* Quick Support Options */}

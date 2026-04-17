@@ -67,29 +67,29 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="md:w-1/3 flex justify-between">
+          <nav className="md:w-1/3 flex justify-between" aria-label="Footer Navigation">
             <div>
               <h3 className="text-sm font-inter text-white uppercase mb-4 tracking-wide">
                 Company
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/" className="hover:text-white transition">
+                  <Link to="/" className="hover:text-white transition" aria-label="Go to Home page">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about" className="hover:text-white transition">
+                  <Link to="/about" className="hover:text-white transition" aria-label="Learn more About us">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="hover:text-white transition">
+                  <Link to="/services" className="hover:text-white transition" aria-label="Our Services">
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="hover:text-white transition">
+                  <Link to="/contact" className="hover:text-white transition" aria-label="Contact us">
                     Contact
                   </Link>
                 </li>
@@ -101,50 +101,52 @@ const Footer = () => {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/blog" className="hover:text-white transition">
+                  <Link to="/blog" className="hover:text-white transition" aria-label="Read our Blog">
                     Blog
                   </Link>
                 </li>
                 <li>
-                  <Link to="/support" className="hover:text-white transition">
+                  <Link to="/support" className="hover:text-white transition" aria-label="Get Support">
                     Support
                   </Link>
                 </li>
                 <li>
-                  <Link to="/privacy" className="hover:text-white transition">
+                  <Link to="/privacy" className="hover:text-white transition" aria-label="Privacy Policy">
                     Privacy Policy
                   </Link>
                 </li>
               </ul>
             </div>
-          </div>
+          </nav>
 
           {/* Contact Section */}
-          <div className=" space-y-4">
+          <address className="space-y-4 not-italic">
             <h3 className="text-sm font-inter text-white uppercase mb-4  tracking-wide">
               Contact
             </h3>
             <div className="flex items-center space-x-3">
-              <Mail size={18} className="text-white" />
+              <Mail size={18} className="text-white" aria-hidden="true" />
               <a
                 href="mailto:contact@ambitrove.com"
-                className="hover:text-white transition">
+                className="hover:text-white transition"
+                aria-label="Email Ambitrove at contact@ambitrove.com">
                 contact@ambitrove.com
               </a>
             </div>
             <div className="flex items-center space-x-3">
-              <Phone size={18} className="text-white" />
+              <Phone size={18} className="text-white" aria-hidden="true" />
               <a
                 href="tel:+27761972861"
-                className="hover:text-white transition">
+                className="hover:text-white transition"
+                aria-label="Call Ambitrove at +27 76 197 2861">
                 +27 76 197 2861
               </a>
             </div>
             <div className="flex items-center space-x-3">
-              <MapPin size={18} className="text-white" />
-              <span>Pretoria, South Africa</span>
+              <MapPin size={18} className="text-white" aria-hidden="true" />
+              <span aria-label="Location: Pretoria, South Africa">Pretoria, South Africa</span>
             </div>
-          </div>
+          </address>
         </div>
 
         {/* Bottom Section */}
