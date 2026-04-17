@@ -31,3 +31,6 @@ dist-ssr
 /.stackdump
 # Local Netlify folder
 .netlify
+
+# Deno
+deno.lock
