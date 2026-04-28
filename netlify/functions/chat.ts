@@ -1,4 +1,10 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenerativeAI, type Content } from "@google/generative-ai";
+
+type NetlifyEvent = {
+  httpMethod: string;
+  body: string;
+  headers: Record<string, string | undefined>;
+};
 
 const COMPANY_CONTEXT = `
 You are Ambi, the friendly and professional AI assistant for Ambitrove Innovation (Pty) Ltd. 
@@ -34,7 +40,7 @@ Persona Guidelines:
 - Be warmly helpful. If you don't know an answer, suggest they contact the team directly via the contact page.
 `;
 
-export const handler = async (event: any) => {
+export const handler = async (event: NetlifyEvent) => {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
@@ -56,7 +62,7 @@ export const handler = async (event: any) => {
     const lastMessage = messages[messages.length - 1].content;
     
     // Format history for Gemini API
-    let history = messages.slice(0, -1).map((m: any) => ({
+    const history: Content[] = messages.slice(0, -1).map((m: { role: string; content: string }) => ({
       role: m.role === "assistant" ? "model" : "user",
       parts: [{ text: m.content }],
     }));
@@ -84,11 +90,11 @@ export const handler = async (event: any) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ content: responseText }),
     };
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Chat Error:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message }),
+      body: JSON.stringify({ error: error instanceof Error ? error.message : "An unknown error occurred" }),
     };
   }
 };
