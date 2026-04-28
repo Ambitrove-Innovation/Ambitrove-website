@@ -9,10 +9,11 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { useState } from "react";
+import type { JobListing } from "@/types";
 import HeroSection from "./components/HeroSection";
-import CareersMetaData from "./components/CareersMetaData";
 import WhyJoinUs from "./components/WhyJoinUs";
 import CareersCTA from "./components/CareersCTA";
+import SEO from "@/components/SEO";
 
 const CareersPage = () => {
   const [selectedJob, setSelectedJob] = useState<JobListing | null>(null);
@@ -89,8 +90,12 @@ const CareersPage = () => {
 
   return (
     <>
-      {/* SEO Metadata */}
-      <CareersMetaData />
+      <SEO 
+        title="Careers | Join Ambitrove Innovation"
+        description="Join Ambitrove Innovation and help build South Africa's tech future. Explore career opportunities in software development, design, and more."
+        url="/careers"
+        keywords="Ambitrove careers, tech jobs South Africa, software developer jobs, Pretoria tech jobs"
+      />
 
       {/* Hero Section */}
       <HeroSection />

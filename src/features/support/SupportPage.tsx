@@ -10,19 +10,15 @@ import {
   Users,
   ExternalLink,
 } from "lucide-react";
-import SupportMetaData from "./components/SupportMetaData";
 import HeroSection from "./components/HeroSection";
+import SEO from "@/components/SEO";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-type FAQItem = {
-  question: string;
-  answer: string;
-};
+import type { FAQItem } from "@/types";
 
 const SupportPage = () => {
   useGSAP(() => {
@@ -86,7 +82,12 @@ const SupportPage = () => {
 
   return (
     <>
-      <SupportMetaData />
+      <SEO 
+        title="Support & Help Center"
+        description="Get support from Ambitrove Innovation. Find answers to common questions, contact our team, and access resources for your software development needs."
+        url="/support"
+        keywords="Ambitrove support, tech support South Africa, software development help, customer service"
+      />
       <HeroSection />
 
       {/* Quick Support Options */}
@@ -212,7 +213,7 @@ const SupportPage = () => {
           <div className="fade-in">
             <Book className="w-8 h-8 text-blue-500 mx-auto mb-3" />
             <h3 className="text-xl font-bold text-white mb-2">Documentation</h3>
-            <a href="#" className="text-blue-400 hover:text-blue-300">
+            <a href="/support" className="text-blue-400 hover:text-blue-300">
               View Docs →
             </a>
           </div>
@@ -220,7 +221,7 @@ const SupportPage = () => {
           <div className="fade-in">
             <FileText className="w-8 h-8 text-purple-500 mx-auto mb-3" />
             <h3 className="text-xl font-bold text-white mb-2">Blog</h3>
-            <a href="#" className="text-purple-400 hover:text-purple-300">
+            <a href="/blog" className="text-purple-400 hover:text-purple-300">
               Read Blog →
             </a>
           </div>
@@ -228,7 +229,7 @@ const SupportPage = () => {
           <div className="fade-in">
             <Users className="w-8 h-8 text-green-500 mx-auto mb-3" />
             <h3 className="text-xl font-bold text-white mb-2">Community</h3>
-            <a href="#" className="text-green-400 hover:text-green-300">
+            <a href="https://www.linkedin.com/company/ambitrove-innovation" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
               Join Community →
             </a>
           </div>

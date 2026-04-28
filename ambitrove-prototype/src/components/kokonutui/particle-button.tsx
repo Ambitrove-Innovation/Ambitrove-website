@@ -12,7 +12,7 @@
 
 import { useState, useRef, type RefObject } from "react";
 import { Button } from "@/components/button";
-import { motion, AnimatePresence } from "motion/react";
+
 import { cn } from "@/lib/utils";
 import type { ButtonProps } from "@/components/button";
 import { MousePointerClick } from "lucide-react";
@@ -63,21 +63,18 @@ function SuccessParticles({
 
 export default function ParticleButton({
     children,
-    onClick,
-    onSuccess,
-    successDuration = 1000,
     className,
     ...props
 }: ParticleButtonProps) {
     const [showParticles, setShowParticles] = useState(false);
     const buttonRef = useRef<HTMLButtonElement>(null);
 
-    const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    const handleClick = async () => {
         setShowParticles(true);
 
         setTimeout(() => {
             setShowParticles(false);
-        }, successDuration);
+        }, props.successDuration || 1000);
     };
 
     return (

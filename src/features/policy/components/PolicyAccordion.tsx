@@ -173,6 +173,7 @@ const PolicyAccordion = () => {
           <AccordionItem
             key={section.id}
             value={section.id}
+            id={section.id}
             className="bg-neutral-900 rounded-lg border border-neutral-800 hover:border-neutral-700 transition overflow-hidden">
             <AccordionTrigger className="px-6 py-5 hover:bg-neutral-800 data-[data-state=open]]:bg-neutral-900 transition">
               <div className="flex items-center gap-4">

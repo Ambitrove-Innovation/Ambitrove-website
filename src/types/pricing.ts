@@ -1,5 +1,5 @@
 // Website Build Package (One-time purchase)
-interface WebsiteBuildPackage {
+export interface WebsiteBuildPackage {
   id: string;
   name: string;
   description: string;
@@ -25,7 +25,7 @@ interface WebsiteBuildPackage {
 }
 
 // Service Care Plan (Subscription)
- interface ServiceCarePlan {
+export interface ServiceCarePlan {
   name: string;
   monthlyPrice?: string;
   yearlyPrice?: string;
@@ -34,14 +34,14 @@ interface WebsiteBuildPackage {
   };
 }
 
-interface ServiceFeature {
+export interface ServiceFeature {
   name: string;
   description?: string;
   tooltip?: string;
 }
 
 // Add-on Service
-interface AddOnService {
+export interface AddOnService {
   id: string;
   title: string;
   description: string;

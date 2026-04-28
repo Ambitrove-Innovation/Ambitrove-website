@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BirdIcon, LinkedinIcon, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -25,46 +25,58 @@ const Navbar = () => {
           {/* Desktop Links - Hidden on mobile */}
           <ul className="hidden md:flex justify-evenly gap-6 text-lg font-semibold">
             <li>
-              <Link to="/" className="hover:text-teal-600 transition-colors">
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => 
+                  `transition-colors hover:text-teal-600 ${isActive ? 'text-teal-500 underline underline-offset-4 decoration-2' : ''}`
+                }
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/about"
-                className="hover:text-teal-600 transition-colors">
+                className={({ isActive }) => 
+                  `transition-colors hover:text-teal-600 ${isActive ? 'text-teal-500 underline underline-offset-4 decoration-2' : ''}`
+                }
+              >
                 About us
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/contact"
-                className="hover:text-teal-600 transition-colors">
+                className={({ isActive }) => 
+                  `transition-colors hover:text-teal-600 ${isActive ? 'text-teal-500 underline underline-offset-4 decoration-2' : ''}`
+                }
+              >
                 Contact
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/services"
-                className="hover:text-teal-600 transition-colors">
+                className={({ isActive }) => 
+                  `transition-colors hover:text-teal-600 ${isActive ? 'text-teal-500 underline underline-offset-4 decoration-2' : ''}`
+                }
+              >
                 Services
-              </Link>
+              </NavLink>
             </li>
           </ul>
 
           {/* Desktop Follow Button - Hidden on mobile */}
-          <button className="hidden md:block bg-gradient outline-1 outline-cyan-300 font-medium text-white px-4 py-2 rounded-md shadow-md shadow-black hover:scale-105 transition-transform duration-300 ease-in-out">
-            <a
-              href="https://www.linkedin.com/company/ambitrove-innovation"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2">
-              Follow us
-              <span className="text-teal-500 h-6 w-6 hover:text-white">
-                <LinkedinIcon />
-              </span>
-            </a>
-          </button>
+          <a
+            href="https://www.linkedin.com/company/ambitrove-innovation"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center gap-2 bg-gradient outline-1 outline-cyan-300 font-medium text-white px-4 py-2 rounded-md shadow-md shadow-black hover:scale-105 transition-transform duration-300 ease-in-out">
+            Follow us
+            <span className="text-teal-500 h-6 w-6 hover:text-white">
+              <LinkedinIcon />
+            </span>
+          </a>
 
           {/* Mobile Menu Button */}
           <button

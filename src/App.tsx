@@ -1,14 +1,13 @@
-import "./index.css";
 import Routespath from "./routes";
-import { gsap } from "gsap";
-import { ScrollTrigger, SplitText } from "gsap/all";
 import { HelmetProvider } from "react-helmet-async";
+import "@/lib/gsap";
+import AiChatBot from "@/features/support/components/AiChatBot";
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
 function App() {
   return (
     <HelmetProvider>
       <Routespath />
+      <AiChatBot />
     </HelmetProvider>
   );
 }

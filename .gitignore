@@ -25,3 +25,12 @@ dist-ssr
 
 #Environment Variables
 .env
+
+# System crash dumps
+*.stackdump
+/.stackdump
+# Local Netlify folder
+.netlify
+
+# Deno
+deno.lock
