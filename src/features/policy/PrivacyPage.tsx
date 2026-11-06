@@ -83,6 +83,7 @@ const PrivacyPage = () => {
         title="Privacy Policy"
         description="Read Ambitrove Innovation's Privacy Policy. Learn how we collect, use, and protect your personal information in compliance with POPIA and GDPR."
         url="/privacy"
+        image="/images/Ambitrove.png"
         keywords="Ambitrove Privacy Policy, POPIA compliance, data protection, South Africa tech company"
       />
 

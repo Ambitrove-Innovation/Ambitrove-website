@@ -15,24 +15,53 @@ interface TeamMemberModalProps {
 const TeamMemberModal = ({ isOpen, onClose, member }: TeamMemberModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
-  // Accessibility: Handle Escape key and Scroll Lock
+  // Accessibility: Handle Escape key, Tab focus trap, and Scroll Lock
   useEffect(() => {
     if (!isOpen) return;
 
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+    const previouslyFocusedElement = document.activeElement as HTMLElement | null;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+
+      if (e.key === "Tab" && modalRef.current) {
+        const focusableElements = modalRef.current.querySelectorAll<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusableElements.length === 0) return;
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+        }
+      }
     };
 
     // Lock scroll
     document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", handleEscape);
+    window.addEventListener("keydown", handleKeyDown);
 
-    // Focus management: Focus the modal when it opens
-    modalRef.current?.focus();
+    // Initial focus on close button or modal container
+    const initialFocus = modalRef.current?.querySelector<HTMLElement>("button") || modalRef.current;
+    initialFocus?.focus();
 
     return () => {
       document.body.style.overflow = "unset";
-      window.removeEventListener("keydown", handleEscape);
+      window.removeEventListener("keydown", handleKeyDown);
+      previouslyFocusedElement?.focus();
     };
   }, [isOpen, onClose]);
 

@@ -33,6 +33,7 @@ export interface JobListing {
 
 export interface BlogPost {
   id: number;
+  slug: string;
   title: string;
   excerpt: string;
   category: string;

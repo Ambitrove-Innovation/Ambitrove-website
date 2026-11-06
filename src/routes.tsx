@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import PageErrorRedirect from "./features/pageNotFound/PageErrorRedirect";
 import { Loader2 } from "lucide-react";
 import ScrollToTop from "./components/ScrollToTop";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 // Lazy loading pages for performance optimization
 const HomePage = lazy(() => import("./features/home/HomePage"));
@@ -14,6 +15,7 @@ const PrivacyPage = lazy(() => import("./features/policy/PrivacyPage"));
 const SupportPage = lazy(() => import("./features/support/SupportPage"));
 const CareersPage = lazy(() => import("./features/careers/CareersPage"));
 const BlogPage = lazy(() => import("./features/blog/BlogPage"));
+const BlogPostDetailPage = lazy(() => import("./features/blog/BlogPostDetailPage"));
 const ServicesPage = lazy(() => import("./features/services/ServicesPage"));
 
 // Simple loading fallback
@@ -35,19 +37,22 @@ const Routespath = () => {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main id="main-content" className="grow" tabIndex={-1}>
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/support" element={<SupportPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="*" element={<PageErrorRedirect />} />
-            </Routes>
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/support" element={<SupportPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/:slug" element={<BlogPostDetailPage />} />
+                <Route path="*" element={<PageErrorRedirect />} />
+              </Routes>
+            </Suspense>
+          </ErrorBoundary>
         </main>
         <Footer />
       </div>
