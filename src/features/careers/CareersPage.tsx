@@ -8,7 +8,8 @@ import {
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import type { JobListing } from "@/types";
 import HeroSection from "./components/HeroSection";
 import WhyJoinUs from "./components/WhyJoinUs";
@@ -17,6 +18,24 @@ import SEO from "@/components/SEO";
 
 const CareersPage = () => {
   const [selectedJob, setSelectedJob] = useState<JobListing | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedJob(null);
+      }
+    };
+
+    if (selectedJob) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedJob]);
 
   useGSAP(() => {
     const prefersReducedMotion = window.matchMedia(
@@ -94,6 +113,7 @@ const CareersPage = () => {
         title="Careers | Join Ambitrove Innovation"
         description="Join Ambitrove Innovation and help build South Africa's tech future. Explore career opportunities in software development, design, and more."
         url="/careers"
+        image="/images/team office.webp"
         keywords="Ambitrove careers, tech jobs South Africa, software developer jobs, Pretoria tech jobs"
       />
 
@@ -154,15 +174,20 @@ const CareersPage = () => {
 
       {/* Job Details Modal */}
       {selectedJob && (
-        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm">
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="job-modal-title"
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm">
           <div className="bg-neutral-900 rounded-2xl max-w-2xl w-full p-8 relative border border-neutral-800 max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setSelectedJob(null)}
+              aria-label="Close job details modal"
               className="absolute top-4 right-4 text-gray-400 hover:text-white transition">
               ✕
             </button>
 
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <h2 id="job-modal-title" className="text-2xl font-bold text-white mb-4">
               {selectedJob.title}
             </h2>
             <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-6">
@@ -205,14 +230,15 @@ const CareersPage = () => {
               </div>
 
               <div className="pt-4">
-                <a
-                  href={`/contact?subject=Application: ${encodeURIComponent(
+                <Link
+                  to={`/contact?subject=Application: ${encodeURIComponent(
                     selectedJob.title,
                   )}`}
+                  onClick={() => setSelectedJob(null)}
                   className="inline-flex items-center justify-center gap-2 w-full px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all">
                   Apply Now
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
                 <p className="text-gray-400 text-sm text-center mt-3">
                   Or email your CV to{" "}
                   <a

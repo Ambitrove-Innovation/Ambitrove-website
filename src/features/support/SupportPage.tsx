@@ -8,8 +8,10 @@ import {
   Book,
   FileText,
   Users,
+  ArrowRight,
   ExternalLink,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import SEO from "@/components/SEO";
 import {
@@ -86,6 +88,7 @@ const SupportPage = () => {
         title="Support & Help Center"
         description="Get support from Ambitrove Innovation. Find answers to common questions, contact our team, and access resources for your software development needs."
         url="/support"
+        image="/images/marketingImages/detailedServiceInfo.webp"
         keywords="Ambitrove support, tech support South Africa, software development help, customer service"
       />
       <HeroSection />
@@ -197,12 +200,12 @@ const SupportPage = () => {
               assist.
             </p>
 
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white  font-semibold rounded-lg transition-all">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all">
               Contact Support
-              <ExternalLink className="w-4 h-4" />
-            </a>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -213,17 +216,17 @@ const SupportPage = () => {
           <div className="fade-in">
             <Book className="w-8 h-8 text-blue-500 mx-auto mb-3" />
             <h3 className="text-xl font-bold text-white mb-2">Documentation</h3>
-            <a href="/support" className="text-blue-400 hover:text-blue-300">
+            <Link to="/support" className="text-blue-400 hover:text-blue-300">
               View Docs →
-            </a>
+            </Link>
           </div>
 
           <div className="fade-in">
             <FileText className="w-8 h-8 text-purple-500 mx-auto mb-3" />
             <h3 className="text-xl font-bold text-white mb-2">Blog</h3>
-            <a href="/blog" className="text-purple-400 hover:text-purple-300">
+            <Link to="/blog" className="text-purple-400 hover:text-purple-300">
               Read Blog →
-            </a>
+            </Link>
           </div>
 
           <div className="fade-in">

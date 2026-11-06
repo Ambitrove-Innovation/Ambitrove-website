@@ -1,12 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { MessageCircle, X, Send, Bot, User, Loader2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
+import { cn } from "@/lib/utils";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
 interface Message {
   role: "user" | "assistant";
@@ -26,8 +22,13 @@ const AiChatBot = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [streamingText, setStreamingText] = useState("");
   const [isStreaming, setIsStreaming] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const typewriterTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
+
+  const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY || "";
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -37,10 +38,19 @@ const AiChatBot = () => {
     scrollToBottom();
   }, [messages, streamingText]);
 
+  // Cleanup typewriter interval on unmount
+  useEffect(() => {
+    return () => {
+      if (typewriterTimerRef.current) {
+        clearInterval(typewriterTimerRef.current);
+      }
+    };
+  }, []);
+
   const handleSend = async () => {
     if (!input.trim() || isLoading || isStreaming) return;
 
-    const userMessage: Message = { role: "user", content: input };
+    const userMessage: Message = { role: "user", content: input.trim() };
     const updatedMessages = [...messages, userMessage];
     setMessages(updatedMessages);
     setInput("");
@@ -50,26 +60,49 @@ const AiChatBot = () => {
       const response = await fetch("/.netlify/functions/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: updatedMessages }),
+        body: JSON.stringify({
+          messages: updatedMessages,
+          turnstileToken: turnstileToken,
+        }),
       });
 
-      if (!response.ok) throw new Error("Failed to connect to Ambi");
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || "Failed to connect to Ambi");
+      }
 
       const data = await response.json();
       const aiContent = data.content;
 
-      // Start Typewriter "Streaming" Effect
+      // Reset Turnstile token for next request
+      if (turnstileRef.current) {
+        try {
+          turnstileRef.current.reset();
+        } catch {
+          // Ignore reset errors
+        }
+      }
+      setTurnstileToken(null);
+
+      // Start Typewriter "Streaming" Effect with interval cleanup safety
       setIsLoading(false);
       setIsStreaming(true);
       let index = 0;
       setStreamingText("");
 
-      const interval = setInterval(() => {
+      if (typewriterTimerRef.current) {
+        clearInterval(typewriterTimerRef.current);
+      }
+
+      typewriterTimerRef.current = setInterval(() => {
         if (index < aiContent.length) {
           setStreamingText((prev) => prev + aiContent.charAt(index));
           index++;
         } else {
-          clearInterval(interval);
+          if (typewriterTimerRef.current) {
+            clearInterval(typewriterTimerRef.current);
+            typewriterTimerRef.current = null;
+          }
           setMessages((prev) => [
             ...prev,
             { role: "assistant", content: aiContent },
@@ -77,15 +110,21 @@ const AiChatBot = () => {
           setStreamingText("");
           setIsStreaming(false);
         }
-      }, 15); // Adjust speed of streaming here
-    } catch (error) {
+      }, 15);
+    } catch (error: unknown) {
       console.error("Chat error:", error);
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "I'm sorry, I'm having a bit of trouble connecting right now. Please try again or visit our contact page!";
+
       setMessages((prev) => [
         ...prev,
         {
           role: "assistant",
-          content:
-            "I'm sorry, I'm having a bit of trouble connecting right now. Please try again or visit our contact page!",
+          content: errorMessage.includes("verification")
+            ? "Bot verification failed or expired. Please refresh the page and try again."
+            : "I'm sorry, I'm having a bit of trouble connecting right now. Please try again or visit our contact page!",
         },
       ]);
       setIsLoading(false);
@@ -215,6 +254,20 @@ const AiChatBot = () => {
             <p className="text-[9px] text-zinc-500 mt-2 text-center">
               AI assistant inspired by Ambitrove Innovation. Powered by Gemini.
             </p>
+            {turnstileSiteKey && (
+              <div className="hidden">
+                <Turnstile
+                  ref={turnstileRef}
+                  siteKey={turnstileSiteKey}
+                  onSuccess={(token) => setTurnstileToken(token)}
+                  onError={() => setTurnstileToken(null)}
+                  onExpire={() => setTurnstileToken(null)}
+                  options={{
+                    size: "invisible",
+                  }}
+                />
+              </div>
+            )}
           </div>
         </div>
       )}

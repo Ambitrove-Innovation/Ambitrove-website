@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { SERVICES } from "@/constants/data";
+import { SERVICES } from "@/constants/servicesData";
 
 const ServiceCardOffers = () => {
   return (

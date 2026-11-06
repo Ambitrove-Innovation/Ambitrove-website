@@ -94,6 +94,7 @@ const ContactPage = () => {
         title="Contact Us"
         description="Get in touch with Ambitrove Innovation. Reach out for software development, SaaS, or digital solutions. Let's collaborate to build South Africa's tech future."
         url="/contact"
+        image="/images/marketingImages/Cta_introImg.webp"
         keywords="Ambitrove contact, tech company South Africa, Ambitrove Innovation, contact form, Kamogelo Mogasoa, Dean Meyer"
       />
 

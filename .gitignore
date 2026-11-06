@@ -34,3 +34,8 @@ dist-ssr
 
 # Deno
 deno.lock
+PROJECT_MEMORY.md
+
+# Backup / legacy clone folder
+Ambitrove-website-1/
+

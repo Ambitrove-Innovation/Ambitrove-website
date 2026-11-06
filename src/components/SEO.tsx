@@ -9,6 +9,7 @@ interface SEOProps {
   image?: string;
   keywords?: string;
   robots?: string;
+  schema?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
 const SEO = ({ 
@@ -16,9 +17,10 @@ const SEO = ({
   description, 
   url = '', 
   type = 'website', 
-  image = '/preview-thumbnail.png', // Default image
+  image = '/images/Ambitrove.png', // Default fallback image
   keywords,
-  robots = 'index, follow'
+  robots = 'index, follow',
+  schema
 }: SEOProps) => {
   const siteTitle = "Ambitrove Innovation";
   const defaultDescription = "Ambitrove™ Innovation is a South African technology company delivering innovative digital solutions including SaaS, Web Apps, Mobile Apps, and Web3 products.";
@@ -59,6 +61,13 @@ const SEO = ({
 
       {/* Canonical Link */}
       <link rel="canonical" href={canonicalUrl} />
+
+      {/* Structured Data (JSON-LD) */}
+      {schema && (
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      )}
     </Helmet>
   );
 };
